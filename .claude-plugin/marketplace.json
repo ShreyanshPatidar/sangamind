@@ -9,7 +9,8 @@
     {
       "name": "sangamind",
       "source": "./sangamind",
-      "description": "Skills for Claude everywhere: chat on web, desktop and mobile, Cowork and Claude Code. Transcribe needs Claude Code on a computer with Python, yt-dlp and Whisper."
+      "description": "Skills for Claude everywhere: chat on web, desktop and mobile, Cowork and Claude Code. Transcribe needs Claude Code on a computer with Python, yt-dlp and Whisper.",
+      "version": "1.1.0"
     },
     {
       "name": "switchboard",
