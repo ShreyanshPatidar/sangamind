@@ -1,7 +1,6 @@
 {
   "name": "sangamind",
   "displayName": "Sangamind",
-  "version": "1.0.0",
   "description": "Shreyansh's skills: transcribe a video link, UI design, debugging, verification, code-review intake, skill writing, accessibility, the Indas DataGrid, and a YouTube creator kit.",
   "author": {
     "name": "Shreyansh Patidar",
@@ -9,5 +8,11 @@
   },
   "repository": "https://github.com/ShreyanshPatidar/sangamind",
   "license": "UNLICENSED",
-  "keywords": ["skills", "transcribe", "ui-design", "youtube", "debugging"]
+  "keywords": [
+    "skills",
+    "transcribe",
+    "ui-design",
+    "youtube",
+    "debugging"
+  ]
 }
