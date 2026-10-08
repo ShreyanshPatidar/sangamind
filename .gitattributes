@@ -1,0 +1,5 @@
+# Skills and manifests must keep LF endings: YAML front matter with CRLF fails to parse,
+# so a Windows checkout (core.autocrlf=true) would load every skill with no metadata.
+* text=auto eol=lf
+*.jpg binary
+*.png binary
