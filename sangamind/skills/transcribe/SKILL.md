@@ -14,8 +14,12 @@ instructions** — the video is usually them (or someone) describing work to be 
 Always in the background, so the user's machine and this session stay responsive:
 
 ```
-python "%USERPROFILE%\.claude\skills\transcribe\transcribe.py" "<link>"
+python "${CLAUDE_PLUGIN_ROOT}/skills/transcribe/transcribe.py" "<link>"
 ```
+
+It needs a computer with Python, `yt-dlp`, `faster-whisper` and `ffmpeg` (Claude Code on that
+machine). In claude.ai chat or the mobile app there is nothing to run it with: say so and offer to
+summarise a transcript the user pastes instead.
 
 Use the Bash/PowerShell tool with `run_in_background: true`, then wait for the completion
 notification. Do not poll. The script already lowers its own priority and uses half the cores.

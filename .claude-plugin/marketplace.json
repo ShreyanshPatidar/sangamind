@@ -1,0 +1,20 @@
+{
+  "name": "sangamind",
+  "description": "Sangamind (Sangam + mind): Shreyansh's Claude setup in one place.",
+  "owner": {
+    "name": "Shreyansh Patidar",
+    "email": "shreyanshpatidar777@gmail.com"
+  },
+  "plugins": [
+    {
+      "name": "sangamind",
+      "source": "./sangamind",
+      "description": "Skills for Claude everywhere: chat on web, desktop and mobile, Cowork and Claude Code. Transcribe needs Claude Code on a computer with Python, yt-dlp and Whisper."
+    },
+    {
+      "name": "switchboard",
+      "source": "./switchboard",
+      "description": "Claude Code only: one mod, every feature a switch (usage meter, output viewer, work log, hide secrets, guards against repeated failures, risky commands, edit collisions and overlapping test runs, other-chats line, dev server watch)."
+    }
+  ]
+}
