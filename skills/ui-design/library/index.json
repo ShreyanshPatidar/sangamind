@@ -1,0 +1,2711 @@
+[
+ {
+  "slug": "airbnb",
+  "category": "Consumer & commerce",
+  "theme": "light",
+  "productUI": false,
+  "accent": "#ff385c",
+  "accentHue": "pink",
+  "canvas": "#ffffff",
+  "ink": "#222222",
+  "displayFont": "Airbnb Cereal VF",
+  "bodyFont": "Airbnb Cereal VF",
+  "monoFont": null,
+  "fontSubstitutes": [
+   "Inter"
+  ],
+  "shape": "round",
+  "radiusControl": 8.0,
+  "radiusCard": 20.0,
+  "pillButtons": false,
+  "displaySize": 28.0,
+  "bodySize": 16.0,
+  "spaceBase": 4,
+  "section": 64.0,
+  "density": "balanced",
+  "contrastIssues": [
+   "button label 3.5:1 (<4.5)",
+   "warning icon/badge 2.3:1 (<3)"
+  ],
+  "summary": "A warm, generous consumer marketplace anchored on a clean white canvas and Airbnb Rausch (#ff385c), the single brand voltage that carries every primary CTA, search-button orb, and rating dot. Type runs Airbnb Cereal VF at modest weights — display sits at 22–28…",
+  "derivedRoles": [
+   "accent",
+   "focus",
+   "link"
+  ]
+ },
+ {
+  "slug": "airtable",
+  "category": "Productivity & SaaS",
+  "theme": "light",
+  "productUI": true,
+  "accent": "#181d26",
+  "accentHue": "black",
+  "canvas": "#ffffff",
+  "ink": "#181d26",
+  "displayFont": "Haas Groot Disp",
+  "bodyFont": "Haas",
+  "monoFont": null,
+  "fontSubstitutes": [
+   "Inter Display"
+  ],
+  "shape": "round",
+  "radiusControl": 12.0,
+  "radiusCard": 12.0,
+  "pillButtons": false,
+  "displaySize": 48.0,
+  "bodySize": 14.0,
+  "spaceBase": 8,
+  "section": 96.0,
+  "density": "dense",
+  "contrastIssues": [
+   "warning icon/badge 2.3:1 (<3)"
+  ],
+  "summary": "A sober, editorial workflow-software interface anchored on white canvas and dark-ink type, where brand voltage comes from full-bleed signature cards in coral, dark green, peach, and dark navy that punctuate long-scroll explainer pages. Primary actions use a ne…",
+  "derivedRoles": [
+   "accent",
+   "focus"
+  ]
+ },
+ {
+  "slug": "apple",
+  "category": "Consumer & commerce",
+  "theme": "light",
+  "productUI": false,
+  "accent": "#0066cc",
+  "accentHue": "indigo",
+  "canvas": "#ffffff",
+  "ink": "#1d1d1f",
+  "displayFont": "SF Pro Display",
+  "bodyFont": "SF Pro Text",
+  "monoFont": null,
+  "fontSubstitutes": [
+   "Inter"
+  ],
+  "shape": "pill",
+  "radiusControl": 11.0,
+  "radiusCard": 18.0,
+  "pillButtons": true,
+  "displaySize": 56.0,
+  "bodySize": 17.0,
+  "spaceBase": 8,
+  "section": 80.0,
+  "density": "balanced",
+  "contrastIssues": [
+   "warning icon/badge 2.3:1 (<3)"
+  ],
+  "summary": "A photography-first interface that turns marketing into a museum gallery. Edge-to-edge product tiles alternate light and dark canvases, framed by SF Pro Display headlines with negative letter-spacing and a single Action Blue (#0066cc) interactive color. UI chr…",
+  "derivedRoles": [
+   "accent",
+   "ink-subtle",
+   "link",
+   "primary-hover",
+   "surface",
+   "surface-raised"
+  ]
+ },
+ {
+  "slug": "binance",
+  "category": "Fintech & payments",
+  "theme": "light",
+  "productUI": true,
+  "accent": "#fcd535",
+  "accentHue": "amber",
+  "canvas": "#ffffff",
+  "ink": "#181a20",
+  "displayFont": "BinanceNova",
+  "bodyFont": "BinanceNova",
+  "monoFont": null,
+  "fontSubstitutes": [
+   "Inter",
+   "JetBrains Mono",
+   "IBM Plex Sans"
+  ],
+  "shape": "soft",
+  "radiusControl": 6.0,
+  "radiusCard": 8.0,
+  "pillButtons": false,
+  "displaySize": 64.0,
+  "bodySize": 14.0,
+  "spaceBase": 8,
+  "section": 80.0,
+  "density": "dense",
+  "contrastIssues": [
+   "secondary text 1.2:1 (<4.5)",
+   "secondary text on cards 1.1:1 (<4.5)",
+   "button / accent against page 1.4:1 (<3)",
+   "focus ring 1.4:1 (<3)",
+   "warning icon/badge 2.3:1 (<3)"
+  ],
+  "summary": "A confident financial-platform interface anchored on a deep near-black canvas, where Binance's iconic yellow (#FCD535) carries every primary CTA, brand accent, and value-claim moment. Type runs Binance's custom BinanceNova / BinancePlex stack at modest weights…",
+  "derivedRoles": [
+   "accent",
+   "focus",
+   "hairline",
+   "link",
+   "surface",
+   "surface-raised"
+  ]
+ },
+ {
+  "slug": "bmw",
+  "category": "Automotive & luxury",
+  "theme": "light",
+  "productUI": false,
+  "accent": "#1c69d4",
+  "accentHue": "indigo",
+  "canvas": "#ffffff",
+  "ink": "#262626",
+  "displayFont": "BMW Type Next Latin",
+  "bodyFont": "BMW Type Next Latin",
+  "monoFont": null,
+  "fontSubstitutes": [
+   "Inter",
+   "Saira Condensed"
+  ],
+  "shape": "sharp",
+  "radiusControl": 0.0,
+  "radiusCard": 12.0,
+  "pillButtons": false,
+  "displaySize": 64.0,
+  "bodySize": 16.0,
+  "spaceBase": 8,
+  "section": 80.0,
+  "density": "balanced",
+  "contrastIssues": [
+   "placeholder / large meta 2.8:1 (<3)",
+   "success icon/badge 2.3:1 (<3)",
+   "warning icon/badge 2.1:1 (<3)"
+  ],
+  "summary": "BMW's corporate site — distinct from BMW M's motorsport-bombastic variant, this is a measured and settled corporate-automotive interface. On a light (cream-tinted white) canvas, BMW corporate blue (#1c69d4) carries every primary CTA; dark navy hero bands frame…",
+  "derivedRoles": [
+   "accent",
+   "focus",
+   "link"
+  ]
+ },
+ {
+  "slug": "bmw-m",
+  "category": "Automotive & luxury",
+  "theme": "dark",
+  "productUI": false,
+  "accent": "#ffffff",
+  "accentHue": "white",
+  "canvas": "#000000",
+  "ink": "#ffffff",
+  "displayFont": "BMWTypeNextLatin",
+  "bodyFont": "BMWTypeNextLatin Light",
+  "monoFont": null,
+  "fontSubstitutes": [
+   "Inter",
+   "Saira Condensed"
+  ],
+  "shape": "sharp",
+  "radiusControl": 0.0,
+  "radiusCard": 6.0,
+  "pillButtons": false,
+  "displaySize": 80.0,
+  "bodySize": 16.0,
+  "spaceBase": 8,
+  "section": 96.0,
+  "density": "airy",
+  "contrastIssues": [
+   "error text 4.4:1 (<4.5)"
+  ],
+  "summary": "A motorsport-engineering interface anchored on a near-black canvas with white BMW Type Next Latin display headlines in confident UPPERCASE. The brand carries no decorative voltage — its energy comes from full-bleed automotive photography (cars on tracks, drive…",
+  "derivedRoles": [
+   "accent",
+   "focus",
+   "link",
+   "primary-hover"
+  ]
+ },
+ {
+  "slug": "bugatti",
+  "category": "Automotive & luxury",
+  "theme": "dark",
+  "productUI": false,
+  "accent": "#ffffff",
+  "accentHue": "white",
+  "canvas": "#000000",
+  "ink": "#ffffff",
+  "displayFont": "Bugatti Display",
+  "bodyFont": "Bugatti Text Regular",
+  "monoFont": null,
+  "fontSubstitutes": [
+   "Bugatti Display",
+   "Saira Condensed",
+   "Bugatti Text Regular"
+  ],
+  "shape": "pill",
+  "radiusControl": 0.0,
+  "radiusCard": 0.0,
+  "pillButtons": true,
+  "displaySize": 64.0,
+  "bodySize": 16.0,
+  "spaceBase": 8,
+  "section": 120.0,
+  "density": "airy",
+  "contrastIssues": [
+   "error text 4.4:1 (<4.5)"
+  ],
+  "summary": "An austere luxury-automotive interface that uses near-pure black canvas, white uppercase letterspaced display, and full-bleed automotive photography as the only voltage. The system runs three custom Bugatti typefaces — Bugatti Display, Bugatti Text Regular, an…",
+  "derivedRoles": [
+   "accent",
+   "focus",
+   "primary-hover"
+  ]
+ },
+ {
+  "slug": "cal",
+  "category": "Productivity & SaaS",
+  "theme": "light",
+  "productUI": true,
+  "accent": "#111111",
+  "accentHue": "black",
+  "canvas": "#ffffff",
+  "ink": "#111111",
+  "displayFont": "Cal Sans",
+  "bodyFont": "Inter",
+  "monoFont": "JetBrains Mono",
+  "fontSubstitutes": [
+   "Inter",
+   "Manrope"
+  ],
+  "shape": "round",
+  "radiusControl": 8.0,
+  "radiusCard": 12.0,
+  "pillButtons": false,
+  "displaySize": 64.0,
+  "bodySize": 16.0,
+  "spaceBase": 8,
+  "section": 96.0,
+  "density": "airy",
+  "contrastIssues": [
+   "success icon/badge 2.5:1 (<3)",
+   "warning icon/badge 2.1:1 (<3)",
+   "error text 3.8:1 (<4.5)"
+  ],
+  "summary": "A clean, calendar-software-first interface anchored on white canvas with black primary CTAs and custom Cal Sans display typography. The system reads as friendly modern SaaS — generous whitespace, soft-rounded cards (~12px), product UI fragments shown directly …",
+  "derivedRoles": [
+   "accent",
+   "focus",
+   "link"
+  ]
+ },
+ {
+  "slug": "claude",
+  "category": "AI & models",
+  "theme": "light",
+  "productUI": false,
+  "accent": "#cc785c",
+  "accentHue": "red",
+  "canvas": "#faf9f5",
+  "ink": "#141413",
+  "displayFont": "Copernicus",
+  "bodyFont": "StyreneB",
+  "monoFont": "JetBrains Mono",
+  "fontSubstitutes": [
+   "Cormorant Garamond",
+   "EB Garamond",
+   "Inter"
+  ],
+  "shape": "round",
+  "radiusControl": 8.0,
+  "radiusCard": 12.0,
+  "pillButtons": false,
+  "displaySize": 64.0,
+  "bodySize": 16.0,
+  "spaceBase": 8,
+  "section": 96.0,
+  "density": "airy",
+  "contrastIssues": [
+   "button label 3.3:1 (<4.5)",
+   "success icon/badge 2.3:1 (<3)",
+   "warning icon/badge 2.3:1 (<3)"
+  ],
+  "summary": "A warm-canvas editorial interface for Anthropic's Claude product. The system anchors on a tinted cream canvas with serif display headlines, warm coral CTAs, and dark navy product surfaces (code editor mockups, model showcase cards). Brand voltage comes from th…",
+  "derivedRoles": [
+   "accent",
+   "focus",
+   "link"
+  ]
+ },
+ {
+  "slug": "clay",
+  "category": "Productivity & SaaS",
+  "theme": "light",
+  "productUI": false,
+  "accent": "#0a0a0a",
+  "accentHue": "black",
+  "canvas": "#fffaf0",
+  "ink": "#0a0a0a",
+  "displayFont": "Plain Black",
+  "bodyFont": "Inter",
+  "monoFont": null,
+  "fontSubstitutes": [
+   "Inter",
+   "Söhne Breit",
+   "Recoleta"
+  ],
+  "shape": "round",
+  "radiusControl": 12.0,
+  "radiusCard": 16.0,
+  "pillButtons": false,
+  "displaySize": 72.0,
+  "bodySize": 16.0,
+  "spaceBase": 8,
+  "section": 96.0,
+  "density": "airy",
+  "contrastIssues": [
+   "placeholder / large meta 2.7:1 (<3)",
+   "success icon/badge 2.2:1 (<3)",
+   "warning icon/badge 2.1:1 (<3)",
+   "error text 3.6:1 (<4.5)"
+  ],
+  "summary": "A vibrant claymation-meets-data interface for Clay.com (GTM data-orchestration platform). Anchors on white canvas with dark-navy primary CTAs, custom rounded display type, and saturated single-color feature cards — hot pink, deep teal, lavender, peach, ochre —…",
+  "derivedRoles": [
+   "accent",
+   "focus",
+   "link"
+  ]
+ },
+ {
+  "slug": "clickhouse",
+  "category": "Developer tools & infra",
+  "theme": "dark",
+  "productUI": true,
+  "accent": "#faff69",
+  "accentHue": "yellow",
+  "canvas": "#0a0a0a",
+  "ink": "#ffffff",
+  "displayFont": "Inter",
+  "bodyFont": "Inter",
+  "monoFont": "JetBrains Mono",
+  "fontSubstitutes": [
+   "Söhne",
+   "Geist"
+  ],
+  "shape": "round",
+  "radiusControl": 8.0,
+  "radiusCard": 12.0,
+  "pillButtons": false,
+  "displaySize": 72.0,
+  "bodySize": 16.0,
+  "spaceBase": 8,
+  "section": 96.0,
+  "density": "airy",
+  "contrastIssues": [
+   "placeholder / large meta 2.9:1 (<3)"
+  ],
+  "summary": "A high-performance database interface anchored on near-pure black canvas with electric yellow as the brand voltage. White typography in confident sans, yellow CTAs, and yellow-text stat numbers carry the brand voice across every page. Code blocks and product U…",
+  "derivedRoles": [
+   "focus",
+   "link"
+  ]
+ },
+ {
+  "slug": "cohere",
+  "category": "AI & models",
+  "theme": "light",
+  "productUI": false,
+  "accent": "#17171c",
+  "accentHue": "black",
+  "canvas": "#ffffff",
+  "ink": "#212121",
+  "displayFont": "CohereText",
+  "bodyFont": "Unica77 Cohere Web",
+  "monoFont": null,
+  "fontSubstitutes": [],
+  "shape": "round",
+  "radiusControl": 32.0,
+  "radiusCard": 22.0,
+  "pillButtons": false,
+  "displaySize": 96.0,
+  "bodySize": 16.0,
+  "spaceBase": 8,
+  "section": 80.0,
+  "density": "balanced",
+  "contrastIssues": [
+   "secondary text 3.0:1 (<4.5)",
+   "secondary text on cards 2.8:1 (<4.5)",
+   "warning icon/badge 2.3:1 (<3)"
+  ],
+  "summary": "Cohere's 2026 web system is a controlled enterprise AI interface built from stark white editorial space, deep green-black product bands, soft mineral surfaces, rounded media cards, and a distinctive type split between monospaced-feeling display headlines and p…",
+  "derivedRoles": [
+   "accent",
+   "focus",
+   "link",
+   "primary-hover",
+   "surface",
+   "surface-raised"
+  ]
+ },
+ {
+  "slug": "coinbase",
+  "category": "Fintech & payments",
+  "theme": "light",
+  "productUI": true,
+  "accent": "#0052ff",
+  "accentHue": "indigo",
+  "canvas": "#ffffff",
+  "ink": "#0a0b0d",
+  "displayFont": "Coinbase Display",
+  "bodyFont": "Coinbase Sans",
+  "monoFont": null,
+  "fontSubstitutes": [
+   "Geist Mono"
+  ],
+  "shape": "pill",
+  "radiusControl": 12.0,
+  "radiusCard": 16.0,
+  "pillButtons": true,
+  "displaySize": 64.0,
+  "bodySize": 16.0,
+  "spaceBase": 8,
+  "section": 96.0,
+  "density": "airy",
+  "contrastIssues": [
+   "placeholder / large meta 2.3:1 (<3)",
+   "warning icon/badge 2.3:1 (<3)"
+  ],
+  "summary": "An institutional-grade crypto exchange whose marketing surfaces read like a quietly-confident financial-services brand. The base canvas is pure white; Coinbase Blue (`#0052ff`) is the single brand voltage, used scarcely on primary CTAs, signature glyphs, and i…",
+  "derivedRoles": [
+   "accent",
+   "focus",
+   "link"
+  ]
+ },
+ {
+  "slug": "composio",
+  "category": "AI & models",
+  "theme": "dark",
+  "productUI": false,
+  "accent": "#0007cd",
+  "accentHue": "indigo",
+  "canvas": "#0f0f0f",
+  "ink": "#ffffff",
+  "displayFont": "abcDiatype",
+  "bodyFont": "abcDiatype",
+  "monoFont": "JetBrains Mono",
+  "fontSubstitutes": [
+   "Inter"
+  ],
+  "shape": "round",
+  "radiusControl": 8.0,
+  "radiusCard": 12.0,
+  "pillButtons": false,
+  "displaySize": 56.0,
+  "bodySize": 16.0,
+  "spaceBase": 8,
+  "section": 96.0,
+  "density": "airy",
+  "contrastIssues": [
+   "button / accent against page 1.7:1 (<3)",
+   "focus ring 1.7:1 (<3)"
+  ],
+  "summary": "A developer-tools brand for AI-agent tool integration whose marketing surfaces lean into a dark, technical aesthetic with a single deep-electric-blue voltage (`#0007cd`). The page floor is near-black (`#0f0f0f`); cards float above on subtle gray-tinted surface…",
+  "derivedRoles": [
+   "accent",
+   "focus",
+   "link"
+  ]
+ },
+ {
+  "slug": "cursor",
+  "category": "AI & models",
+  "theme": "light",
+  "productUI": true,
+  "accent": "#f54e00",
+  "accentHue": "red",
+  "canvas": "#f7f7f4",
+  "ink": "#26251e",
+  "displayFont": "CursorGothic",
+  "bodyFont": "CursorGothic",
+  "monoFont": "JetBrains Mono",
+  "fontSubstitutes": [
+   "Inter",
+   "GT Sectra"
+  ],
+  "shape": "round",
+  "radiusControl": 8.0,
+  "radiusCard": 12.0,
+  "pillButtons": false,
+  "displaySize": 72.0,
+  "bodySize": 16.0,
+  "spaceBase": 8,
+  "section": 80.0,
+  "density": "balanced",
+  "contrastIssues": [
+   "placeholder / large meta 2.6:1 (<3)",
+   "button label 3.5:1 (<4.5)",
+   "warning icon/badge 2.1:1 (<3)"
+  ],
+  "summary": "An AI-first code editor whose marketing site reads like a quietly-confident developer-tools brand with a warm-cream editorial canvas (`#f7f7f4`) instead of the typical dark IDE atmosphere. Near-black warm ink (`#26251e`) carries body and display alike — displa…",
+  "derivedRoles": [
+   "accent",
+   "focus",
+   "link"
+  ]
+ },
+ {
+  "slug": "dell-1996",
+  "category": "Big tech & hardware",
+  "theme": "light",
+  "productUI": false,
+  "accent": "#e91d2a",
+  "accentHue": "red",
+  "canvas": "#ffffff",
+  "ink": "#000000",
+  "displayFont": "Arial Black",
+  "bodyFont": "Times New Roman",
+  "monoFont": null,
+  "fontSubstitutes": [],
+  "shape": "sharp",
+  "radiusControl": 0.0,
+  "radiusCard": 0.0,
+  "pillButtons": false,
+  "displaySize": 36.0,
+  "bodySize": 14.0,
+  "spaceBase": 4,
+  "section": 40.0,
+  "density": "dense",
+  "contrastIssues": [
+   "button label 4.5:1 (<4.5)",
+   "warning icon/badge 2.3:1 (<3)"
+  ],
+  "summary": "An inspired interpretation of Dell.com's 1996 design language — a catalog-era enterprise web design built around a literal black page frame, vivid flat color-block \"ribbon cards\" tinted in sage, salmon, periwinkle, sky, peach and lime, chunky Helvetica-Black d…",
+  "derivedRoles": [
+   "accent",
+   "focus",
+   "hairline",
+   "ink-muted",
+   "ink-subtle",
+   "primary-hover",
+   "surface-raised"
+  ]
+ },
+ {
+  "slug": "elevenlabs",
+  "category": "AI & models",
+  "theme": "light",
+  "productUI": false,
+  "accent": "#292524",
+  "accentHue": "neutral",
+  "canvas": "#f5f5f5",
+  "ink": "#0c0a09",
+  "displayFont": "Waldenburg",
+  "bodyFont": "Inter",
+  "monoFont": null,
+  "fontSubstitutes": [
+   "EB Garamond",
+   "GT Sectra"
+  ],
+  "shape": "pill",
+  "radiusControl": 8.0,
+  "radiusCard": 12.0,
+  "pillButtons": true,
+  "displaySize": 48.0,
+  "bodySize": 16.0,
+  "spaceBase": 8,
+  "section": 96.0,
+  "density": "airy",
+  "contrastIssues": [
+   "placeholder / large meta 2.3:1 (<3)",
+   "warning icon/badge 2.1:1 (<3)",
+   "error text 4.4:1 (<4.5)"
+  ],
+  "summary": "A voice-AI brand whose marketing surfaces read like a quietly editorial print magazine. The base canvas is off-white (`#f5f5f5`) holding warm near-black ink (`#292524`); the brand voltage is photographic, not chromatic — soft pastel atmospheric gradient orbs (…",
+  "derivedRoles": [
+   "accent",
+   "focus",
+   "link"
+  ]
+ },
+ {
+  "slug": "expo",
+  "category": "Developer tools & infra",
+  "theme": "light",
+  "productUI": true,
+  "accent": "#000000",
+  "accentHue": "black",
+  "canvas": "#ffffff",
+  "ink": "#171717",
+  "displayFont": "Inter",
+  "bodyFont": "Inter",
+  "monoFont": "JetBrains Mono",
+  "fontSubstitutes": [],
+  "shape": "round",
+  "radiusControl": 8.0,
+  "radiusCard": 12.0,
+  "pillButtons": false,
+  "displaySize": 48.0,
+  "bodySize": 16.0,
+  "spaceBase": 8,
+  "section": 96.0,
+  "density": "airy",
+  "contrastIssues": [
+   "placeholder / large meta 1.6:1 (<3)",
+   "warning icon/badge 2.3:1 (<3)",
+   "error text 2.4:1 (<4.5)"
+  ],
+  "summary": "A React Native developer-platform whose marketing site reads like a quietly-confident infrastructure brand. The base canvas is pure white with a soft sky-blue gradient atmospheric wash behind the hero; near-black ink (`#171717`) carries body and display alike.…",
+  "derivedRoles": [
+   "accent",
+   "focus",
+   "link"
+  ]
+ },
+ {
+  "slug": "ferrari",
+  "category": "Automotive & luxury",
+  "theme": "dark",
+  "productUI": false,
+  "accent": "#da291c",
+  "accentHue": "red",
+  "canvas": "#181818",
+  "ink": "#ffffff",
+  "displayFont": "FerrariSans",
+  "bodyFont": "FerrariSans",
+  "monoFont": null,
+  "fontSubstitutes": [
+   "Inter",
+   "Söhne"
+  ],
+  "shape": "sharp",
+  "radiusControl": 0.0,
+  "radiusCard": 8.0,
+  "pillButtons": false,
+  "displaySize": 56.0,
+  "bodySize": 14.0,
+  "spaceBase": 8,
+  "section": 96.0,
+  "density": "dense",
+  "contrastIssues": [
+   "secondary text on cards 4.5:1 (<4.5)",
+   "error text 3.8:1 (<4.5)"
+  ],
+  "summary": "A luxury-automotive brand whose marketing surfaces read as cinematic editorial. The base canvas is **near-black** (`#181818`) holding pure white display type; white-canvas bands appear only inside specific editorial contexts (preowned listings, pricing tables)…",
+  "derivedRoles": [
+   "accent",
+   "focus",
+   "link",
+   "surface-raised"
+  ]
+ },
+ {
+  "slug": "figma",
+  "category": "Productivity & SaaS",
+  "theme": "light",
+  "productUI": true,
+  "accent": "#000000",
+  "accentHue": "black",
+  "canvas": "#ffffff",
+  "ink": "#000000",
+  "displayFont": "figmaSans",
+  "bodyFont": "figmaSans",
+  "monoFont": null,
+  "fontSubstitutes": [
+   "Inter",
+   "Geist",
+   "JetBrains Mono"
+  ],
+  "shape": "round",
+  "radiusControl": 50.0,
+  "radiusCard": 24.0,
+  "pillButtons": false,
+  "displaySize": 86.0,
+  "bodySize": 18.0,
+  "spaceBase": 8,
+  "section": 96.0,
+  "density": "airy",
+  "contrastIssues": [
+   "warning icon/badge 2.3:1 (<3)"
+  ],
+  "summary": "A confident black-and-white editorial frame interrupted by oversized, hand-cut pastel color blocks. The marketing canvas is rigorously monochrome — figmaSans variable type, pure white surfaces, pure black ink, pill-shaped CTAs — while each story section drops …",
+  "derivedRoles": [
+   "accent",
+   "focus",
+   "ink-muted",
+   "ink-subtle",
+   "link",
+   "primary-hover"
+  ]
+ },
+ {
+  "slug": "framer",
+  "category": "Productivity & SaaS",
+  "theme": "dark",
+  "productUI": false,
+  "accent": "#ffffff",
+  "accentHue": "white",
+  "canvas": "#090909",
+  "ink": "#ffffff",
+  "displayFont": "GT Walsheim Framer Medium",
+  "bodyFont": "Inter Variable",
+  "monoFont": null,
+  "fontSubstitutes": [
+   "Mona Sans",
+   "Geist",
+   "Inter"
+  ],
+  "shape": "pill",
+  "radiusControl": 10.0,
+  "radiusCard": 15.0,
+  "pillButtons": true,
+  "displaySize": 110.0,
+  "bodySize": 15.0,
+  "spaceBase": 8,
+  "section": 96.0,
+  "density": "airy",
+  "contrastIssues": [
+   "error text 4.2:1 (<4.5)"
+  ],
+  "summary": "A confident dark-canvas builder marketing site that treats the page like a working artboard — pure black surfaces, white display type set in GT Walsheim Medium with aggressive negative tracking, and a single confident blue (#0099ff) reserved for hyperlinks and…",
+  "derivedRoles": [
+   "focus",
+   "ink-subtle",
+   "link",
+   "primary-hover"
+  ]
+ },
+ {
+  "slug": "hashicorp",
+  "category": "Developer tools & infra",
+  "theme": "dark",
+  "productUI": true,
+  "accent": "#000000",
+  "accentHue": "black",
+  "canvas": "#000000",
+  "ink": "#ffffff",
+  "displayFont": "hashicorpSans",
+  "bodyFont": "hashicorpSans",
+  "monoFont": null,
+  "fontSubstitutes": [
+   "Inter",
+   "Geist Sans",
+   "IBM Plex Sans"
+  ],
+  "shape": "round",
+  "radiusControl": 8.0,
+  "radiusCard": 12.0,
+  "pillButtons": false,
+  "displaySize": 80.0,
+  "bodySize": 16.0,
+  "spaceBase": 8,
+  "section": 96.0,
+  "density": "airy",
+  "contrastIssues": [
+   "button / accent against page 1.0:1 (<3)",
+   "focus ring 1.0:1 (<3)"
+  ],
+  "summary": "An enterprise-infrastructure marketing canvas built around a near-black ground (#000000) and a system of per-product accent colors — Terraform purple, Vault yellow, Consul pink, Waypoint cyan, Vagrant blue — that act as identity tokens rather than decorative p…",
+  "derivedRoles": [
+   "focus",
+   "link",
+   "primary-hover"
+  ]
+ },
+ {
+  "slug": "hp",
+  "category": "Big tech & hardware",
+  "theme": "light",
+  "productUI": false,
+  "accent": "#024ad8",
+  "accentHue": "indigo",
+  "canvas": "#ffffff",
+  "ink": "#1a1a1a",
+  "displayFont": "Forma DJR Micro",
+  "bodyFont": "Forma DJR Micro",
+  "monoFont": null,
+  "fontSubstitutes": [
+   "Inter",
+   "Manrope",
+   "Roboto"
+  ],
+  "shape": "soft",
+  "radiusControl": 4.0,
+  "radiusCard": 8.0,
+  "pillButtons": false,
+  "displaySize": 72.0,
+  "bodySize": 16.0,
+  "spaceBase": 8,
+  "section": 80.0,
+  "density": "balanced",
+  "contrastIssues": [
+   "placeholder / large meta 1.8:1 (<3)",
+   "warning icon/badge 2.3:1 (<3)"
+  ],
+  "summary": "An inspired interpretation of HP's design language — a white-paper enterprise-consumer system anchored by HP Electric Blue (`#024ad8`) as the lone signal CTA, near-black ink (`#1a1a1a`) for headlines, geometric Forma-DJR sans throughout, and angular blue-chevr…",
+  "derivedRoles": [
+   "accent",
+   "focus",
+   "surface",
+   "surface-raised"
+  ]
+ },
+ {
+  "slug": "ibm",
+  "category": "Big tech & hardware",
+  "theme": "light",
+  "productUI": true,
+  "accent": "#0f62fe",
+  "accentHue": "indigo",
+  "canvas": "#ffffff",
+  "ink": "#161616",
+  "displayFont": "IBM Plex Sans",
+  "bodyFont": "IBM Plex Sans",
+  "monoFont": null,
+  "fontSubstitutes": [],
+  "shape": "sharp",
+  "radiusControl": 0.0,
+  "radiusCard": 8.0,
+  "pillButtons": false,
+  "displaySize": 76.0,
+  "bodySize": 16.0,
+  "spaceBase": 8,
+  "section": 96.0,
+  "density": "airy",
+  "contrastIssues": [
+   "warning icon/badge 1.7:1 (<3)"
+  ],
+  "summary": "An enterprise-marketing canvas faithful to Carbon Design System: white surfaces, charcoal type, IBM Blue (#0f62fe) as the single confident accent, and a deliberately flat-square aesthetic where corners stay at 0–4px. Type runs IBM Plex Sans at light weight 300…",
+  "derivedRoles": [
+   "accent",
+   "focus",
+   "link",
+   "primary-hover"
+  ]
+ },
+ {
+  "slug": "intercom",
+  "category": "Productivity & SaaS",
+  "theme": "light",
+  "productUI": true,
+  "accent": "#111111",
+  "accentHue": "black",
+  "canvas": "#f5f1ec",
+  "ink": "#111111",
+  "displayFont": "Saans",
+  "bodyFont": "Saans",
+  "monoFont": "SaansMono",
+  "fontSubstitutes": [
+   "Söhne",
+   "Inter",
+   "Geist Sans"
+  ],
+  "shape": "round",
+  "radiusControl": 8.0,
+  "radiusCard": 12.0,
+  "pillButtons": false,
+  "displaySize": 72.0,
+  "bodySize": 16.0,
+  "spaceBase": 8,
+  "section": 96.0,
+  "density": "airy",
+  "contrastIssues": [
+   "success icon/badge 1.6:1 (<3)",
+   "warning icon/badge 2.0:1 (<3)"
+  ],
+  "summary": "An editorial customer-service marketing canvas built around a soft cream-white ground, charcoal type set in Saans (Intercom's proprietary geometric sans), and a single confident Fin Orange (#ff5600) reserved for the Fin AI brand. Cards live as floating white t…",
+  "derivedRoles": [
+   "accent",
+   "focus",
+   "link",
+   "primary-hover"
+  ]
+ },
+ {
+  "slug": "kraken",
+  "category": "Fintech & payments",
+  "theme": "light",
+  "productUI": true,
+  "accent": "#7132f5",
+  "accentHue": "indigo",
+  "canvas": "#ffffff",
+  "ink": "#101114",
+  "displayFont": "Kraken-Brand",
+  "bodyFont": "Kraken-Product",
+  "monoFont": null,
+  "fontSubstitutes": [],
+  "shape": "round",
+  "radiusControl": 8.0,
+  "radiusCard": 10.0,
+  "pillButtons": false,
+  "displaySize": 48.0,
+  "bodySize": 16.0,
+  "spaceBase": 8,
+  "section": 96.0,
+  "density": "airy",
+  "contrastIssues": [
+   "placeholder / large meta 2.9:1 (<3)",
+   "warning icon/badge 2.3:1 (<3)"
+  ],
+  "summary": "Kraken's website is a clean, trustworthy crypto exchange that uses purple as its commanding brand color. The design operates on white backgrounds with Kraken Purple (`#7132f5`, `#5741d8`, `#5b1ecf`) creating a distinctive, professional crypto identity. The pro…",
+  "derivedRoles": [
+   "accent",
+   "focus",
+   "link",
+   "primary-hover",
+   "surface",
+   "surface-raised"
+  ]
+ },
+ {
+  "slug": "lamborghini",
+  "category": "Automotive & luxury",
+  "theme": "dark",
+  "productUI": false,
+  "accent": "#ffc000",
+  "accentHue": "amber",
+  "canvas": "#000000",
+  "ink": "#ffffff",
+  "displayFont": "LamboType",
+  "bodyFont": "LamboType",
+  "monoFont": null,
+  "fontSubstitutes": [],
+  "shape": "sharp",
+  "radiusControl": 2.0,
+  "radiusCard": 20.0,
+  "pillButtons": false,
+  "displaySize": 120.0,
+  "bodySize": 16.0,
+  "spaceBase": 8,
+  "section": 96.0,
+  "density": "airy",
+  "contrastIssues": [
+   "links 3.6:1 (<4.5)",
+   "error text 4.4:1 (<4.5)"
+  ],
+  "summary": "Lamborghini's website is a cathedral of darkness — a digital stage where jet-black surfaces stretch infinitely and every element emerges from the void like a machine under a spotlight. The page is almost entirely black. Not dark gray, not near-black — true, un…",
+  "derivedRoles": [
+   "accent",
+   "focus",
+   "primary-hover",
+   "surface-raised"
+  ]
+ },
+ {
+  "slug": "linear.app",
+  "category": "Productivity & SaaS",
+  "theme": "dark",
+  "productUI": true,
+  "accent": "#5e6ad2",
+  "accentHue": "indigo",
+  "canvas": "#010102",
+  "ink": "#f7f8f8",
+  "displayFont": "Linear Display",
+  "bodyFont": "Linear Text",
+  "monoFont": "Linear Mono",
+  "fontSubstitutes": [
+   "Inter",
+   "Geist Sans",
+   "JetBrains Mono"
+  ],
+  "shape": "round",
+  "radiusControl": 8.0,
+  "radiusCard": 12.0,
+  "pillButtons": false,
+  "displaySize": 80.0,
+  "bodySize": 16.0,
+  "spaceBase": 8,
+  "section": 96.0,
+  "density": "airy",
+  "contrastIssues": [
+   "error text 4.4:1 (<4.5)"
+  ],
+  "summary": "A near-black product-focused marketing canvas built around #010102 (the deepest dark surface of any tool in this collection), light gray text (#f7f8f8), and the signature Linear lavender-blue (#5e6ad2) used as the single chromatic accent. The system reads as s…",
+  "derivedRoles": [
+   "accent",
+   "link"
+  ]
+ },
+ {
+  "slug": "lovable",
+  "category": "AI & models",
+  "theme": "light",
+  "productUI": false,
+  "accent": "#1c1c1c",
+  "accentHue": "black",
+  "canvas": "#f7f4ed",
+  "ink": "#1c1c1c",
+  "displayFont": "Camera Plain Variable",
+  "bodyFont": "Camera Plain Variable",
+  "monoFont": null,
+  "fontSubstitutes": [],
+  "shape": "round",
+  "radiusControl": 8.0,
+  "radiusCard": 12.0,
+  "pillButtons": false,
+  "displaySize": 60.0,
+  "bodySize": 16.0,
+  "spaceBase": 8,
+  "section": 96.0,
+  "density": "airy",
+  "contrastIssues": [
+   "warning icon/badge 2.1:1 (<3)",
+   "error text 4.3:1 (<4.5)"
+  ],
+  "summary": "Lovable's website radiates warmth through restraint. The entire page sits on a creamy, parchment-toned background (`#f7f4ed`) that immediately separates it from the cold-white conventions of most developer tool sites. This isn't minimalism for minimalism's sak…",
+  "derivedRoles": [
+   "accent",
+   "ink-subtle",
+   "link",
+   "primary-hover",
+   "surface-raised"
+  ]
+ },
+ {
+  "slug": "mastercard",
+  "category": "Fintech & payments",
+  "theme": "light",
+  "productUI": false,
+  "accent": "#141413",
+  "accentHue": "black",
+  "canvas": "#f3f0ee",
+  "ink": "#141413",
+  "displayFont": "MarkForMC",
+  "bodyFont": "MarkForMC",
+  "monoFont": null,
+  "fontSubstitutes": [
+   "Sofia Sans",
+   "Inter",
+   "Neue Haas Grotesk"
+  ],
+  "shape": "round",
+  "radiusControl": 24.0,
+  "radiusCard": 40.0,
+  "pillButtons": false,
+  "displaySize": 64.0,
+  "bodySize": 16.0,
+  "spaceBase": 8,
+  "section": 96.0,
+  "density": "airy",
+  "contrastIssues": [
+   "warning icon/badge 2.0:1 (<3)",
+   "error text 4.2:1 (<4.5)"
+  ],
+  "summary": "Mastercard's experience reads like a warm, editorial magazine built from soft stone and signal orange. The canvas is a muted putty-cream (`#F3F0EE`) — not white, not gray, but a color that feels like the paper of a premium annual report. On top of that canvas,…",
+  "derivedRoles": [
+   "focus",
+   "primary-hover",
+   "surface-raised"
+  ]
+ },
+ {
+  "slug": "meta",
+  "category": "Big tech & hardware",
+  "theme": "light",
+  "productUI": false,
+  "accent": "#0064e0",
+  "accentHue": "indigo",
+  "canvas": "#ffffff",
+  "ink": "#1c1e21",
+  "displayFont": "Optimistic VF",
+  "bodyFont": "Optimistic VF",
+  "monoFont": null,
+  "fontSubstitutes": [],
+  "shape": "pill",
+  "radiusControl": 6.0,
+  "radiusCard": 8.0,
+  "pillButtons": true,
+  "displaySize": 64.0,
+  "bodySize": 16.0,
+  "spaceBase": 8,
+  "section": 64.0,
+  "density": "balanced",
+  "contrastIssues": [
+   "warning icon/badge 1.8:1 (<3)"
+  ],
+  "summary": "Meta's design system spans hardware commerce (Quest VR, Ray-Ban Meta AI glasses) and brand surfaces with a confident product-merchandising voice. The system pairs a stark white canvas with full-bleed photographic product cards, a confident Optimistic VF wordma…",
+  "derivedRoles": [
+   "accent",
+   "focus",
+   "link"
+  ]
+ },
+ {
+  "slug": "minimax",
+  "category": "AI & models",
+  "theme": "light",
+  "productUI": false,
+  "accent": "#0a0a0a",
+  "accentHue": "black",
+  "canvas": "#ffffff",
+  "ink": "#0a0a0a",
+  "displayFont": "DM Sans",
+  "bodyFont": "DM Sans",
+  "monoFont": null,
+  "fontSubstitutes": [],
+  "shape": "pill",
+  "radiusControl": 8.0,
+  "radiusCard": 12.0,
+  "pillButtons": true,
+  "displaySize": 80.0,
+  "bodySize": 16.0,
+  "spaceBase": 8,
+  "section": 64.0,
+  "density": "balanced",
+  "contrastIssues": [
+   "secondary text 2.3:1 (<4.5)",
+   "secondary text on cards 2.2:1 (<4.5)",
+   "placeholder / large meta 2.3:1 (<3)",
+   "warning icon/badge 2.3:1 (<3)"
+  ],
+  "summary": "MiniMax presents itself as a premium AI infrastructure brand through a striking duality — bold black-pill CTAs and stark white canvas for marketing, paired with vibrant gradient product cards (orange-red, magenta-pink, purple, blue) that turn each model releas…",
+  "derivedRoles": [
+   "accent",
+   "focus",
+   "link",
+   "primary-hover"
+  ]
+ },
+ {
+  "slug": "mintlify",
+  "category": "Developer tools & infra",
+  "theme": "light",
+  "productUI": true,
+  "accent": "#0a0a0a",
+  "accentHue": "black",
+  "canvas": "#ffffff",
+  "ink": "#0a0a0a",
+  "displayFont": "Inter",
+  "bodyFont": "Inter",
+  "monoFont": "Geist Mono",
+  "fontSubstitutes": [],
+  "shape": "pill",
+  "radiusControl": 8.0,
+  "radiusCard": 12.0,
+  "pillButtons": true,
+  "displaySize": 72.0,
+  "bodySize": 16.0,
+  "spaceBase": 8,
+  "section": 64.0,
+  "density": "balanced",
+  "contrastIssues": [
+   "secondary text 2.4:1 (<4.5)",
+   "secondary text on cards 2.2:1 (<4.5)",
+   "placeholder / large meta 2.4:1 (<3)",
+   "warning icon/badge 2.3:1 (<3)"
+  ],
+  "summary": "Mintlify presents documentation infrastructure with a dual-mode aesthetic — atmospheric sky-gradient marketing heroes (cloud illustration backdrops, soft cream-to-blue washes) paired with dense developer-grade documentation surfaces. The system uses Inter for …",
+  "derivedRoles": [
+   "accent",
+   "focus",
+   "link",
+   "primary-hover"
+  ]
+ },
+ {
+  "slug": "miro",
+  "category": "Productivity & SaaS",
+  "theme": "light",
+  "productUI": true,
+  "accent": "#1c1c1e",
+  "accentHue": "black",
+  "canvas": "#ffffff",
+  "ink": "#1c1c1e",
+  "displayFont": "Roobert PRO",
+  "bodyFont": "Roobert PRO",
+  "monoFont": null,
+  "fontSubstitutes": [],
+  "shape": "pill",
+  "radiusControl": 8.0,
+  "radiusCard": 12.0,
+  "pillButtons": true,
+  "displaySize": 80.0,
+  "bodySize": 16.0,
+  "spaceBase": 8,
+  "section": 64.0,
+  "density": "balanced",
+  "contrastIssues": [
+   "secondary text 2.4:1 (<4.5)",
+   "secondary text on cards 2.2:1 (<4.5)",
+   "placeholder / large meta 2.4:1 (<3)",
+   "warning icon/badge 2.3:1 (<3)"
+  ],
+  "summary": "Miro presents itself as the AI-powered visual workspace through a confident, almost playful brand voice — anchored by its signature canary yellow ({colors.brand-yellow}) wordmark over white canvas, broken open by colorful pastel feature tints (rose, teal, cora…",
+  "derivedRoles": [
+   "accent",
+   "focus",
+   "link",
+   "primary-hover"
+  ]
+ },
+ {
+  "slug": "mistral.ai",
+  "category": "AI & models",
+  "theme": "light",
+  "productUI": false,
+  "accent": "#fa520f",
+  "accentHue": "red",
+  "canvas": "#ffffff",
+  "ink": "#1f1f1f",
+  "displayFont": "PP Editorial Old",
+  "bodyFont": "Inter",
+  "monoFont": "JetBrains Mono",
+  "fontSubstitutes": [],
+  "shape": "round",
+  "radiusControl": 8.0,
+  "radiusCard": 12.0,
+  "pillButtons": false,
+  "displaySize": 84.0,
+  "bodySize": 16.0,
+  "spaceBase": 8,
+  "section": 64.0,
+  "density": "balanced",
+  "contrastIssues": [
+   "secondary text 2.4:1 (<4.5)",
+   "secondary text on cards 2.3:1 (<4.5)",
+   "placeholder / large meta 2.4:1 (<3)",
+   "button label 3.3:1 (<4.5)",
+   "links 3.3:1 (<4.5)",
+   "warning icon/badge 2.3:1 (<3)"
+  ],
+  "summary": "Mistral AI brands itself with a singular signature — atmospheric sunset gradients (mustard, orange, deep red) layered over photography of mountains, plus a horizontal \"sunset stripe\" bar that closes every page. The system pairs warm cream-yellow surfaces ({col…",
+  "derivedRoles": [
+   "accent",
+   "focus",
+   "surface-raised"
+  ]
+ },
+ {
+  "slug": "mongodb",
+  "category": "Developer tools & infra",
+  "theme": "light",
+  "productUI": true,
+  "accent": "#00ed64",
+  "accentHue": "lime",
+  "canvas": "#ffffff",
+  "ink": "#001e2b",
+  "displayFont": "Euclid Circular A",
+  "bodyFont": "Euclid Circular A",
+  "monoFont": "Source Code Pro",
+  "fontSubstitutes": [],
+  "shape": "pill",
+  "radiusControl": 8.0,
+  "radiusCard": 12.0,
+  "pillButtons": true,
+  "displaySize": 72.0,
+  "bodySize": 16.0,
+  "spaceBase": 8,
+  "section": 64.0,
+  "density": "balanced",
+  "contrastIssues": [
+   "secondary text 2.1:1 (<4.5)",
+   "secondary text on cards 2.1:1 (<4.5)",
+   "placeholder / large meta 2.1:1 (<3)",
+   "button / accent against page 1.6:1 (<3)",
+   "focus ring 1.6:1 (<3)",
+   "warning icon/badge 2.3:1 (<3)"
+  ],
+  "summary": "MongoDB carries a strong dual-mode visual identity — dark deep-teal hero bands with bright MongoDB green ({colors.brand-green}) CTAs paired with stark white documentation surfaces. The signature green pill button is unmistakable across product, pricing, learni…",
+  "derivedRoles": [
+   "focus",
+   "link"
+  ]
+ },
+ {
+  "slug": "nike",
+  "category": "Consumer & commerce",
+  "theme": "light",
+  "productUI": false,
+  "accent": "#111111",
+  "accentHue": "black",
+  "canvas": "#ffffff",
+  "ink": "#111111",
+  "displayFont": "Nike Futura ND",
+  "bodyFont": "Helvetica Now Text",
+  "monoFont": null,
+  "fontSubstitutes": [
+   "Bebas Neue",
+   "Inter"
+  ],
+  "shape": "pill",
+  "radiusControl": 24.0,
+  "radiusCard": 30.0,
+  "pillButtons": true,
+  "displaySize": 96.0,
+  "bodySize": 16.0,
+  "spaceBase": 4,
+  "section": 48.0,
+  "density": "dense",
+  "contrastIssues": [
+   "warning icon/badge 2.3:1 (<3)"
+  ],
+  "summary": "A photography-first commerce system built on extreme typographic contrast — towering uppercase Futura display lockups burned into editorial campaign imagery, sitting above a dense, neutral, near-monochrome retail chrome of pill-shaped black CTAs, gray search a…",
+  "derivedRoles": [
+   "accent",
+   "focus",
+   "link",
+   "primary-hover",
+   "surface",
+   "surface-raised"
+  ]
+ },
+ {
+  "slug": "nintendo-2001",
+  "category": "Consumer & commerce",
+  "theme": "light",
+  "productUI": false,
+  "accent": "#e60012",
+  "accentHue": "red",
+  "canvas": "#7a8aba",
+  "ink": "#21242e",
+  "displayFont": "Arial Black",
+  "bodyFont": "Arial",
+  "monoFont": null,
+  "fontSubstitutes": [
+   "Silkscreen",
+   "VT323",
+   "Press Start 2P"
+  ],
+  "shape": "sharp",
+  "radiusControl": 2.0,
+  "radiusCard": 10.0,
+  "pillButtons": false,
+  "displaySize": 44.0,
+  "bodySize": 12.0,
+  "spaceBase": 4,
+  "section": 48.0,
+  "density": "dense",
+  "contrastIssues": [
+   "body text 4.6:1 (<7)",
+   "secondary text 2.9:1 (<4.5)",
+   "placeholder / large meta 2.1:1 (<3)",
+   "button / accent against page 1.4:1 (<3)",
+   "focus ring 1.4:1 (<3)",
+   "success icon/badge 1.0:1 (<3)",
+   "warning icon/badge 1.7:1 (<3)",
+   "error text 1.4:1 (<4.5)"
+  ],
+  "summary": "An analysis of Nintendo.com's 2001 design language — a brushed-periwinkle \"console chrome\" interface where every panel is a beveled metal plate, navigation glows amber over a halftone-dotted carbon bar, and bold outlined display type sits on circuit-board hero…",
+  "derivedRoles": [
+   "accent",
+   "focus",
+   "ink-muted",
+   "ink-subtle",
+   "link",
+   "primary-hover",
+   "surface-raised"
+  ]
+ },
+ {
+  "slug": "notion",
+  "category": "Productivity & SaaS",
+  "theme": "light",
+  "productUI": true,
+  "accent": "#5645d4",
+  "accentHue": "indigo",
+  "canvas": "#ffffff",
+  "ink": "#1a1a1a",
+  "displayFont": "Notion Sans",
+  "bodyFont": "Notion Sans",
+  "monoFont": null,
+  "fontSubstitutes": [],
+  "shape": "round",
+  "radiusControl": 8.0,
+  "radiusCard": 12.0,
+  "pillButtons": false,
+  "displaySize": 80.0,
+  "bodySize": 16.0,
+  "spaceBase": 8,
+  "section": 64.0,
+  "density": "balanced",
+  "contrastIssues": [
+   "secondary text 2.0:1 (<4.5)",
+   "secondary text on cards 1.8:1 (<4.5)",
+   "placeholder / large meta 2.0:1 (<3)",
+   "success icon/badge 2.9:1 (<3)"
+  ],
+  "summary": "Notion presents itself as the all-in-one workspace through a confident, illustration-rich brand voice — anchored by a deep navy hero band ({colors.brand-navy}) decorated with brand-colored sticky-note dots and mesh wire illustrations, a signature purple pill p…",
+  "derivedRoles": [
+   "accent",
+   "focus"
+  ]
+ },
+ {
+  "slug": "nvidia",
+  "category": "Big tech & hardware",
+  "theme": "light",
+  "productUI": false,
+  "accent": "#76b900",
+  "accentHue": "lime",
+  "canvas": "#ffffff",
+  "ink": "#000000",
+  "displayFont": "NVIDIA-EMEA",
+  "bodyFont": "NVIDIA-EMEA",
+  "monoFont": null,
+  "fontSubstitutes": [
+   "Inter",
+   "Arial"
+  ],
+  "shape": "sharp",
+  "radiusControl": 2.0,
+  "radiusCard": 2.0,
+  "pillButtons": false,
+  "displaySize": 48.0,
+  "bodySize": 16.0,
+  "spaceBase": 4,
+  "section": 64.0,
+  "density": "balanced",
+  "contrastIssues": [
+   "button / accent against page 2.4:1 (<3)",
+   "focus ring 2.4:1 (<3)"
+  ],
+  "summary": "An engineering-grade marketing system organized around two surface modes — a deep black canvas for hero and footer chapters and a flat paper-white canvas for body content — connected by a single, almost violently saturated NVIDIA Green accent that carries ever…",
+  "derivedRoles": [
+   "accent",
+   "focus"
+  ]
+ },
+ {
+  "slug": "ollama",
+  "category": "AI & models",
+  "theme": "light",
+  "productUI": false,
+  "accent": "#000000",
+  "accentHue": "black",
+  "canvas": "#ffffff",
+  "ink": "#000000",
+  "displayFont": "SF Pro Rounded",
+  "bodyFont": "ui-sans-serif",
+  "monoFont": "ui-monospace",
+  "fontSubstitutes": [
+   "Nunito",
+   "Inter",
+   "JetBrains Mono"
+  ],
+  "shape": "pill",
+  "radiusControl": 8.0,
+  "radiusCard": 12.0,
+  "pillButtons": true,
+  "displaySize": 36.0,
+  "bodySize": 16.0,
+  "spaceBase": 4,
+  "section": 88.0,
+  "density": "balanced",
+  "contrastIssues": [
+   "placeholder / large meta 2.5:1 (<3)",
+   "focus ring 1.8:1 (<3)",
+   "warning icon/badge 2.3:1 (<3)"
+  ],
+  "summary": "An almost defiantly minimal documentation-first system that treats the home page like a Markdown README — paper-white canvas, 36px center-aligned heading, a single black pill CTA, an inline terminal install snippet, and a hand-drawn llama mascot as the only or…",
+  "derivedRoles": [
+   "accent",
+   "primary-hover"
+  ]
+ },
+ {
+  "slug": "opencode.ai",
+  "category": "Developer tools & infra",
+  "theme": "light",
+  "productUI": true,
+  "accent": "#201d1d",
+  "accentHue": "black",
+  "canvas": "#fdfcfc",
+  "ink": "#201d1d",
+  "displayFont": "Berkeley Mono",
+  "bodyFont": "Berkeley Mono",
+  "monoFont": null,
+  "fontSubstitutes": [
+   "JetBrains Mono",
+   "IBM Plex Mono",
+   "Geist Mono"
+  ],
+  "shape": "soft",
+  "radiusControl": 4.0,
+  "radiusCard": 4.0,
+  "pillButtons": false,
+  "displaySize": 38.0,
+  "bodySize": 16.0,
+  "spaceBase": 4,
+  "section": 96.0,
+  "density": "airy",
+  "contrastIssues": [
+   "success icon/badge 2.0:1 (<3)",
+   "warning icon/badge 2.0:1 (<3)",
+   "error text 3.5:1 (<4.5)"
+  ],
+  "summary": "A terminal-native marketing system rendered entirely in Berkeley Mono — every word on the page, from the hero headline down to the footer fine print, is monospaced. The page itself reads like a manpage or a static-site README: warm cream canvas (`#fdfcfc`), ne…",
+  "derivedRoles": [
+   "focus",
+   "link",
+   "primary-hover"
+  ]
+ },
+ {
+  "slug": "pinterest",
+  "category": "Consumer & commerce",
+  "theme": "light",
+  "productUI": false,
+  "accent": "#e60023",
+  "accentHue": "red",
+  "canvas": "#ffffff",
+  "ink": "#000000",
+  "displayFont": "Pin Sans",
+  "bodyFont": "Pin Sans",
+  "monoFont": null,
+  "fontSubstitutes": [
+   "Inter",
+   "Manrope"
+  ],
+  "shape": "round",
+  "radiusControl": 16.0,
+  "radiusCard": 32.0,
+  "pillButtons": false,
+  "displaySize": 70.0,
+  "bodySize": 16.0,
+  "spaceBase": 8,
+  "section": 64.0,
+  "density": "balanced",
+  "contrastIssues": [
+   "warning icon/badge 2.3:1 (<3)"
+  ],
+  "summary": "A photography-first discovery system organized around the Pinterest Red CTA, the masonry pin grid, and a soft warm-cream chrome that gets out of the imagery's way. The home page is a content-discovery tool wearing the chrome of a magazine publisher: 70px displ…",
+  "derivedRoles": [
+   "accent",
+   "focus",
+   "link"
+  ]
+ },
+ {
+  "slug": "playstation",
+  "category": "Consumer & commerce",
+  "theme": "light",
+  "productUI": false,
+  "accent": "#0070d1",
+  "accentHue": "blue",
+  "canvas": "#ffffff",
+  "ink": "#000000",
+  "displayFont": "PlayStation SST",
+  "bodyFont": "PlayStation SST",
+  "monoFont": null,
+  "fontSubstitutes": [
+   "Inter"
+  ],
+  "shape": "pill",
+  "radiusControl": 8.0,
+  "radiusCard": 16.0,
+  "pillButtons": true,
+  "displaySize": 54.0,
+  "bodySize": 18.0,
+  "spaceBase": 8,
+  "section": 96.0,
+  "density": "airy",
+  "contrastIssues": [],
+  "summary": "A three-surface marketing system organized around alternating black, white, and PlayStation Blue chapters that scroll past the viewer like a console launch trailer. Each section has a single editorial purpose — hero photography, console product render, PS Plus…",
+  "derivedRoles": [
+   "accent",
+   "focus",
+   "hairline",
+   "ink-subtle",
+   "link"
+  ]
+ },
+ {
+  "slug": "posthog",
+  "category": "Developer tools & infra",
+  "theme": "light",
+  "productUI": true,
+  "accent": "#f7a501",
+  "accentHue": "amber",
+  "canvas": "#eeefe9",
+  "ink": "#23251d",
+  "displayFont": "IBM Plex Sans Variable",
+  "bodyFont": "IBM Plex Sans Variable",
+  "monoFont": null,
+  "fontSubstitutes": [
+   "Inter",
+   "JetBrains Mono"
+  ],
+  "shape": "soft",
+  "radiusControl": 6.0,
+  "radiusCard": 8.0,
+  "pillButtons": false,
+  "displaySize": 36.0,
+  "bodySize": 16.0,
+  "spaceBase": 4,
+  "section": 80.0,
+  "density": "balanced",
+  "contrastIssues": [
+   "button / accent against page 1.8:1 (<3)",
+   "focus ring 1.7:1 (<3)",
+   "success icon/badge 3.0:1 (<3)",
+   "warning icon/badge 2.0:1 (<3)",
+   "error text 4.1:1 (<4.5)"
+  ],
+  "summary": "A playful developer-tools system rendered on a warm cream canvas with hand-drawn hedgehog mascots dotted across every page like marginalia in a sketchbook. The chrome reads like a friendly engineering blog: olive-gray ink (#4d4f46) for body, deep olive-charcoa…",
+  "derivedRoles": []
+ },
+ {
+  "slug": "raycast",
+  "category": "Developer tools & infra",
+  "theme": "dark",
+  "productUI": true,
+  "accent": "#ffffff",
+  "accentHue": "white",
+  "canvas": "#07080a",
+  "ink": "#f4f4f6",
+  "displayFont": "Inter",
+  "bodyFont": "Inter",
+  "monoFont": null,
+  "fontSubstitutes": [
+   "JetBrains Mono",
+   "Geist Mono"
+  ],
+  "shape": "round",
+  "radiusControl": 8.0,
+  "radiusCard": 10.0,
+  "pillButtons": false,
+  "displaySize": 64.0,
+  "bodySize": 16.0,
+  "spaceBase": 4,
+  "section": 96.0,
+  "density": "airy",
+  "contrastIssues": [
+   "error text 4.2:1 (<4.5)"
+  ],
+  "summary": "Raycast's marketing system reads like an extended product screenshot. The chrome IS the in-product chrome at marketing scale: pure-near-black canvas, hairline 1px borders, command-palette-style cards, Inter typography with the ss03 stylistic set enabled site-w…",
+  "derivedRoles": [
+   "focus",
+   "link"
+  ]
+ },
+ {
+  "slug": "renault",
+  "category": "Automotive & luxury",
+  "theme": "light",
+  "productUI": false,
+  "accent": "#ffed00",
+  "accentHue": "yellow",
+  "canvas": "#ffffff",
+  "ink": "#000000",
+  "displayFont": "NouvelR",
+  "bodyFont": "NouvelR",
+  "monoFont": null,
+  "fontSubstitutes": [],
+  "shape": "sharp",
+  "radiusControl": 2.0,
+  "radiusCard": 46.0,
+  "pillButtons": false,
+  "displaySize": 56.0,
+  "bodySize": 16.0,
+  "spaceBase": 8,
+  "section": 80.0,
+  "density": "balanced",
+  "contrastIssues": [
+   "button / accent against page 1.2:1 (<3)",
+   "focus ring 1.2:1 (<3)",
+   "success icon/badge 2.0:1 (<3)",
+   "warning icon/badge 1.9:1 (<3)",
+   "error text 4.0:1 (<4.5)"
+  ],
+  "summary": "Renault's web presence pairs the freshly-modernised Renault diamond (the 2021 flat-line rhombus mark) with a stark black-and-white canvas, a signature Sunlight Yellow accent, and the proprietary NouvelR display typeface. The system reads as confident, photogra…",
+  "derivedRoles": [
+   "accent",
+   "focus"
+  ]
+ },
+ {
+  "slug": "replicate",
+  "category": "AI & models",
+  "theme": "light",
+  "productUI": false,
+  "accent": "#ea2804",
+  "accentHue": "red",
+  "canvas": "#f9f7f3",
+  "ink": "#202020",
+  "displayFont": "rb-freigeist-neue",
+  "bodyFont": "basier-square",
+  "monoFont": "jetbrains-mono",
+  "fontSubstitutes": [],
+  "shape": "pill",
+  "radiusControl": 10.0,
+  "radiusCard": 16.0,
+  "pillButtons": true,
+  "displaySize": 128.0,
+  "bodySize": 16.0,
+  "spaceBase": 4,
+  "section": 96.0,
+  "density": "airy",
+  "contrastIssues": [
+   "button label 4.4:1 (<4.5)",
+   "links 4.1:1 (<4.5)",
+   "warning icon/badge 2.1:1 (<3)",
+   "error text 4.4:1 (<4.5)"
+  ],
+  "summary": "Replicate's marketing surfaces pair the warm-cream developer-tools aesthetic of an indie ML playground with a confident hot-orange brand accent and a signature display typeface (rb-freigeist-neue) sized aggressively large at 72px+. The system reads as \"AI lab …",
+  "derivedRoles": [
+   "accent",
+   "focus",
+   "surface-raised"
+  ]
+ },
+ {
+  "slug": "resend",
+  "category": "Developer tools & infra",
+  "theme": "dark",
+  "productUI": true,
+  "accent": "#fcfdff",
+  "accentHue": "white",
+  "canvas": "#000000",
+  "ink": "#fcfdff",
+  "displayFont": "Domaine Display",
+  "bodyFont": "ABC Favorit",
+  "monoFont": "Geist Mono",
+  "fontSubstitutes": [],
+  "shape": "round",
+  "radiusControl": 8.0,
+  "radiusCard": 12.0,
+  "pillButtons": false,
+  "displaySize": 96.0,
+  "bodySize": 16.0,
+  "spaceBase": 4,
+  "section": 96.0,
+  "density": "airy",
+  "contrastIssues": [
+   "error text 4.4:1 (<4.5)"
+  ],
+  "summary": "Resend's marketing surfaces sit on a near-pure black canvas with off-white text and a single signature color — the deep editorial-serif Domaine Display headline mark — that gives an otherwise utilitarian developer-tool brand its print-magazine confidence. The …",
+  "derivedRoles": [
+   "focus",
+   "on-primary",
+   "primary-hover"
+  ]
+ },
+ {
+  "slug": "revolut",
+  "category": "Fintech & payments",
+  "theme": "light",
+  "productUI": true,
+  "accent": "#494fdf",
+  "accentHue": "indigo",
+  "canvas": "#ffffff",
+  "ink": "#191c1f",
+  "displayFont": "Aeonik Pro",
+  "bodyFont": "Inter",
+  "monoFont": null,
+  "fontSubstitutes": [],
+  "shape": "pill",
+  "radiusControl": 12.0,
+  "radiusCard": 20.0,
+  "pillButtons": true,
+  "displaySize": 136.0,
+  "bodySize": 16.0,
+  "spaceBase": 8,
+  "section": 88.0,
+  "density": "balanced",
+  "contrastIssues": [
+   "warning icon/badge 2.3:1 (<3)"
+  ],
+  "summary": "Revolut's marketing surfaces pair a stark black canvas with the brand's cobalt-violet (`#494fdf`) and a wide accent palette of deep, fully-saturated product colours — teal, light-blue, deep pink, light-green, warning orange. The system reads as fintech-meets-p…",
+  "derivedRoles": [
+   "accent",
+   "focus",
+   "hairline"
+  ]
+ },
+ {
+  "slug": "runwayml",
+  "category": "AI & models",
+  "theme": "dark",
+  "productUI": false,
+  "accent": "#ffffff",
+  "accentHue": "white",
+  "canvas": "#000000",
+  "ink": "#ffffff",
+  "displayFont": "abcNormal",
+  "bodyFont": "abcNormal",
+  "monoFont": null,
+  "fontSubstitutes": [],
+  "shape": "round",
+  "radiusControl": 8.0,
+  "radiusCard": 16.0,
+  "pillButtons": false,
+  "displaySize": 48.0,
+  "bodySize": 16.0,
+  "spaceBase": 8,
+  "section": 96.0,
+  "density": "airy",
+  "contrastIssues": [
+   "error text 4.4:1 (<4.5)"
+  ],
+  "summary": "Runway's interface is a cinematic reel brought to life as a website — a dark, editorial, film-production-grade design where full-bleed photography and video ARE the primary UI elements. This is not a typical tech product page; it's a visual manifesto for AI-po…",
+  "derivedRoles": [
+   "accent",
+   "focus",
+   "link",
+   "primary-hover",
+   "surface-raised"
+  ]
+ },
+ {
+  "slug": "sanity",
+  "category": "Developer tools & infra",
+  "theme": "dark",
+  "productUI": false,
+  "accent": "#f36458",
+  "accentHue": "red",
+  "canvas": "#0b0b0b",
+  "ink": "#ffffff",
+  "displayFont": "waldenburgNormal",
+  "bodyFont": "waldenburgNormal",
+  "monoFont": "IBM Plex Mono",
+  "fontSubstitutes": [],
+  "shape": "soft",
+  "radiusControl": 5.0,
+  "radiusCard": 8.0,
+  "pillButtons": false,
+  "displaySize": 112.0,
+  "bodySize": 16.0,
+  "spaceBase": 8,
+  "section": 96.0,
+  "density": "airy",
+  "contrastIssues": [
+   "button label 3.1:1 (<4.5)",
+   "error text 3.8:1 (<4.5)"
+  ],
+  "summary": "Sanity's website is a developer-content platform rendered as a nocturnal command center -- dark, precise, and deeply structured. The entire experience sits on a near-black canvas (`#0b0b0b`) that reads less like a \"dark mode toggle\" and more like the natural s…",
+  "derivedRoles": [
+   "link",
+   "primary-hover",
+   "surface-raised"
+  ]
+ },
+ {
+  "slug": "sentry",
+  "category": "Developer tools & infra",
+  "theme": "light",
+  "productUI": true,
+  "accent": "#150f23",
+  "accentHue": "violet",
+  "canvas": "#ffffff",
+  "ink": "#1f1633",
+  "displayFont": "Sentri Display",
+  "bodyFont": "Rubik",
+  "monoFont": "Monaco",
+  "fontSubstitutes": [
+   "Space Grotesk",
+   "Archivo",
+   "Hubot Sans"
+  ],
+  "shape": "round",
+  "radiusControl": 8.0,
+  "radiusCard": 10.0,
+  "pillButtons": false,
+  "displaySize": 88.0,
+  "bodySize": 16.0,
+  "spaceBase": 4,
+  "section": 96.0,
+  "density": "airy",
+  "contrastIssues": [
+   "warning icon/badge 2.3:1 (<3)"
+  ],
+  "summary": "An inspired interpretation of Sentri's design language — a developer-tools brand built on a deep purple-violet midnight canvas, electric lime accents, and a slightly subversive illustrated personality. The system pairs a custom display sans (chunky, playful, n…",
+  "derivedRoles": [
+   "accent",
+   "canvas",
+   "focus",
+   "hairline",
+   "ink-muted",
+   "ink-subtle",
+   "link",
+   "primary-hover",
+   "surface",
+   "surface-raised"
+  ]
+ },
+ {
+  "slug": "shopify",
+  "category": "Consumer & commerce",
+  "theme": "light",
+  "productUI": false,
+  "accent": "#000000",
+  "accentHue": "black",
+  "canvas": "#ffffff",
+  "ink": "#000000",
+  "displayFont": "NeueHaasGrotesk Display",
+  "bodyFont": "Inter Variable",
+  "monoFont": "ui-monospace",
+  "fontSubstitutes": [
+   "Helvetica Now Display",
+   "Inter Display",
+   "Inter Variable"
+  ],
+  "shape": "round",
+  "radiusControl": 8.0,
+  "radiusCard": 12.0,
+  "pillButtons": false,
+  "displaySize": 96.0,
+  "bodySize": 16.0,
+  "spaceBase": 4,
+  "section": 32.0,
+  "density": "dense",
+  "contrastIssues": [
+   "warning icon/badge 2.3:1 (<3)"
+  ],
+  "summary": "An inspired interpretation of Shopifi's design language — a cinematic commerce platform that runs two parallel design tracks. The marketing-hero and product-narrative pages live on near-black canvases with full-bleed photography of merchants, giant Neue Haas G…",
+  "derivedRoles": [
+   "accent",
+   "focus",
+   "hairline",
+   "ink-muted",
+   "ink-subtle",
+   "link",
+   "primary-hover",
+   "surface",
+   "surface-raised"
+  ]
+ },
+ {
+  "slug": "slack",
+  "category": "Productivity & SaaS",
+  "theme": "light",
+  "productUI": true,
+  "accent": "#4a154b",
+  "accentHue": "magenta",
+  "canvas": "#ffffff",
+  "ink": "#1d1d1d",
+  "displayFont": "Salesforce-Avant-Garde",
+  "bodyFont": "Salesforce-Sans",
+  "monoFont": null,
+  "fontSubstitutes": [
+   "Inter",
+   "Lato"
+  ],
+  "shape": "round",
+  "radiusControl": 8.0,
+  "radiusCard": 12.0,
+  "pillButtons": false,
+  "displaySize": 64.0,
+  "bodySize": 16.0,
+  "spaceBase": 4,
+  "section": 24.0,
+  "density": "dense",
+  "contrastIssues": [
+   "warning icon/badge 2.3:1 (<3)"
+  ],
+  "summary": "An inspired interpretation of Slacc's design language — a workplace messaging brand built on a deep aubergine primary, with cream-lavender hero gradients, blue inline links, and pill CTAs. The system pairs a proprietary humanist sans for display with a separat…",
+  "derivedRoles": [
+   "accent",
+   "focus",
+   "ink-muted",
+   "ink-subtle",
+   "surface",
+   "surface-raised"
+  ]
+ },
+ {
+  "slug": "spacex",
+  "category": "Automotive & luxury",
+  "theme": "light",
+  "productUI": false,
+  "accent": "#000000",
+  "accentHue": "black",
+  "canvas": "#ffffff",
+  "ink": "#000000",
+  "displayFont": "D-DIN-Bold",
+  "bodyFont": "D-DIN",
+  "monoFont": null,
+  "fontSubstitutes": [
+   "D-DIN",
+   "Inter"
+  ],
+  "shape": "round",
+  "radiusControl": 16.0,
+  "radiusCard": 32.0,
+  "pillButtons": false,
+  "displaySize": 80.0,
+  "bodySize": 16.0,
+  "spaceBase": 8,
+  "section": 32.0,
+  "density": "dense",
+  "contrastIssues": [
+   "warning icon/badge 2.3:1 (<3)"
+  ],
+  "summary": "An inspired interpretation of Spasex's design language — a mission-oriented aerospace brand built on pure black canvas, full-bleed photographic and video heroes of rockets and Mars landscapes, and uppercase D-DIN display type set in tight vertical leading. UI …",
+  "derivedRoles": [
+   "accent",
+   "focus",
+   "hairline",
+   "ink-muted",
+   "ink-subtle",
+   "link",
+   "primary-hover",
+   "surface",
+   "surface-raised"
+  ]
+ },
+ {
+  "slug": "spotify",
+  "category": "Consumer & commerce",
+  "theme": "dark",
+  "productUI": false,
+  "accent": "#1ed760",
+  "accentHue": "lime",
+  "canvas": "#121212",
+  "ink": "#ffffff",
+  "displayFont": "SpotifyMixUITitle",
+  "bodyFont": "SpotifyMixUI",
+  "monoFont": null,
+  "fontSubstitutes": [],
+  "shape": "soft",
+  "radiusControl": 6.0,
+  "radiusCard": 8.0,
+  "pillButtons": false,
+  "displaySize": 24.0,
+  "bodySize": 16.0,
+  "spaceBase": 8,
+  "section": 96.0,
+  "density": "airy",
+  "contrastIssues": [],
+  "summary": "Spotify's web interface is a dark, immersive music player that wraps listeners in a near-black cocoon (`#121212`, `#181818`, `#1f1f1f`) where album art and content become the primary source of color. The design philosophy is \"content-first darkness\" — the UI r…",
+  "derivedRoles": [
+   "accent",
+   "focus",
+   "primary-hover",
+   "surface-raised"
+  ]
+ },
+ {
+  "slug": "starbucks",
+  "category": "Consumer & commerce",
+  "theme": "light",
+  "productUI": false,
+  "accent": "#00754a",
+  "accentHue": "lime",
+  "canvas": "#f2f0eb",
+  "ink": "#1f1f1f",
+  "displayFont": "SoDoSans",
+  "bodyFont": "SoDoSans",
+  "monoFont": null,
+  "fontSubstitutes": [
+   "Inter",
+   "Manrope",
+   "Nunito Sans"
+  ],
+  "shape": "round",
+  "radiusControl": 50.0,
+  "radiusCard": 50.0,
+  "pillButtons": false,
+  "displaySize": 80.0,
+  "bodySize": 16.0,
+  "spaceBase": 8,
+  "section": 96.0,
+  "density": "airy",
+  "contrastIssues": [
+   "success icon/badge 3.0:1 (<3)",
+   "warning icon/badge 2.0:1 (<3)"
+  ],
+  "summary": "Starbucks' design system is a **warm, confident retail flagship** wearing the green of their storefront apron across every surface. The canvas alternates between a neutral-warm cream (`#f2f0eb`) and a ceramic off-white (`#edebe9`) — colors that reference actua…",
+  "derivedRoles": [
+   "focus",
+   "ink-subtle",
+   "link",
+   "primary-hover",
+   "surface-raised"
+  ]
+ },
+ {
+  "slug": "stripe",
+  "category": "Fintech & payments",
+  "theme": "light",
+  "productUI": true,
+  "accent": "#533afd",
+  "accentHue": "indigo",
+  "canvas": "#ffffff",
+  "ink": "#0d253d",
+  "displayFont": "sohne-var",
+  "bodyFont": "sohne-var",
+  "monoFont": null,
+  "fontSubstitutes": [
+   "Inter"
+  ],
+  "shape": "round",
+  "radiusControl": 8.0,
+  "radiusCard": 12.0,
+  "pillButtons": false,
+  "displaySize": 56.0,
+  "bodySize": 15.0,
+  "spaceBase": 4,
+  "section": 32.0,
+  "density": "dense",
+  "contrastIssues": [
+   "warning icon/badge 2.3:1 (<3)"
+  ],
+  "summary": "An inspired interpretation of Stripi's design language — a financial-infrastructure brand built on a deep navy ink, an electric indigo primary, and a recurring atmospheric gradient mesh that occupies the upper third of nearly every marketing page. The system p…",
+  "derivedRoles": [
+   "accent",
+   "focus",
+   "ink-subtle",
+   "link",
+   "surface-raised"
+  ]
+ },
+ {
+  "slug": "supabase",
+  "category": "Developer tools & infra",
+  "theme": "light",
+  "productUI": true,
+  "accent": "#3ecf8e",
+  "accentHue": "lime",
+  "canvas": "#ffffff",
+  "ink": "#171717",
+  "displayFont": "Circular",
+  "bodyFont": "Circular",
+  "monoFont": "ui-monospace",
+  "fontSubstitutes": [
+   "Inter",
+   "Geist Sans"
+  ],
+  "shape": "round",
+  "radiusControl": 8.0,
+  "radiusCard": 12.0,
+  "pillButtons": false,
+  "displaySize": 64.0,
+  "bodySize": 16.0,
+  "spaceBase": 4,
+  "section": 32.0,
+  "density": "dense",
+  "contrastIssues": [
+   "button / accent against page 2.0:1 (<3)",
+   "focus ring 2.0:1 (<3)",
+   "warning icon/badge 2.3:1 (<3)"
+  ],
+  "summary": "An inspired interpretation of Supabaze's design language — an open-source database platform built on a clean white-and-near-black system with a single signature emerald-green CTA, a custom humanist sans display tier, and dense product UI mockups composited abo…",
+  "derivedRoles": [
+   "accent",
+   "focus",
+   "ink-subtle",
+   "link",
+   "surface-raised"
+  ]
+ },
+ {
+  "slug": "superhuman",
+  "category": "Productivity & SaaS",
+  "theme": "light",
+  "productUI": true,
+  "accent": "#1b1938",
+  "accentHue": "indigo",
+  "canvas": "#ffffff",
+  "ink": "#292827",
+  "displayFont": "Super Sans VF",
+  "bodyFont": "Super Sans VF",
+  "monoFont": null,
+  "fontSubstitutes": [
+   "Inter Variable"
+  ],
+  "shape": "round",
+  "radiusControl": 8.0,
+  "radiusCard": 12.0,
+  "pillButtons": false,
+  "displaySize": 64.0,
+  "bodySize": 16.0,
+  "spaceBase": 4,
+  "section": 32.0,
+  "density": "dense",
+  "contrastIssues": [
+   "warning icon/badge 2.3:1 (<3)"
+  ],
+  "summary": "An inspired interpretation of Superhumon's design language — a fast-email productivity brand split between an editorial dark hero (deep indigo navy with violet-sky atmospheric backdrop and a portrait subject) and a quiet white content body with off-warm-grey i…",
+  "derivedRoles": [
+   "accent",
+   "focus",
+   "ink-muted",
+   "ink-subtle",
+   "link",
+   "surface-raised"
+  ]
+ },
+ {
+  "slug": "tesla",
+  "category": "Automotive & luxury",
+  "theme": "light",
+  "productUI": false,
+  "accent": "#3e6ae1",
+  "accentHue": "indigo",
+  "canvas": "#ffffff",
+  "ink": "#171a20",
+  "displayFont": "Universal Sans Display",
+  "bodyFont": "Universal Sans Text",
+  "monoFont": null,
+  "fontSubstitutes": [],
+  "shape": "round",
+  "radiusControl": 12.0,
+  "radiusCard": 12.0,
+  "pillButtons": false,
+  "displaySize": 40.0,
+  "bodySize": 14.0,
+  "spaceBase": 8,
+  "section": 96.0,
+  "density": "dense",
+  "contrastIssues": [
+   "warning icon/badge 2.3:1 (<3)"
+  ],
+  "summary": "Tesla's website is an exercise in radical subtraction — a digital showroom where the product is everything and the interface is almost nothing. The page opens with a full-viewport hero that fills the entire screen with cinematic car photography: three vehicles…",
+  "derivedRoles": [
+   "accent",
+   "focus",
+   "link",
+   "primary-hover",
+   "surface-raised"
+  ]
+ },
+ {
+  "slug": "theverge",
+  "category": "Editorial & media",
+  "theme": "dark",
+  "productUI": false,
+  "accent": "#3cffd0",
+  "accentHue": "green",
+  "canvas": "#131313",
+  "ink": "#ffffff",
+  "displayFont": "Manuka",
+  "bodyFont": "PolySans",
+  "monoFont": null,
+  "fontSubstitutes": [
+   "Anton",
+   "Oswald",
+   "Bebas Neue"
+  ],
+  "shape": "soft",
+  "radiusControl": 4.0,
+  "radiusCard": 20.0,
+  "pillButtons": false,
+  "displaySize": 107.0,
+  "bodySize": 16.0,
+  "spaceBase": 8,
+  "section": 96.0,
+  "density": "airy",
+  "contrastIssues": [
+   "links 3.2:1 (<4.5)",
+   "error text 3.9:1 (<4.5)"
+  ],
+  "summary": "The Verge's 2024 redesign feels like somebody wired a Condé Nast magazine to a chiptune soundboard. The canvas is almost-black (`#131313`), the headlines are built from a brutally heavy display face (Manuka) that runs up to 107px, and the whole page is peppere…",
+  "derivedRoles": [
+   "ink-subtle",
+   "primary-hover",
+   "surface-raised"
+  ]
+ },
+ {
+  "slug": "together.ai",
+  "category": "AI & models",
+  "theme": "light",
+  "productUI": false,
+  "accent": "#000000",
+  "accentHue": "black",
+  "canvas": "#ffffff",
+  "ink": "#000000",
+  "displayFont": "The Future",
+  "bodyFont": "The Future",
+  "monoFont": null,
+  "fontSubstitutes": [
+   "Display sans",
+   "Uppercase mono eyebrow"
+  ],
+  "shape": "soft",
+  "radiusControl": 4.0,
+  "radiusCard": 8.0,
+  "pillButtons": false,
+  "displaySize": 64.0,
+  "bodySize": 16.0,
+  "spaceBase": 4,
+  "section": 80.0,
+  "density": "balanced",
+  "contrastIssues": [
+   "secondary text 3.0:1 (<4.5)",
+   "secondary text on cards 2.8:1 (<4.5)",
+   "warning icon/badge 2.3:1 (<3)"
+  ],
+  "summary": "An inspired interpretation of Together AI's design language — an AI infrastructure platform whose surface alternates between near-black hero bands (with a three-color orange-magenta-periwinkle gradient as the single piece of brand chrome) and bright white rese…",
+  "derivedRoles": [
+   "accent",
+   "focus",
+   "ink-subtle",
+   "link",
+   "primary-hover",
+   "surface",
+   "surface-raised"
+  ]
+ },
+ {
+  "slug": "uber",
+  "category": "Consumer & commerce",
+  "theme": "light",
+  "productUI": false,
+  "accent": "#000000",
+  "accentHue": "black",
+  "canvas": "#ffffff",
+  "ink": "#000000",
+  "displayFont": "UberMove",
+  "bodyFont": "UberMoveText",
+  "monoFont": null,
+  "fontSubstitutes": [
+   "Display sans",
+   "Text sans"
+  ],
+  "shape": "pill",
+  "radiusControl": 8.0,
+  "radiusCard": 12.0,
+  "pillButtons": true,
+  "displaySize": 52.0,
+  "bodySize": 16.0,
+  "spaceBase": 8,
+  "section": 96,
+  "density": "airy",
+  "contrastIssues": [
+   "placeholder / large meta 2.2:1 (<3)",
+   "warning icon/badge 2.3:1 (<3)"
+  ],
+  "summary": "An inspired interpretation of Uber's design language — a transportation-and-delivery super-app brand whose web surface is a black-and-white duet, framed by a custom geometric display sans, accented by a single signature pill shape (radius 999px) on every inter…",
+  "derivedRoles": [
+   "accent",
+   "focus",
+   "hairline",
+   "primary-hover",
+   "surface-raised"
+  ]
+ },
+ {
+  "slug": "vercel",
+  "category": "Developer tools & infra",
+  "theme": "light",
+  "productUI": true,
+  "accent": "#171717",
+  "accentHue": "black",
+  "canvas": "#ffffff",
+  "ink": "#171717",
+  "displayFont": "Geist",
+  "bodyFont": "Geist",
+  "monoFont": "Geist Mono",
+  "fontSubstitutes": [
+   "Geometric sans",
+   "Monospace"
+  ],
+  "shape": "pill",
+  "radiusControl": 8.0,
+  "radiusCard": 12.0,
+  "pillButtons": true,
+  "displaySize": 48.0,
+  "bodySize": 16.0,
+  "spaceBase": 8,
+  "section": 192.0,
+  "density": "airy",
+  "contrastIssues": [
+   "warning icon/badge 2.0:1 (<3)"
+  ],
+  "summary": "An inspired interpretation of Vercel's design language — a developer-platform brand whose surface is a stark black-and-ink duet on near-white canvas, broken at hero scale by a multi-color mesh gradient (cyan / blue / magenta / amber) that acts as the entire de…",
+  "derivedRoles": [
+   "accent",
+   "focus",
+   "primary-hover",
+   "surface-raised"
+  ]
+ },
+ {
+  "slug": "vodafone",
+  "category": "Big tech & hardware",
+  "theme": "light",
+  "productUI": false,
+  "accent": "#e60000",
+  "accentHue": "red",
+  "canvas": "#ffffff",
+  "ink": "#25282b",
+  "displayFont": "Vodafone",
+  "bodyFont": "Vodafone",
+  "monoFont": null,
+  "fontSubstitutes": [
+   "Display sans"
+  ],
+  "shape": "round",
+  "radiusControl": 60.0,
+  "radiusCard": 60.0,
+  "pillButtons": false,
+  "displaySize": 126.0,
+  "bodySize": 18.0,
+  "spaceBase": 4,
+  "section": 48,
+  "density": "dense",
+  "contrastIssues": [
+   "secondary text 4.1:1 (<4.5)",
+   "secondary text on cards 3.6:1 (<4.5)",
+   "placeholder / large meta 1.9:1 (<3)",
+   "warning icon/badge 2.3:1 (<3)"
+  ],
+  "summary": "An inspired interpretation of Vodafone's design language — a telecom super-brand whose web surface alternates between editorial photography hero bands with massive uppercase display headlines and clean white content bands, anchored by the company's signature s…",
+  "derivedRoles": [
+   "accent",
+   "focus",
+   "hairline",
+   "link",
+   "primary-hover",
+   "surface-raised"
+  ]
+ },
+ {
+  "slug": "voltagent",
+  "category": "AI & models",
+  "theme": "dark",
+  "productUI": false,
+  "accent": "#00d992",
+  "accentHue": "green",
+  "canvas": "#101010",
+  "ink": "#f2f2f2",
+  "displayFont": "Inter",
+  "bodyFont": "Inter",
+  "monoFont": "SFMono-Regular",
+  "fontSubstitutes": [
+   "Sans",
+   "Mono"
+  ],
+  "shape": "soft",
+  "radiusControl": 6.0,
+  "radiusCard": 8.0,
+  "pillButtons": false,
+  "displaySize": 60.0,
+  "bodySize": 16.0,
+  "spaceBase": 4,
+  "section": 48,
+  "density": "dense",
+  "contrastIssues": [
+   "error text 4.0:1 (<4.5)"
+  ],
+  "summary": "An inspired interpretation of Voltagent's design language — a developer-focused AI agent engineering platform whose surface is an unrelenting near-black canvas broken only by a single electric-green brand accent, code-editor mockups inside the hero, and a prec…",
+  "derivedRoles": [
+   "accent",
+   "focus",
+   "link",
+   "surface-raised"
+  ]
+ },
+ {
+  "slug": "warp",
+  "category": "Developer tools & infra",
+  "theme": "dark",
+  "productUI": true,
+  "accent": "#f7f5f0",
+  "accentHue": "white",
+  "canvas": "#2b2622",
+  "ink": "#f7f5f0",
+  "displayFont": "Inter",
+  "bodyFont": "Inter",
+  "monoFont": "DM Mono",
+  "fontSubstitutes": [
+   "Inter",
+   "DM Mono",
+   "Instrument Serif"
+  ],
+  "shape": "soft",
+  "radiusControl": 3.0,
+  "radiusCard": 6.0,
+  "pillButtons": false,
+  "displaySize": 64.0,
+  "bodySize": 16.0,
+  "spaceBase": 4,
+  "section": 48,
+  "density": "dense",
+  "contrastIssues": [
+   "error text 3.2:1 (<4.5)"
+  ],
+  "summary": "An inspired interpretation of Warp's design language — an agentic terminal-and-development-environment brand whose surface is a warm near-charcoal canvas (a tint warmer than pure black), broken only by clean Inter typography, the occasional Instrument Serif it…",
+  "derivedRoles": [
+   "accent",
+   "focus",
+   "link",
+   "primary-hover",
+   "surface-raised"
+  ]
+ },
+ {
+  "slug": "webflow",
+  "category": "Productivity & SaaS",
+  "theme": "light",
+  "productUI": false,
+  "accent": "#080808",
+  "accentHue": "black",
+  "canvas": "#ffffff",
+  "ink": "#080808",
+  "displayFont": "WF Visual Sans Variable",
+  "bodyFont": "WF Visual Sans Variable",
+  "monoFont": null,
+  "fontSubstitutes": [
+   "Mono"
+  ],
+  "shape": "soft",
+  "radiusControl": 4.0,
+  "radiusCard": 8.0,
+  "pillButtons": false,
+  "displaySize": 80.0,
+  "bodySize": 16.0,
+  "spaceBase": 4,
+  "section": 48,
+  "density": "dense",
+  "contrastIssues": [
+   "warning icon/badge 2.3:1 (<3)"
+  ],
+  "summary": "An inspired interpretation of Webflow's design language — a visual web development platform whose surface contrasts a deep near-black `#080808` primary against a generous white canvas, broken by a five-stop chromatic accent system (purple / pink / blue / orang…",
+  "derivedRoles": [
+   "focus",
+   "link",
+   "primary-hover",
+   "surface",
+   "surface-raised"
+  ]
+ },
+ {
+  "slug": "wired",
+  "category": "Editorial & media",
+  "theme": "light",
+  "productUI": false,
+  "accent": "#000000",
+  "accentHue": "black",
+  "canvas": "#ffffff",
+  "ink": "#000000",
+  "displayFont": "WiredDisplay",
+  "bodyFont": "Apercu",
+  "monoFont": null,
+  "fontSubstitutes": [
+   "WiredDisplay",
+   "BreveText",
+   "Apercu"
+  ],
+  "shape": "sharp",
+  "radiusControl": 0.0,
+  "radiusCard": 0.0,
+  "pillButtons": false,
+  "displaySize": 64.0,
+  "bodySize": 17.0,
+  "spaceBase": 4,
+  "section": 48,
+  "density": "dense",
+  "contrastIssues": [
+   "secondary text on cards 4.2:1 (<4.5)",
+   "warning icon/badge 2.3:1 (<3)"
+  ],
+  "summary": "An inspired interpretation of Wired's design language — a flagship technology-magazine brand whose surface is a strict editorial duet of stark black wordmark on white canvas, anchored by a tall narrow custom display serif for hero headlines, a humanist serif b…",
+  "derivedRoles": [
+   "accent",
+   "focus",
+   "ink-subtle",
+   "primary-hover",
+   "surface-raised"
+  ]
+ },
+ {
+  "slug": "wise",
+  "category": "Fintech & payments",
+  "theme": "light",
+  "productUI": true,
+  "accent": "#9fe870",
+  "accentHue": "lime",
+  "canvas": "#ffffff",
+  "ink": "#0e0f0c",
+  "displayFont": "Wise Sans",
+  "bodyFont": "Inter",
+  "monoFont": null,
+  "fontSubstitutes": [
+   "Display"
+  ],
+  "shape": "round",
+  "radiusControl": 24.0,
+  "radiusCard": 16.0,
+  "pillButtons": false,
+  "displaySize": 96.0,
+  "bodySize": 16.0,
+  "spaceBase": 4,
+  "section": 48,
+  "density": "dense",
+  "contrastIssues": [
+   "button / accent against page 1.5:1 (<3)",
+   "focus ring 1.5:1 (<3)",
+   "success icon/badge 2.9:1 (<3)",
+   "warning icon/badge 1.5:1 (<3)"
+  ],
+  "summary": "An inspired interpretation of Wise's design language — a global money-transfer brand whose surface combines an unusually heavy near-black display sans (weight 900 at 64–126 px) with a vivid lime-green brand accent, sage-tinted surface neutrals, and rounded whi…",
+  "derivedRoles": [
+   "accent",
+   "focus",
+   "hairline",
+   "link",
+   "surface-raised"
+  ]
+ },
+ {
+  "slug": "x.ai",
+  "category": "AI & models",
+  "theme": "dark",
+  "productUI": false,
+  "accent": "#ffffff",
+  "accentHue": "white",
+  "canvas": "#0a0a0a",
+  "ink": "#ffffff",
+  "displayFont": "universalSans",
+  "bodyFont": "universalSans",
+  "monoFont": null,
+  "fontSubstitutes": [
+   "Mono"
+  ],
+  "shape": "pill",
+  "radiusControl": 8.0,
+  "radiusCard": 8.0,
+  "pillButtons": true,
+  "displaySize": 96.0,
+  "bodySize": 16.0,
+  "spaceBase": 4,
+  "section": 48,
+  "density": "dense",
+  "contrastIssues": [
+   "error text 4.2:1 (<4.5)"
+  ],
+  "summary": "An inspired interpretation of xAI's design language — Elon Musk's frontier-AI company whose web surface is a strict near-black canvas broken only by white pill outlines, occasional warm sunset / dusk gradient accents, a custom geometric sans (Universal Sans) f…",
+  "derivedRoles": [
+   "accent",
+   "focus",
+   "link",
+   "primary-hover",
+   "surface-raised"
+  ]
+ },
+ {
+  "slug": "zapier",
+  "category": "Productivity & SaaS",
+  "theme": "light",
+  "productUI": true,
+  "accent": "#ff4f00",
+  "accentHue": "red",
+  "canvas": "#fffefb",
+  "ink": "#201515",
+  "displayFont": "Degular Display",
+  "bodyFont": "Inter",
+  "monoFont": null,
+  "fontSubstitutes": [
+   "Display"
+  ],
+  "shape": "round",
+  "radiusControl": 12.0,
+  "radiusCard": 12.0,
+  "pillButtons": false,
+  "displaySize": 56.0,
+  "bodySize": 18.0,
+  "spaceBase": 4,
+  "section": 48,
+  "density": "dense",
+  "contrastIssues": [
+   "placeholder / large meta 1.8:1 (<3)",
+   "button label 3.3:1 (<4.5)",
+   "warning icon/badge 2.3:1 (<3)"
+  ],
+  "summary": "An inspired interpretation of Zapier's design language — a workflow-automation platform whose surface combines warm-cream neutrals (`#fffefb` canvas, `#f8f4f0` soft cream) with deep coffee ink (`#201515`) and a single saturated orange CTA accent (`#ff4f00`); t…",
+  "derivedRoles": [
+   "accent",
+   "focus",
+   "hairline",
+   "link",
+   "primary-hover",
+   "surface-raised"
+  ]
+ }
+]

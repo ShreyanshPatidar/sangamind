@@ -1,0 +1,6 @@
+﻿# Switchboard writes a trace log per session
+trace*.log
+node_modules/
+__pycache__/
+*.pyc
+.DS_Store

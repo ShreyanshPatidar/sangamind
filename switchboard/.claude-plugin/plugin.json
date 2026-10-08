@@ -1,0 +1,98 @@
+{
+  "name": "switchboard",
+  "version": "0.1.0",
+  "description": "Switchboard: useful extras for Claude Code, each one a switch. A usage meter above the prompt, an output viewer for long results and images, secret hiding, a stop for repeated failures, a check before risky commands, a work log, and coordination between parallel chats. /switchboard turns each on or off.",
+  "author": { "name": "Shreyansh Patidar" },
+  "userConfig": {
+    "usageMeter": {
+      "type": "boolean",
+      "title": "Usage meter",
+      "description": "A line above the prompt with context fill, the 5-hour and weekly limits with reset times, and this chat's cost. /meter opens the details.",
+      "default": true
+    },
+    "gitStatus": {
+      "type": "boolean",
+      "title": "Git status",
+      "description": "The branch, changed files, and commits to push or pull, on the line above the prompt.",
+      "default": true
+    },
+    "taskProgress": {
+      "type": "boolean",
+      "title": "Task progress",
+      "description": "How far Claude is through its task list and what it is on now, e.g. \"3/7 · Writing tests\", above the prompt.",
+      "default": true
+    },
+    "usageHints": {
+      "type": "boolean",
+      "title": "Usage hints",
+      "description": "One hint above the prompt when it helps: a limit nearly used, context nearly full, the cache gone cold, low cache hits. Rules only, no model calls. x hides it for a few turns.",
+      "default": true
+    },
+    "turnSummary": {
+      "type": "boolean",
+      "title": "Turn summary",
+      "description": "After each answer's time line: tools used, subagents, tokens in and out, and how much came from the cache.",
+      "default": true
+    },
+    "saveBeforeCompact": {
+      "type": "boolean",
+      "title": "Save before compact",
+      "description": "When a chat is compacted, saves a markdown handoff in ~/.claude/handoffs: the summary, the command to resume the full chat, and the files it changed.",
+      "default": true
+    },
+    "outputViewer": {
+      "type": "boolean",
+      "title": "Output viewer",
+      "description": "Buttons that open things in a pane: Image #n and Pasted text #n under your own messages, Open under long tool output, View under results that touched an image. /viewer lists recent ones.",
+      "default": true
+    },
+    "hideSecrets": {
+      "type": "boolean",
+      "title": "Hide secrets",
+      "description": "Replaces the values from your .env files (and well-known key formats) with [hidden: NAME] in tool output before Claude sees it.",
+      "default": true
+    },
+    "stopRepeatedFailures": {
+      "type": "boolean",
+      "title": "Stop repeated failures",
+      "description": "Blocks a tool call that already failed the same way twice, and tells Claude to change approach.",
+      "default": true
+    },
+    "confirmRiskyCommands": {
+      "type": "boolean",
+      "title": "Confirm risky commands",
+      "description": "Asks before force pushes, hard resets, recursive deletes, DROP/TRUNCATE, database pushes and production deploys.",
+      "default": true
+    },
+    "workLog": {
+      "type": "boolean",
+      "title": "Work log",
+      "description": "Records files changed, subagents run and where each turn's time went. /worklog shows this chat and today's other chats.",
+      "default": true
+    },
+    "editCollisionCheck": {
+      "type": "boolean",
+      "title": "Edit collision check",
+      "description": "Asks before Claude edits a file another open chat changed in the last 30 minutes.",
+      "default": true
+    },
+    "oneTestRunAtATime": {
+      "type": "boolean",
+      "title": "One test run at a time",
+      "description": "Asks before starting a Playwright run while another one is already running on this machine.",
+      "default": true
+    },
+    "otherChatsLine": {
+      "type": "boolean",
+      "title": "Other chats line",
+      "description": "Shows the other open chats on the same project above the prompt, working or idle.",
+      "default": true
+    },
+    "devServerWatch": {
+      "type": "boolean",
+      "title": "Dev server watch",
+      "description": "Checks a dev server once a minute and shows a red line when it is down or erroring. Set its address with /devserver <url>.",
+      "default": true
+    }
+  }
+}
