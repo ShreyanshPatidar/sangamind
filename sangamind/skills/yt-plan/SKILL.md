@@ -28,7 +28,7 @@ A plan that does not fit the week is a list of regrets. Ask two questions before
   channel's own analytics say is best - ask for that, do not assume Tuesday.
 - **One cheap one.** Built from something that exists: a clip, a reaction, a follow-up to the
   comment that got the most replies last week.
-- **Shorts from the anchor.** Three, cut from the long video, not written separately. `/yt-shorts`
+- **Shorts from the anchor.** Three, cut from the long video, not written separately. `/yt-cut`
   finds them.
 
 Three uploads on a seven-day week, not seven. A plan that posts daily is not a plan anyone

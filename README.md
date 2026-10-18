@@ -30,8 +30,9 @@ Works wherever Claude runs. A few highlights:
 | **datagrid-helper** | Configure and debug the Indas DataGrid. |
 | **motion-design / explainer-video** | Make a finished motion/explainer video (Remotion, local). |
 
-Plus a full **YouTube toolkit**: `yt-playbook`, `yt-plan`, `yt-script`, `yt-package`, `yt-seo`,
-`yt-chapters`, `yt-shorts`, `yt-edit`, `yt-retention`, `yt-audit`, `yt-viral`, `yt-comment`.
+Plus a full **YouTube toolkit**: `yt-playbook`, `yt-plan`, `yt-script`, `yt-package`, `yt-metadata`
+(description, tags, chapters), `yt-cut` (tighten a take + carve Shorts), `yt-retention`, `yt-audit`,
+`yt-viral`, `yt-comment`.
 
 ### `switchboard` — the Claude Code mod
 Claude Code only. One mod, every feature a toggle: usage meter, output viewer, work log, hide secrets,
