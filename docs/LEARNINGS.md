@@ -50,4 +50,31 @@ places AI consistently skips:
 
 ---
 
+## 2026-10-18 · Verification gaps seen in a long multi-task session
+Source: live session (analytics setup, multi-repo commits across many parallel sessions).
+**Fed → `verification-before-completion` skill** (applied same day).
+
+Three real "looked done but wasn't" failure modes the skill didn't yet cover:
+1. **Verified locally ≠ verified where it matters.** GA4 code passed locally and was called "set up",
+   but wasn't *live* — not pushed/deployed. Fix added: verify the **real surface** (production URL,
+   the deployed artifact, the user's actual path), and remember committed ≠ pushed ≠ deployed, and an
+   env var/setting takes effect only on the next deploy.
+2. **"Done" meant happy-path only.** Real completion includes failure/empty/offline/error states —
+   ties into the premium-apps learning above. Added a "break it on purpose" check to the done bar.
+3. **Verified THAT a command ran, not WHAT it did.** A `git commit` succeeded but swept in a
+   pre-staged file that wasn't mine. Fix added: check the staged diff contents (only your files), and
+   confirm other sessions' work is untouched, before claiming a clean commit.
+
+## 2026-10-18 · transcribe now handles text links (not just media)
+Applied directly to the `transcribe` skill (committed). A link with no video/audio (article, text-only
+post) now falls back to fetching the page's readable text instead of failing; `--text-only` forces it;
+cookies extend to the fetch for login-walled pages. X/Twitter still needs cookies (it paywalls fetches).
+
+## 2026-10-18 · YouTube skills consolidated 12 → 10
+`yt-seo`+`yt-chapters` → `yt-metadata`; `yt-shorts`+`yt-edit` → `yt-cut`. Lesson for future merges:
+**check for code dependencies and cross-references before deleting a skill** — `chapters.py` and
+`retention.py` both imported `deadair.py` from `yt-edit`, and four docs referenced the old names.
+Merging on assumption would have broken all of them. Left `yt-audit`/`yt-viral` separate on purpose
+(different inputs, different triggers) — fewer isn't automatically better; triggering accuracy matters.
+
 <!-- Add new learnings above this line, newest at the bottom of its section or as a new dated section. -->

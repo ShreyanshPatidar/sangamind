@@ -104,6 +104,28 @@ Skip any step = lying, not verifying
 ❌ Trust agent report
 ```
 
+## Verify the real surface, not just the local command
+
+Passing locally is not the claim the user cares about. "Working" means working **where they will
+experience it** — the deployed site, production, the actual user path — not just `exit 0` on your machine.
+
+| Claim | Not sufficient | Actually verify |
+|-------|----------------|-----------------|
+| "Analytics / the feature is live" | Code builds locally | Fetch the **production** URL and confirm the tag/feature is served. Committed ≠ pushed ≠ deployed. |
+| "It's pushed / deployed" | `git commit` ran | `git push` output shows it reached the remote; the deploy built the new commit, not an old one. |
+| "The config is applied" | Added an env var / setting | The running app actually reads it (env vars take effect on the **next deploy**, not instantly). |
+| "Done" (a user-facing feature) | Happy path works | The **failure/empty/offline/error** states work too — break it on purpose and check (a sync-fail, an empty list, a declined action). Happy-path-only is not done. |
+
+## Verify WHAT you changed, not just THAT a command ran
+
+A command succeeding does not mean it did the *right* thing. Check the contents.
+
+| Claim | Not sufficient | Actually verify |
+|-------|----------------|-----------------|
+| "Committed my work" | `git commit` succeeded | `git diff --cached --name-status` / `git show --stat` shows **only your files** — no foreign/pre-staged changes swept in. (Real incident: a pre-staged deletion rode along in a commit.) |
+| "Left the other session's work alone" | You didn't edit it | `git status` shows their files still uncommitted/unchanged after your commit. |
+| "Staged only my hunks" | `git add -p` ran | Re-read the staged diff; confirm the exact hunks, nothing adjacent. |
+
 ## When To Apply
 
 **ALWAYS before:**
