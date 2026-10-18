@@ -1,0 +1,25 @@
+{
+ "note": "Word lists and weights hookscore.py scores against. 'creator' is for advice/how-to channels; 'story' is for history, money, business and science explainers, where the stakes are lives, wars and money rather than the viewer's time. Edit here, not in the code.",
+ "shared": {
+  "number_words": ["one","two","three","four","five","six","seven","eight","nine","ten","eleven","twelve","fifteen","twenty","thirty","forty","fifty","hundred","thousand","million","billion","trillion","half","dozen"],
+  "filler": ["basically","actually","literally","just","really","very","so","kind","sort","like","guys","hey","welcome","today","video","subscribe","channel"],
+  "vague": ["amazing","incredible","insane","crazy","huge","massive","game","changer","secret","powerful","ultimate","best","revolutionary","mind","blowing","unbelievable"],
+  "closed": ["because","so that","which means"]
+ },
+ "profiles": {
+  "creator": {
+   "weights": {"SPECIFICITY": 1, "ADDRESS": 1, "STAKES": 1, "CURIOSITY": 1, "BREVITY": 1},
+   "stakes": ["lose","lost","wasting","waste","quit","fail","broke","cost","risk","before","stop","never","die","dying","dead"],
+   "curiosity": ["why","how","what","which","until","before","but","nobody","almost","except","reason","actually"],
+   "address_phrases": [],
+   "brevity_band": [9, 24]
+  },
+  "story": {
+   "weights": {"SPECIFICITY": 1, "ADDRESS": 0.5, "STAKES": 1, "CURIOSITY": 1.25, "BREVITY": 1, "RHYTHM": 0.75},
+   "stakes": ["die","died","dead","death","deaths","killed","kill","war","wars","million","billion","collapse","collapsed","crash","lost","empire","fell","ruined","bankrupt","gunshot","gunshots","bullet","bomb","never came home","cost","paid","starve","famine","banned"],
+   "curiosity": ["why","how","what","until","but","nobody","almost","except","reason","real","truth","wrong","myth","never","secret","half","stranger","actually","hidden","forgot","forgotten"],
+   "address_phrases": ["you were told","you were taught","you think","you've heard","you have heard","you probably","you never","you've never","your"],
+   "brevity_band": [8, 26]
+  }
+ }
+}

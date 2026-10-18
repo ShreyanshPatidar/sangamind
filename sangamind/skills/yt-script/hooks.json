@@ -1,6 +1,6 @@
 {
- "version": "1.0",
- "note": "21 hook formulas for YouTube. A YouTube hook is the first 15 seconds and it does three jobs: confirm the click the title promised, raise a question the viewer cannot close, and prove the payoff exists. A hook that only does the third is a summary and it leaks. Every formula here carries the shape, a worked example, the failure mode, and the patterns hookscore.py classifies transcribed speech against.",
+ "version": "1.1",
+ "note": "25 hook formulas (21 creator + 4 story) for YouTube. A YouTube hook is the first 15 seconds and it does three jobs: confirm the click the title promised, raise a question the viewer cannot close, and prove the payoff exists. A hook that only does the third is a summary and it leaks. Every formula here carries the shape, a worked example, the failure mode, and the patterns hookscore.py classifies transcribed speech against.",
  "rules": [
   "Confirm the title in the first sentence. A hook that ignores its own title is why people leave at 0:08.",
   "One idea. A hook carrying two promises keeps neither.",
@@ -262,6 +262,51 @@
     "^if you\\b",
     "\\bfor (anyone|everyone|people) who\\b",
     "\\byou specifically\\b"
+   ]
+  },
+  {
+   "id": "myth-buster",
+   "name": "The Myth Buster",
+   "shape": "Name what the viewer was told, then say it is wrong or only half the story.",
+   "example": "You were taught a bullet started World War One. The truth is stranger: the assassin had already given up.",
+   "fails_when": "Dies if the 'myth' is something nobody actually believes, or the video never proves the correction.",
+   "match": [
+    "\\byou (were|have been|'ve been) (told|taught)\\b",
+    "\\byou('ve| have)? (heard|think|probably)\\b",
+    "\\b(myth|half (of )?the story|wrong half|the real story|not the real story|isn't true|is not true)\\b"
+   ]
+  },
+  {
+   "id": "contrast-stack",
+   "name": "The Contrast Stack",
+   "shape": "Two or three short hard facts in a row, then the twist.",
+   "example": "One wrong turn. Two gunshots. Fifteen million dead. And you were probably told the wrong half of the story.",
+   "fails_when": "Dies if the beats are vague ('One choice. One moment.') or there is no twist after them.",
+   "match": [
+    "^(\\s*[^.!?]{1,30}[.!?]){2,}",
+    "\\b(one|two|three)\\b[^.!?]{0,20}\\.\\s+(one|two|three|four|five|fifteen|a)\\b"
+   ]
+  },
+  {
+   "id": "chain-reaction",
+   "name": "The Chain Reaction",
+   "shape": "A tiny cause, then a huge effect, with the link left unexplained.",
+   "example": "A driver got lost, an assassin got lucky, and fifteen million people never came home.",
+   "fails_when": "Dies if it claims the small thing caused the big thing and the video says otherwise - say 'spark', not 'cause'.",
+   "match": [
+    "\\b(wrong turn|got lost|one mistake|a single|tiny|one small)\\b",
+    "\\b(million|billion|war|empire|collapse|crash)\\b"
+   ]
+  },
+  {
+   "id": "hidden-cause",
+   "name": "The Hidden Cause",
+   "shape": "The famous explanation is not the real one; promise the real one.",
+   "example": "McDonald's doesn't make its money from burgers. It makes it from something you've walked on.",
+   "fails_when": "Dies if the hidden cause is revealed in the hook itself - keep it for the turn.",
+   "match": [
+    "\\b(isn't|is not|wasn't|was not|doesn't|didn't)\\b[^.!?]*\\b(really|actually|real)\\b",
+    "\\b(here's what (really|actually)|what really|the real reason|the real story)\\b"
    ]
   }
  ]

@@ -35,6 +35,11 @@ The multiple is the signal. The formula line is a judgement about the TITLE, mat
 [the 21 formulas](../yt-script/hooks.json) - it is not a claim about why the video worked, and you
 should say so when you present it.
 
+**Study, never remake.** The output is the reason a video worked, applied to a new idea in the
+user's voice. Recreating the video itself is copying, and since 1 Oct 2026 Shorts cut the reach of
+channels that re-upload or lightly rework other people's work. To work out whether the topic or
+the packaging won, use the method in [research](../yt-playbook/references/research.md).
+
 What to hand back: the top five with their multiples, the formula each used, and the ONE structural
 thing they share. Then the harder line - which of those the user could actually make this week, in
 their voice, with what they have.
