@@ -1,0 +1,21 @@
+# Sources (read 11 Oct 2026)
+
+| Source | What it gave | Trust |
+|---|---|---|
+| Tryahd (@tryahdd), X article "How I'd Build a Faceless YouTube Channel From Scratch in 2026", 9 Oct 2026 | Policy timeline, research method, niches and scorecard, AI host, scripting pipeline, money, CMS, scaling | High for method; dates and figures are his reading of YouTube announcements - verify in the Help Center. Contains his own affiliate link (Glitchy). |
+| Force (@0xForce_), X article "How to Set Up a Claude Content System That Produces Without You", 9 Oct 2026 | Researcher / writer / editor / publisher agents, PIPELINE.md, VOICE.md, /schedule | High - a workflow, no claims. |
+| Sammy (@He1s_Sammy), X article "Faceless YouTube channel to $41k/month using Claude", Aug 2026 | High-RPM triangle, retention script prompt, tool stack, batching, CTR | Medium for method; the income figure is unverified. |
+| Nyx (@Nyx_Tech_AI) thread "Claude can build a YouTube channel", 9 Oct 2026 | Seven "act as a world-class X" prompts (roadmap, niche, viral engine, algorithm, production, monetization, analytics) | Low - generic brainstorm prompts. |
+| shashwat_agarwal reel (Instagram DeNq3yzT52d) | "YouTube Agent Skill": 11 agents, 21 hooks, titles/thumbnails, editing, comments, calendar, virality agent | Same shape as Sangamind's yt-* kit, which already exists. Its "remake the viral video" idea conflicts with the 1 Oct originality rule. |
+| cindiezhu reel (Instagram Da0ev1FJanT) | Claude "Jarvis": Buffer/Metricool MCP, Chrome, RevenueCat, Meta Ads MCP, FAQ markdown, sub-agents, daily-brief routine, Hermes + Fish Audio voice | Medium - tool pointers. |
+| HPH_Animation reel (Instagram DeRj9lsBTA1) | 7:40 science explainer "why human babies are helpless" - textbook curiosity-loop structure (insult hook, contrast stack, "but that created another problem", ends on one word). Full breakdown: `Channels/Syptian/swipe-file.md` | High as a structure model. Transcribed 11 Oct 2026 (worked without a login on retry). |
+| Hermes Agent (hermes-agent.nousresearch.com) | Open-source always-on agent with messaging, memory, schedules; model costs extra | Considered for a "Jarvis"; parked over model cost. |
+| RoundtableSpace (X, 10 Oct 2026) "5 links to build an AI content engine" | Descript (edit by transcript), OpusClip (long -> Shorts), ElevenLabs (voice), Ideogram (thumbnails, good text-in-image), Buffer (scheduling) | Medium - tool list. Ideogram is the useful addition (thumbnails); Descript/OpusClip overlap our own tools |
+| ElevenLabs MCP (official, open source) | Lets Claude generate voiceovers directly | The MCP is free, the voices use ElevenLabs credits; free plan is non-commercial. Kokoro (local, free, commercial OK) stays the default |
+| "Eromify Claude MCP for AI girls" (Shreyansh's note) | - | Not found anywhere online (11 Oct 2026). Explicit-image generation is out of scope for these channels |
+| k1rallik (X article "How to Make Your First $1,000,000 with AI", Oct 2026) and 0xAIGOAT (X article "Seth Godin's Purple Cow Is AI Slop Now", 8 Oct 2026) | Jean Phil case, character-sheet workflow, motion-transfer tools, $155-300 test budget. Kept in `ai-characters.md` | Medium. View counts are their reports; the token money is wallet fees, not profit. The "swap into viral videos" and token advice are rejected |
+| Arcads (arcads.ai), Shreyansh's "Arcade" link, checked 12 Oct 2026 | AI ad maker: the "Mark" agent reads a product link and writes ads; talking AI actors (1,000+ stock); clips keep the same actor and voice; up to ~2 min per talking clip, longer by joining clips | Pricing hidden until signup: reviews say about $110 (Starter) / $220 (Creator) a month, no free plan, about $11 a video because clips bill per full minute. Custom actor or self-clone is Pro only. Reviewers report billing complaints. Built for product ads, not our channels; see `ai-characters.md` |
+| "Hermes, an agent that gets me APIs for free" (Shreyansh's note) | - | Hermes doesn't make paid APIs free; it can run on free-tier models, which are rate-limited. Still parked |
+| "UGC" (Shreyansh's note) | AI UGC = short product videos in a customer style | Fake-customer AI testimonials are deceptive (playbook money.md); only AI presenters who explain a product, labelled as AI |
+
+Not read: The AI Colony e-book thread (separate topic), Nyx prompt 8.

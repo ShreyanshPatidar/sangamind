@@ -1,0 +1,27 @@
+{
+  "width": 1920,
+  "height": 1080,
+  "fps": 30,
+  "zoom_end": 1.08,
+  "blur_radius": 40,
+  "background_dim": 0.45,
+  "card_title_size": 120,
+  "card_line_size": 64,
+  "label_size": 40,
+  "caption_size": 64,
+  "caption_max_words": 7,
+  "caption_margin_bottom": 90,
+  "caption_box_padding": 14,
+  "caption_box_alpha": 80,
+  "crf": 20,
+  "preset": "veryfast",
+  "audio_bitrate": "192k",
+  "checks": {
+    "min_height": 1080,
+    "black_min_seconds": 0.05,
+    "freeze_max_seconds": 4,
+    "loudness_lufs": -14,
+    "loudness_tolerance": 1,
+    "true_peak_max": -1
+  }
+}

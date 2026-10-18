@@ -1,0 +1,44 @@
+{
+  "_help": "Sound effects synthesised with ffmpeg (ours, no licence needed). Each is an ffmpeg aevalsrc expression plus an optional filter chain. Durations in seconds. 'variants' pitch-shifted copies (name-1..n.wav, spread by 'vary') so a repeated effect never sounds identical; export.py cycles through them.",
+  "rate": 48000,
+  "sounds": {
+    "whoosh": {
+      "expr": "(random(0)*2-1)*sin(PI*t/0.7)",
+      "d": 0.7,
+      "filter": "highpass=f=400,lowpass=f=3500,volume=0.35"
+    },
+    "pop": {
+      "expr": "sin(2*PI*(700-400*t)*t)*exp(-40*t)",
+      "d": 0.2,
+      "filter": "volume=0.5"
+    },
+    "boom": {
+      "expr": "0.9*sin(2*PI*48*t)*exp(-3.5*t)+0.5*(random(0)*2-1)*exp(-14*t)",
+      "d": 1.6,
+      "filter": "lowpass=f=900,aecho=0.8:0.6:60:0.3,volume=0.9"
+    },
+    "gunshot": {
+      "expr": "(random(0)*2-1)*exp(-35*t)+0.7*sin(2*PI*90*t)*exp(-12*t)",
+      "d": 1.2,
+      "filter": "aecho=0.8:0.7:90|180:0.35|0.2,volume=0.8"
+    },
+    "stamp": {
+      "expr": "0.9*sin(2*PI*110*t)*exp(-22*t)+0.6*(random(0)*2-1)*exp(-45*t)",
+      "d": 0.5,
+      "filter": "lowpass=f=2500,volume=0.9"
+    },
+    "tick": {
+      "expr": "sin(2*PI*1400*t)*exp(-90*t)",
+      "d": 0.08,
+      "filter": "volume=0.25"
+    },
+    "drone": {
+      "expr": "0.30*sin(2*PI*55*t)+0.22*sin(2*PI*82.4*t)*(0.7+0.3*sin(2*PI*0.07*t))+0.12*sin(2*PI*110*t)*(0.6+0.4*sin(2*PI*0.11*t))+0.04*(random(0)*2-1)",
+      "d": 240,
+      "filter": "lowpass=f=600,aecho=0.8:0.85:400|700:0.4|0.3,afade=t=in:d=3,volume=0.5",
+      "variants": 1
+    }
+  },
+  "variants": 3,
+  "vary": 0.12
+}
