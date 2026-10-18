@@ -1,13 +1,13 @@
 ---
 name: ui-design
 description: One design workflow for web UI. Use it when building a new page or component, reshaping or redesigning an existing interface, or when asked to review, audit or polish a UI ("make this look premium", "why does this look generic", "review my UI", "check accessibility"). It combines design direction, anti-template taste rules, a redesign audit, Vercel's Web Interface Guidelines check and a 74-system design library with a token mixer/exporter.
-when_to_use: Use for ANY change to how a page, screen or component looks or is laid out, small fixes included, before writing the code: "looks ugly", "looks bad on phone", "fix the spacing/alignment/colours", "make it look premium/modern/clean", "redesign", "new page", "this UI", a screenshot of a screen with a complaint.
+when_to_use: Use for ANY change to how a page, screen or component looks, is laid out, or where something lives, small fixes included, before writing the code: "looks ugly", "looks bad on phone", "fix the spacing/alignment/colours", "make it look premium/modern/clean", "redesign", "new page", "this UI", "move X to", "merge these", "why is this its own page", "put this inside", a screenshot of a screen with a complaint.
 ---
 
 # UI design
 
-This workflow has four stages: **direction, build, audit, look**. Load only the reference files the
-task needs; they are long.
+This workflow has five stages: **placement, direction, build, audit, look**. Load only the reference
+files the task needs; they are long, except `references/placement.md`, which is short and always read.
 
 ## Always first: the project's own rules win
 
@@ -17,6 +17,15 @@ component library). Where a reference file below disagrees with them, the projec
   or DB settings), never literals in components. This applies even when a reference file shows hex values.
 - An existing component library is extended, not replaced or restyled around.
 - Placeholder images and CDN icons from the reference files are for throwaway prototypes only, never shipped.
+
+## 0. Placement (every time, before anything else)
+
+Read `references/placement.md` and answer its ten questions for the change, in writing, in two or
+three lines: where the thing is used, whose it is, and which existing screen holds it. Most rework
+comes from where a thing was put, not from how it looks: a page of its own for a short list, a
+window opened over a window, a tab nobody visits, details reachable only after a second save.
+Default to the screen that already exists; a new page, window or tab must say why no existing one
+can hold it. Do this unprompted: the person should not have to ask for it to live in the right place.
 
 ## 1. Direction (new UI or a big reshape)
 
@@ -40,6 +49,19 @@ the result, ask one question.
 Follow the plan through tokens. Build to a quality floor: works at phone width, visible keyboard focus,
 respects reduced motion, works in light and dark themes, has loading, empty and error states.
 
+**Premium is evidence of thought, not polish.** AI makes everything *look* decent — the "commodity
+ceiling" — so a pretty screen is the floor, not the edge. What reads as premium is the parts AI skips,
+so build them on purpose, not as afterthoughts:
+- **Design every state as a first-class screen** — loading, empty, error, offline, and *undo*. The
+  skipped-state gap is "design theater": the happy path looks right while the user is left wondering
+  "did that work? can I go back?". The user must always know *what just happened, that they can undo it,
+  and what to do next.*
+- **Failure moments are the biggest premium lever** (service-recovery paradox: a failure handled well
+  leaves people as happy as if nothing broke; one bad moment loses ~a third of users). A declined
+  payment with a clear "check balance / contact support" beats a dead error. Spend design effort here.
+- **Hold the whole product together**, not screen-by-screen. The user sees screen 80 beside screen 1;
+  seams where it "stops feeling like the same app" quietly cost trust and speed (people under-report it).
+
 ## 3. Audit (after building, or when asked to review)
 
 1. For an existing UI being redesigned, first work through `references/redesign.md` (scan, diagnose, fix,
@@ -48,6 +70,10 @@ respects reduced motion, works in light and dark themes, has loading, empty and 
    `https://raw.githubusercontent.com/vercel-labs/web-interface-guidelines/main/command.md`
    Report findings as `file:line` with the rule broken, in the format that file asks for.
 3. Run the pre-flight check in section 14 of `references/taste.md` for marketing pages.
+4. **Break it on purpose.** Turn off the network mid-flow, fail an action, empty every list, submit the
+   bad input — and judge the error/empty/offline/recovery states as carefully as the success screens.
+   Most teams skip this, which makes it the cheapest place to buy "premium". Then walk the whole flow as
+   one product and log every seam where it stops feeling like the same app.
 
 ## 4. Look at it
 
