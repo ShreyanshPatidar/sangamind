@@ -149,12 +149,63 @@ def stamp(secs: int) -> str:
     return f"{h}:{m:02d}:{s:02d}" if h else f"{m:02d}:{s:02d}"
 
 
+def browser_cookies(browser: str | None):
+    """Load the named browser's cookies so logged-in pages (e.g. X) can be fetched. None on failure."""
+    if not browser:
+        return None
+    try:
+        import browser_cookie3  # optional
+
+        return getattr(browser_cookie3, browser)()
+    except Exception:
+        return None
+
+
+def fetch_text(url: str, cookies_browser: str | None):
+    """
+    Fallback when a link has no video/audio: fetch the page and pull its readable text.
+    Returns (title, text) or raises. Good for articles, blog posts and open social posts.
+    X/Twitter and other login-walled sites usually need --cookies-browser to return anything.
+    """
+    import requests
+    from bs4 import BeautifulSoup
+
+    headers = {
+        # A real browser UA; many sites return an empty shell to the default python UA.
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
+        "(KHTML, like Gecko) Chrome/130.0 Safari/537.36",
+        "Accept-Language": "en-US,en;q=0.9",
+    }
+    r = requests.get(url, headers=headers, cookies=browser_cookies(cookies_browser), timeout=30)
+    r.raise_for_status()
+    soup = BeautifulSoup(r.text, "html.parser")
+
+    title = (soup.title.string.strip() if soup.title and soup.title.string else "") or "page"
+    # Prefer the social/article summary when the body is JS-rendered (common on X).
+    meta = soup.find("meta", attrs={"property": "og:description"}) or soup.find("meta", attrs={"name": "description"})
+    meta_text = (meta.get("content") or "").strip() if meta else ""
+
+    for tag in soup(["script", "style", "noscript", "nav", "header", "footer", "aside", "form", "svg"]):
+        tag.decompose()
+    main = soup.find("article") or soup.find("main") or soup.body or soup
+    body_text = re.sub(r"\n{3,}", "\n\n", main.get_text("\n", strip=True))
+
+    # Keep whichever gives us real content. On JS-only pages the body is thin, so the meta wins.
+    text = body_text if len(body_text) > len(meta_text) else meta_text
+    if not text or len(text) < 20:
+        text = meta_text or body_text
+    if not text.strip():
+        raise RuntimeError("No readable text found on that page (it may be login-walled or JS-only).")
+    return title, text.strip()
+
+
 def main() -> int:
     ap = argparse.ArgumentParser(description="Transcribe a video or audio link to English.")
     ap.add_argument("url")
     ap.add_argument("--model", default="small", help="tiny | base | small | medium | large-v3 (bigger = better Hindi, slower)")
     ap.add_argument("--cookies-browser", default=None, help="Use this browser's sign-in for private posts: chrome, edge, firefox")
     ap.add_argument("--no-captions", action="store_true", help="Skip existing captions and always run speech-to-text")
+    ap.add_argument("--text-only", action="store_true", help="Skip audio/video; just fetch the page's text (articles, posts)")
     ap.add_argument("--out", default=str(DEFAULT_OUT))
     a = ap.parse_args()
 
@@ -167,35 +218,46 @@ def main() -> int:
     workdir = tempfile.mkdtemp(prefix="transcribe-")
     try:
         title, lines, source, language = "video", None, "", ""
+        text_body = None  # set only when we fall back to fetching page text
         if not a.no_captions:
             try:
                 title, lines = captions(a.url, workdir, a.cookies_browser)
                 source = "captions (English)"
             except Exception as e:  # Captions are a shortcut; any failure falls through to Whisper.
                 print(f"(no usable captions: {str(e).splitlines()[0][:120]})", file=sys.stderr)
-        if not lines:
-            print("Downloading audio…", file=sys.stderr)
-            title, audio = download_audio(a.url, workdir, a.cookies_browser)
-            print(f"Transcribing to English with Whisper '{a.model}' on {threads} threads (low priority)…", file=sys.stderr)
-            language, lines = whisper_english(audio, a.model, threads)
-            source = f"speech-to-text, Whisper {a.model}, spoken language: {language}, translated to English"
-        if not lines:
-            print("No speech was found in that link.", file=sys.stderr)
+        if not lines and not a.text_only:
+            try:
+                print("Downloading audio…", file=sys.stderr)
+                title, audio = download_audio(a.url, workdir, a.cookies_browser)
+                print(f"Transcribing to English with Whisper '{a.model}' on {threads} threads (low priority)…", file=sys.stderr)
+                language, lines = whisper_english(audio, a.model, threads)
+                source = f"speech-to-text, Whisper {a.model}, spoken language: {language}, translated to English"
+            except Exception as e:  # No video/audio (e.g. a text post) → fall back to reading the page text.
+                print(f"(no video/audio: {str(e).splitlines()[0][:120]}) — reading page text instead…", file=sys.stderr)
+        if not lines and text_body is None:
+            # Text fallback: an article, blog post, or a text-only social post.
+            title, text_body = fetch_text(a.url, a.cookies_browser)
+            source = "page text (no audio/video on this link)"
+        if not lines and text_body is None:
+            print("No speech or readable text was found at that link.", file=sys.stderr)
             return 2
 
         out_dir = Path(a.out)
         out_dir.mkdir(parents=True, exist_ok=True)
         path = out_dir / f"{datetime.now():%Y-%m-%d_%H%M}_{slug(title)}.txt"
         body = [f"Title: {title}", f"Link: {a.url}", f"Source: {source}", ""]
-        body += [f"[{stamp(t)}] {text}" for t, text in lines]
+        if text_body is not None:
+            body.append(text_body)
+        else:
+            body += [f"[{stamp(t)}] {text}" for t, text in lines]
         path.write_text("\n".join(body) + "\n", encoding="utf-8")
         print(f"TRANSCRIPT: {path}")
         return 0
     except Exception as e:
         msg = str(e).splitlines()[0][:300]
         hint = ""
-        if re.search(r"login|private|cookies|sign in|rate", msg, re.I):
-            hint = "  This post needs a signed-in account: rerun with --cookies-browser chrome (or edge/firefox). Chrome must be closed for that on Windows."
+        if re.search(r"login|private|cookies|sign in|rate|402|403", msg, re.I):
+            hint = "  This link needs a signed-in account: rerun with --cookies-browser chrome (or edge/firefox). Chrome must be closed for that on Windows."
         print(f"FAILED: {msg}{hint}", file=sys.stderr)
         return 1
     finally:
