@@ -44,6 +44,12 @@ so you don't have to."
    character from sheet + location from sheet + specific action + camera angle and movement +
    light direction and mood + style from sheet. "Girl talking in her room" is why AI video looks
    bad.
+   - Tool to know: **CreateUGC** (createugc.ai, ~$20-50/mo, Veo/Kling/Seedance under the hood) -
+     product link or script in, a talking AI-avatar clip out in ~60s, 9:16/1:1/16:9. Built for
+     ecommerce UGC *ads*, not channel hosting, so its avatars are generic presenters, not a locked
+     persona - fine for a quick ad creative for your own app (Oric), weak for a consistent host you
+     reuse across a channel (steps 1-4 beat it there). Its own landing page makes unverified
+     conversion claims; judge the output, not the copy.
 7. **Write in persona** - the JSON script template with the persona sheet as a rule.
 8. **Assemble** - avatar segments with maps, charts, footage, graphics; captions; cut dead air;
    disclose.
