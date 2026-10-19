@@ -13,8 +13,8 @@
       "version": "1.2.0"
     },
     {
-      "name": "switchboard",
-      "source": "./switchboard",
+      "name": "switchmod",
+      "source": "./switchmod",
       "description": "Claude Code only: one mod, every feature a switch (usage meter, output viewer, work log, hide secrets, guards against repeated failures, risky commands, edit collisions and overlapping test runs, other-chats line, dev server watch)."
     }
   ]

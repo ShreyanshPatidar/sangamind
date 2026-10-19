@@ -1,7 +1,7 @@
-// Switchboard — useful extras for Claude Code, each one a switch.
+// SwitchMod — useful extras for Claude Code, each one a switch.
 //
 // Every feature is a userConfig toggle in ../.claude-plugin/plugin.json: it shows as a row in
-// /config, and /switchboard opens a settings page listing them with their explanations. Each
+// /config, and /switchmod opens a settings page listing them with their explanations. Each
 // feature's functions start by checking their switch, so an off feature does nothing. Tunables
 // (thresholds, patterns, colours) are in ../config.js.
 //
@@ -2171,7 +2171,7 @@ export function register(on, options) {
   setOptions(options)
 
   on('session.start', async ($, e, next) => {
-    await $.command.register({ name: 'switchboard', immediate: true, description: 'Switchboard settings: turn each feature on or off' })
+    await $.command.register({ name: 'switchmod', immediate: true, description: 'SwitchMod settings: turn each feature on or off' })
     await trace($, 'session.start', { options, surfaces: await $.session.surfaces() })
     $.clock.every(2000, () => void flushTrace($))
     await secretsSessionStart($)
@@ -2232,8 +2232,8 @@ export function register(on, options) {
   on('session.compact', ($, e, next) => compactSave($, e, next))
 
   // Commands fire only for features that registered them, so only for switches that are on.
-  on('command.run', { command: 'switchboard' }, async ($) => {
-    await $.ui.open({ id: 'switchboard', title: 'Switchboard', focus: true, closeOnEscape: true, rows: SETTINGS_ROWS })
+  on('command.run', { command: 'switchmod' }, async ($) => {
+    await $.ui.open({ id: 'switchmod', title: 'SwitchMod', focus: true, closeOnEscape: true, rows: SETTINGS_ROWS })
     return {}
   })
   on('command.run', { command: 'meter' }, ($) => meterCommand($))
@@ -2243,7 +2243,7 @@ export function register(on, options) {
   on('command.run', { command: 'devserver' }, ($, e) => devCommand($, e))
   on('command.run', { command: 'risky' }, ($, e) => riskyCommand($, e))
 
-  on('ui.render', { component: 'Pane', requestId: 'switchboard' }, ($, e) => settingsPane($, e))
+  on('ui.render', { component: 'Pane', requestId: 'switchmod' }, ($, e) => settingsPane($, e))
   on('ui.render', { component: 'Pane', requestId: 'meter' }, ($, e) => meterPane($, e))
   on('ui.render', { component: 'Pane', requestId: 'viewer' }, ($, e) => viewerPane($, e))
   on('ui.render', { component: 'Pane', requestId: 'worklog' }, ($, e) => logPane($, e))

@@ -1,6 +1,6 @@
 {
-  "name": "switchboard",
-  "description": "Switchboard: useful extras for Claude Code, each one a switch. A usage meter above the prompt, an output viewer for long results and images, secret hiding, a stop for repeated failures, a check before risky commands, a work log, and coordination between parallel chats. /switchboard turns each on or off.",
+  "name": "switchmod",
+  "description": "SwitchMod: useful extras for Claude Code, each one a switch. A usage meter above the prompt, an output viewer for long results and images, secret hiding, a stop for repeated failures, a check before risky commands, a work log, and coordination between parallel chats. /switchmod turns each on or off.",
   "author": {
     "name": "Shreyansh Patidar"
   },

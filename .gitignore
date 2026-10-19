@@ -1,4 +1,4 @@
-﻿# Switchboard writes a trace log per session
+﻿# SwitchMod writes a trace log per session
 trace*.log
 node_modules/
 __pycache__/

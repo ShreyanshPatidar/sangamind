@@ -2,7 +2,7 @@
 
 Written up from a screenshot of the project's home page (saved 8 Oct 2026):
 [images/oh-my-claudecode.jpg](images/oh-my-claudecode.jpg). Not installed here;
-kept as a reference to compare against Switchboard and these skills.
+kept as a reference to compare against SwitchMod and these skills.
 
 > **oh-my-claudecode** — "A weapon, not a tool"
 >
@@ -36,6 +36,6 @@ npm install -g oh-my-claude-sisyphus@4.9.1
 ## Before installing
 
 - Read what it does first (house rule): its hooks and agents run in every session once installed.
-- It overlaps with Switchboard (guards, multi-chat awareness) and may clash with its hooks;
+- It overlaps with SwitchMod (guards, multi-chat awareness) and may clash with its hooks;
   try it in one chat, not globally.
 - Figures above are as shown on the page that day; check the repo for the current version.

@@ -1,4 +1,4 @@
-// Switchboard's tunables: thresholds, patterns, colours and limits for each feature.
+// SwitchMod's tunables: thresholds, patterns, colours and limits for each feature.
 // Plain data, edited by hand; the switches themselves are in .claude-plugin/plugin.json (userConfig).
 
 export default {

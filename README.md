@@ -3,7 +3,7 @@
 **A Claude plugin marketplace — 18 skills and a Claude Code mod, in one install.**
 
 *Sangamind = Sangam ("confluence") + mind.* A curated set of skills for Claude across chat (web,
-desktop, mobile), Cowork and Claude Code, plus **Switchboard**, a Claude Code mod where every feature
+desktop, mobile), Cowork and Claude Code, plus **SwitchMod**, a Claude Code mod where every feature
 is a switch.
 
 ---
@@ -34,7 +34,7 @@ Plus a **creator toolkit**. Cross-platform (YouTube, Reels, Shorts, TikTok): `cr
 voice). YouTube-specific: `yt-publish` (description/tags/chapters + a channel audit) and
 `yt-strategy` (2026 playbook + upload planning + Studio retention diagnostics).
 
-### `switchboard` — the Claude Code mod
+### `switchmod` — the Claude Code mod
 Claude Code only. One mod, every feature a toggle: usage meter, output viewer, work log, hide secrets,
 guards against repeated failures / risky commands / edit collisions / overlapping test runs, an
 other-chats line, and a dev-server watch.
@@ -48,7 +48,7 @@ It's a Claude plugin marketplace. Add it, then install the plugins you want:
 ```
 /plugin marketplace add ShreyanshPatidar/sangamind
 /plugin install sangamind@sangamind
-/plugin install switchboard@sangamind
+/plugin install switchmod@sangamind
 ```
 
 Some skills need tools on the machine:
@@ -63,7 +63,7 @@ Skills without extra tooling work in Claude chat (web, desktop, mobile) and Cowo
 
 ```
 sangamind/      the skills plugin (skills/<name>/SKILL.md each)
-switchboard/    the Claude Code mod
+switchmod/      the Claude Code mod
 hookify/        hookify rule files
 docs/           notes, including LEARNINGS.md (log for future skill upgrades)
 .claude-plugin/ marketplace manifest
