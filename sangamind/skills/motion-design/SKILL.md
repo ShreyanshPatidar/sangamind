@@ -1,7 +1,7 @@
 ---
 name: motion-design
 description: Make a finished motion design video (brand reel, explainer, YouTube intro, product demo) as a Remotion project that renders an MP4, stage by stage with Shreyansh approving each gate - brief, script, style frames, transitions, animatic, build, final - and quality checks before every gate. Use when asked to make, animate or render a video, reel, intro, explainer or demo clip.
-when_to_use: Any request to produce a video or animation from scratch ("make a video", "brand reel", "YouTube intro", "explainer", "animate this", "demo video for Oric", "motion graphics"). Not for transcribing or editing existing footage (use transcribe or yt-cut).
+when_to_use: Any request to produce a video or animation from scratch ("make a video", "brand reel", "YouTube intro", "explainer", "animate this", "demo video for Oric", "motion graphics"). Not for transcribing or editing existing footage (use transcribe or creator-cut).
 ---
 
 # Motion design harness
