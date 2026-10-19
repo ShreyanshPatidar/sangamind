@@ -1,12 +1,12 @@
 ---
-name: yt-comment
+name: creator-comment
 description: >-
   Draft replies to YouTube comments in the creator's voice, triaged by which
   ones are worth answering. Use for "reply to my comments", "handle the
   comment section", "someone asked X", or a pasted comment thread.
 ---
 
-# yt-comment
+# creator-comment
 
 The comment section is a retention surface, not a chore. Replies in the first few hours are what
 decide whether a thread becomes a conversation other people read.

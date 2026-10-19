@@ -1,5 +1,5 @@
 ---
-name: yt-script
+name: creator-script
 description: >-
   Write a YouTube video script from a raw idea - hook options off 21
   formulas, scored, then the full spoken script with the retention beats
@@ -8,7 +8,7 @@ description: >-
   and does not have the first fifteen seconds yet.
 ---
 
-# yt-script
+# creator-script
 
 One idea into a script somebody finishes.
 
@@ -37,10 +37,10 @@ and weights live in `profiles.json`, the 25 formulas (21 creator + 4 story) in `
 3. **Factual topic (money, history, news, science, business)? Research brief first.** Build it from
    sources, verify it, and write only from it, marking anything uncertain `[VERIFY]`. The brief
    prompt and the JSON script template are in
-   [the playbook's pipeline](../yt-playbook/references/pipeline.md). Fill in the template before
+   [the playbook's pipeline](../yt-strategy/references/pipeline.md). Fill in the template before
    drafting a series, so every episode keeps the same audience, tone and rules.
 4. A character host? Write in the persona sheet's voice, never claim credentials, and keep money
-   content educational ([ai-host](../yt-playbook/references/ai-host.md)).
+   content educational ([ai-host](../yt-strategy/references/ai-host.md)).
 
 ## Short-form (1-5 minutes)
 

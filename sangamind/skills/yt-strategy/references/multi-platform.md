@@ -46,7 +46,7 @@ country-specific products (401k vs SIP), so one video works in both languages.
 ## Tool notes (11 Oct 2026)
 
 - **Thumbnails:** Ideogram (free tier) handles text inside images better than most generators.
-- **Shorts from long videos:** OpusClip can auto-cut; `/yt-cut` picks the moments from a transcript for free.
+- **Shorts from long videos:** OpusClip can auto-cut; `/creator-cut` picks the moments from a transcript for free.
 - **Voice:** Kokoro (local, free, commercial use allowed) by default; ElevenLabs via its official MCP only on a paid plan
   (free plan is non-commercial).
 

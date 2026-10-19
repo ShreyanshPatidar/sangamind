@@ -34,7 +34,7 @@ current stage: BRIEFED / DRAFTED / EDITED / APPROVED / PUBLISHED
 ```
 
 VOICE.md: written once from five of your best pieces; every agent reads it every run. In Sangamind
-the voice file is `~/.claude/youtube/voice.md` (yt-script and yt-plan read it).
+the voice file is `~/.claude/youtube/voice.md` (creator-script and yt-strategy read it).
 
 Run the first pass by hand and fix each agent until it is reliable. Then `/schedule` each stage
 (e.g. research 7am, approve by 9; write 10am; edit 1pm; publish 3pm). The human's job becomes four

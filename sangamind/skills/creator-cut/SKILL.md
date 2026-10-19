@@ -1,5 +1,5 @@
 ---
-name: yt-cut
+name: creator-cut
 description: >-
   Cut a video down from its transcript - tighten a rambling recording into an
   edit decision list (dead air, filler, retakes with timecodes), and find the
@@ -8,7 +8,7 @@ description: >-
   "clip this", "repurpose this video", "what should I clip".
 ---
 
-# yt-cut
+# creator-cut
 
 Two cuts, both from a timestamped transcript: **tighten** a raw take, and **carve Shorts** out of a
 long video. The skill prints the cuts; you apply them in your editor. No transcript yet? Ask for one
@@ -52,7 +52,7 @@ without reading the whole transcript.
 
 **Writing each one:**
 - **A NEW first line.** The long video's line assumes context this viewer doesn't have. Write the
-  replacement and run it through `../yt-script/hookscore.py`.
+  replacement and run it through `../creator-script/hookscore.py`.
 - **On-screen text for the first two seconds**, different words from the spoken line.
 - **A loop point**: what the last line sets up so the first line answers it.
 - A vertical framing note — what gets cropped out of a 16:9 frame and whether that matters.

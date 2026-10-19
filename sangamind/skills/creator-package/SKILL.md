@@ -1,5 +1,5 @@
 ---
-name: yt-package
+name: creator-package
 description: >-
   Write and lint the title and thumbnail for a YouTube video as one pairing,
   checking truncation, duplication and vagueness before publish. Use for
@@ -7,7 +7,7 @@ description: >-
   bad", packaging, or any request to rename or repackage an existing video.
 ---
 
-# yt-package
+# creator-package
 
 The title and the thumbnail are ONE unit. Writing them separately is why most packaging fails: the
 thumbnail repeats the title, and half the click surface says the same thing twice.

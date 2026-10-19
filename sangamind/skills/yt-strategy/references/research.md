@@ -29,7 +29,7 @@ strategy. Example: all five caption from second one -> sound-off viewers matter.
 
 ## Outliers
 
-A video far above its channel's normal (20k average, one at 2M = 100x). `/yt-viral` ranks these.
+A video far above its channel's normal (20k average, one at 2M = 100x). `/creator-viral` ranks these.
 Investigate in order: topic (big in general or to this audience?), timing (news, release, trend),
 thumbnail, title (curiosity gap), format, hook, audience, search demand, external events.
 

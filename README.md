@@ -1,6 +1,6 @@
 # Sangamind
 
-**A Claude plugin marketplace — 21 skills and a Claude Code mod, in one install.**
+**A Claude plugin marketplace — 18 skills and a Claude Code mod, in one install.**
 
 *Sangamind = Sangam ("confluence") + mind.* A curated set of skills for Claude across chat (web,
 desktop, mobile), Cowork and Claude Code, plus **Switchboard**, a Claude Code mod where every feature
@@ -28,9 +28,11 @@ Works wherever Claude runs. A few highlights:
 | **datagrid-helper** | Configure and debug the Indas DataGrid. |
 | **motion-design / explainer-video** | Make a finished motion/explainer video (Remotion, local). |
 
-Plus a full **YouTube toolkit**: `yt-playbook`, `yt-plan`, `yt-script`, `yt-package`, `yt-metadata`
-(description, tags, chapters), `yt-cut` (tighten a take + carve Shorts), `yt-retention`, `yt-audit`,
-`yt-viral`, `yt-comment`.
+Plus a **creator toolkit**. Cross-platform (YouTube, Reels, Shorts, TikTok): `creator-script`
+(scored hooks + script), `creator-cut` (tighten a take + carve Shorts), `creator-package`
+(title + thumbnail), `creator-viral` (find the winning formula), `creator-comment` (reply in your
+voice). YouTube-specific: `yt-publish` (description/tags/chapters + a channel audit) and
+`yt-strategy` (2026 playbook + upload planning + Studio retention diagnostics).
 
 ### `switchboard` — the Claude Code mod
 Claude Code only. One mod, every feature a toggle: usage meter, output viewer, work log, hide secrets,

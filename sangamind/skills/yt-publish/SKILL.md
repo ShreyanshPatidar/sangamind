@@ -1,18 +1,24 @@
 ---
-name: yt-metadata
+name: yt-publish
 description: >-
-  Write the search-facing text a YouTube video publishes with - the description,
-  tags, and chapters - aimed at the query a real person types and validated so the
-  chapters actually render. Use for "write my description", "tags", "SEO", "add
-  chapters", "timestamps", "break this into sections", "help this video get found",
-  "nobody is finding this".
+  Everything a YouTube video needs at publish time - the search-facing text
+  (description, tags, chapters validated so they actually render) and a
+  channel-level audit that ends in the ONE fix to make next. Use for "write my
+  description", "tags", "SEO", "add chapters", "timestamps", "help this video get
+  found", "nobody is finding this", "audit my channel", "why isn't my channel
+  growing", "review my videos", or a pasted channel URL.
 ---
 
-# yt-metadata
+# yt-publish
+
+The publish surface: the search-facing text you set on a video, and the channel-level audit that
+tells you what to fix before the next upload. Two jobs that both happen at publish time.
+
+# Metadata — description, tags, chapters
 
 The publish-time text around the video: **description, tags, chapters.** Search is a smaller lever
 than packaging and a bigger one than people think for evergreen videos. For a video aimed at the
-subscriber feed, say so and spend the effort on `/yt-package` instead.
+subscriber feed, say so and spend the effort on `/creator-package` instead.
 
 ## Before you write
 
@@ -59,6 +65,33 @@ it is filler (chapters double as a retention diagnostic).
 Before handing anything over, write the three search queries this video should win, and check the
 title and first two description lines contain the words in those queries. If they don't, the problem
 is the title, not the description.
+
+# Channel audit — end in ONE fix
+
+An audit that lists twenty problems is a way of avoiding the one that matters. This ends in ONE fix.
+Same "Before you write" as above (read `~/.claude/youtube/voice.md`; invent no numbers).
+
+## What to look at, in this order
+
+1. **The last ten titles, as a set.** Read them as a list, the way the channel page shows them. Do
+   they promise different things? Run them through `../creator-package/title.py`. A channel where
+   every title is the same shape has a format problem, not a title problem.
+2. **The thumbnails, at feed size.** Shrink them. What survives? If three of them are unreadable at
+   that size, that is the fix and nothing else matters yet.
+3. **The first fifteen seconds of the three most recent.** Transcribe them and score with
+   `../creator-script/hookscore.py`. This is where most channels lose.
+4. **Upload rhythm.** Not frequency — CONSISTENCY. Six videos in one week and then nothing for a
+   month is worse than one a fortnight forever.
+5. **The retention shape**, if they can export it. `/yt-strategy` (retention).
+
+## What to hand back
+
+- The single biggest fix, named, with what to do this week.
+- Three things that are already working, so they do not break them. Be specific; "your energy is
+  good" is not an observation.
+- What NOT to do yet, and why.
+
+Never open an audit with praise you do not mean, and never end one with a list of twenty things.
 
 ## The gate
 

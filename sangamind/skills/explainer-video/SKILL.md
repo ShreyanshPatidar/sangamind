@@ -1,7 +1,7 @@
 ---
 name: explainer-video
 description: Turn a finished script into an animated explainer video (Claude Motion style) on this computer - AI narration with real pauses, word-timed motion graphics (kinetic text, counters, archive photos, animated OpenStreetMap maps with routes and markers, stamps), word-by-word captions, original sound effects, then quality checks. Remotion + Kokoro + Whisper, all local and free.
-when_to_use: Making or re-making a video for one of Shreyansh's channels from a script ("make the video", "render #14", "animate this script", "add a map scene"). Not for writing the script (yt-script) or a short brand sting (motion-design).
+when_to_use: Making or re-making a video for one of Shreyansh's channels from a script ("make the video", "render #14", "animate this script", "add a map scene"). Not for writing the script (creator-script) or a short brand sting (motion-design).
 ---
 
 # explainer-video

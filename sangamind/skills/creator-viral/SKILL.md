@@ -1,5 +1,5 @@
 ---
-name: yt-viral
+name: creator-viral
 description: >-
   Find what is actually working in the user's niche on YouTube and rank it
   by how far each video beat its own channel, then name the formula. Use for
@@ -7,7 +7,7 @@ description: >-
   blow up", competitor research, or a swipe file.
 ---
 
-# yt-viral
+# creator-viral
 
 Raw view counts rank channel size, not ideas. This ranks by **multiple over each channel's own
 median**, which is the only version of the question that is about the video.
@@ -32,13 +32,13 @@ account credentials.
 ## Reading the output
 
 The multiple is the signal. The formula line is a judgement about the TITLE, matched against
-[the 21 formulas](../yt-script/hooks.json) - it is not a claim about why the video worked, and you
+[the 21 formulas](../creator-script/hooks.json) - it is not a claim about why the video worked, and you
 should say so when you present it.
 
 **Study, never remake.** The output is the reason a video worked, applied to a new idea in the
 user's voice. Recreating the video itself is copying, and since 1 Oct 2026 Shorts cut the reach of
 channels that re-upload or lightly rework other people's work. To work out whether the topic or
-the packaging won, use the method in [research](../yt-playbook/references/research.md).
+the packaging won, use the method in [research](../yt-strategy/references/research.md).
 
 What to hand back: the top five with their multiples, the formula each used, and the ONE structural
 thing they share. Then the harder line - which of those the user could actually make this week, in
