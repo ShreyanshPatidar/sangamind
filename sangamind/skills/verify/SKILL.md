@@ -1,5 +1,5 @@
 ---
-name: verification-before-completion
+name: verify
 description: Use when about to claim work is complete, fixed, or passing, before committing or creating PRs - requires running verification commands and confirming output before making any success claims; evidence before assertions always
 when_to_use: Use whenever the question is whether work is finished or works: "is it done", "are we done", "is it working", "did it work", "can I tell the team / ship it", "over or something is left", and before saying done, fixed, passing, or committing and pushing.
 ---

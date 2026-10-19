@@ -1,5 +1,5 @@
 ---
-name: receiving-code-review
+name: review-intake
 description: Use when receiving code review feedback, before implementing suggestions, especially if feedback seems unclear or technically questionable - requires technical rigor and verification, not performative agreement or blind implementation
 when_to_use: Use when someone else's suggestions arrive, before acting on them: "the reviewer says", a pasted PR or review comment, a bot's findings, another chat's advice, "should we just do it", "they want us to change X".
 ---

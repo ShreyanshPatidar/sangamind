@@ -1,5 +1,5 @@
 ---
-name: systematic-debugging
+name: debug
 description: Find the root cause of any bug before fixing it - an error, a 500, a crash, a failing test, a wrong number, or something that stopped working. Load before investigating or proposing a fix.
 when_to_use: Use as soon as something is broken, before proposing any fix: "why is X failing", "not working", "giving 500", "error", "crash", "test failing", "it was working yesterday", "broken", "wrong total", a pasted stack trace or error message.
 ---
@@ -186,7 +186,7 @@ You MUST complete each phase before proceeding to the next.
    - Test passes now?
    - No other tests broken?
    - Issue actually resolved?
-   - Use the `verification-before-completion` skill before claiming success
+   - Use the `verify` skill before claiming success
 
 4. **If Fix Doesn't Work**
    - STOP
