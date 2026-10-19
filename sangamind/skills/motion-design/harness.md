@@ -72,7 +72,10 @@ black frames `-vf blackdetect=d=0.05`; frozen frames `-vf freezedetect=n=0.003:d
   in-between frames.
 - **voiceover**: narration, checked takes, and a word-timing map the animation follows.
 - **music**: an original score written to the approved animatic (no stock tracks without a licence
-  in assets/SOURCES.md).
+  in assets/SOURCES.md). For sound effects and ambience (not the score), Openverse is a free
+  source of 5.2M+ CC audio with no API key — `api.openverse.org`; use only cc0/by/by-sa
+  (commercial-OK) and record each file's credit in assets/SOURCES.md. The explainer-video skill's
+  `tools/openverse.py` already does the search, licence filter and credit logging if you want it.
 - **final-pass**: format, black or frozen frames, loudness, true peak, and a frame sheet to look at.
 
 ## Guards against a runaway loop

@@ -41,6 +41,11 @@ ffmpeg). After editing code here: `python setup.py --workspace <path> --sync`.
    Country maps: GeoJSON borders (e.g. historical-basemaps for a past year) + a `map-*.config.json`
    (bbox, regions, points, attribution, credit), then `python geo_map.py config.json ../_studio/public/<n>/map-x.json`.
    Optional `sfx`: whoosh, pop, boom, gunshot, stamp, tick. Follow **Visual rules** below.
+   For a **real recorded** sound a synthesised recipe can't fake (a true stamp thunk, crackling
+   fire, room ambience), search Openverse (5.2M+ CC audio, free, no key):
+   `python tools/openverse.py "<plain words>"` — it matches words literally, so listen to a few,
+   then `--get <n> --out _studio/public/<n>/sfx --name <sound>`. It logs the licence + credit to
+   that folder's `credits.json` so the description carries it. Abstract hits stay synthesised.
 4. **Export** (voice + word timings + timeline):
    `_tools/.venv/Scripts/python _tools/export.py <script> --assets <assets> --brand <brand.json> --out _studio/public/<n> --render-dir <channel>/renders/<n>`
    (writes captions.srt for YouTube and credits.txt for the description into the render folder)
@@ -76,11 +81,14 @@ ffmpeg). After editing code here: `python setup.py --workspace <path> --sync`.
 - `tools/voice.json`: voice blend (e.g. `bf_emma*0.6+af_bella*0.4`), speed, pauses, polish chain,
   pronunciation respellings for names Kokoro gets wrong (check names by running Whisper on the output).
 - `tools/video.json`: check targets. `tools/sfx.json`: the synthesised sound recipes.
+  `tools/openverse.py`: search/fetch real CC-licensed sounds when synthesis won't do.
 
 ## Rules
 
 - Never publish. Deliver files; Shreyansh uploads.
 - Image and map credits go in the description (`credits.json`, "Map data (c) OpenStreetMap contributors").
 - Remotion is free for individuals and companies up to 3 people; above that it needs a company licence.
-- Fonts are OFL (licences in `studio/public/fonts`). Sound effects are synthesised, ours.
+- Fonts are OFL (licences in `studio/public/fonts`). Abstract sound effects are synthesised, ours;
+  any real sound fetched from Openverse is CC-licensed and must keep its credit (handled by
+  `openverse.py` → `credits.json` → description). Only cc0/by/by-sa are fetched (commercial-OK).
 - Shell heredocs mangle backslashes on this Windows setup: write regex-heavy code with the editor, not `sed`/heredocs.
