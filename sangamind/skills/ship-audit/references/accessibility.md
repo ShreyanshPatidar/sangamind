@@ -1,14 +1,8 @@
----
-name: accessibility-wcag22
-description: Ensure WCAG 2.2 Level AA accessibility compliance for web applications including keyboard navigation, screen readers, ARIA attributes, color contrast, and focus management. Use when user mentions accessibility, a11y, WCAG, screen readers, keyboard navigation, or compliance requirements.
-allowed-tools: Read, Grep, Glob, Edit
-version: 1.0.0
-updated: 2025-12-28
----
+# Accessibility audit (WCAG 2.2 AA)
 
-# Accessibility (WCAG 2.2) Skill
-
-Ensure this Next.js application meets WCAG 2.2 Level AA standards (ISO/IEC 40500:2025).
+Bring a web app to WCAG 2.2 Level AA (ISO/IEC 40500:2025). The code examples below are
+Next.js/React/Tailwind/Radix and reference the Indas DataGrid — they apply directly to Estimo, Oric
+and indas-ui; for a plain site, use the checklists and ignore the framework specifics.
 
 ## WCAG 2.2 Status (December 2025)
 
@@ -570,13 +564,3 @@ if (process.env.NODE_ENV !== 'production') {
 - [ ] 3.3.3 Error Suggestion
 - [ ] 3.3.4 Error Prevention
 
-## When to Use This Skill
-
-Use when user mentions:
-- "Accessibility" or "a11y"
-- "WCAG compliance"
-- "Screen reader support"
-- "Keyboard navigation"
-- "Focus management"
-- Legal/compliance requirements
-- Preparing for accessibility audit
