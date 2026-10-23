@@ -61,9 +61,9 @@ click the title promised, open a question the viewer cannot close, and prove the
 1. **Hook.** Write FIVE against [the 25 formulas](hooks.json), run them through `hookscore.py`,
    keep the top two, and show the user both with their scores. Never hand over one hook.
 2. **The turn** (0:15-0:45). Say what the video is going to do, in one sentence, and start doing it.
-   Make it a **counted promise** and point at one part: "there are five levels to this; most people
-   never get past level two", "seven rules; most people break the third". It opens two loops at once
-   (what is it, why that one), and each counted part becomes a payoff and a chapter.
+   Promise the depth or the payoff in words the viewer feels ("the answer sits deeper than most
+   people ever look", "seven rules; most people break the third"). A count can work once, in the
+   turn; never as a label later.
    No channel intro, no "before we get started", no subscribe pitch. Those are the single most
    common cause of the 0:30 cliff.
 3. **The body.** One idea per beat. Mark each beat with what is ON SCREEN, not just what is said -
@@ -84,6 +84,13 @@ every heading. Before drafting, write the **story spine** into the script file:
   second one is a new chapter: rewrite the join.
 - **Every beat ends on the question the next beat answers.** Re-hooks come from the story ("but the
   day isn't over"), never from "stay tuned".
+- **Never announce the structure.** No "Level two.", "Part three.", "Rule number four:" as a spoken
+  label: it reads like a slide deck and the viewer hears a gear change. The next section opens by
+  *answering* the question the last one ended on ("...who did?" -> "People did. The names on the
+  poster."). If the format has levels, the visuals show the depth (a dive, a ruler, a counter);
+  the voice just tells the story. Deleting the labels is not enough - write the new joins.
+- **Write the punchlines for the screen too.** Mark the 2-3 lines that should fill the screen as
+  big text (the reveal, the twist, the line people will quote). Subtitles run everywhere else.
 - **Count it out loud** when the story has a pattern ("failure number one... two... three").
 - **Digressions go where they are natural** (debunk the myth when that moment comes up), never
   between the climax and its consequence.

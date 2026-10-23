@@ -96,6 +96,12 @@ brand block (colours, fonts, depths, ruler labels, dive length); nothing is chan
   `section`, `kicker`, `title`, optional `rise: true` to go back up, and an `sfx` (a file the channel
   puts in `_studio/public/sfx`). `scenes.json` `"meta"`: `file` (e.g. "FILE 004") and `sections`
   (the readout names, `|`-separated) for this video.
+- **Subtitles always on** (brand `motion.captions: 1`): small, bottom centre, on a paper-coloured
+  strip, the spoken word in the highlight colour; keep source lines and labels out of the bottom band.
+- **Full-screen punchlines:** give the 2-3 lines the script marks for the screen their own short
+  paper scene with one centred `big` text item (`"align": "center"`, `"enter": "pop"`) cued to the line.
+- **Dive titles are not labels:** a dive's `title` is the line that answers the previous section
+  ("People did."), not "Level 2"; leave `kicker` empty unless the brand wants it.
 - **Drawings:** keep text out of SVG files (they render without the brand fonts); put labels on as
   `text` items. Pages longer than ~25 s need a new page or a steady stream of items.
 
