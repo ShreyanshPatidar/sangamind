@@ -64,25 +64,18 @@ RULES
 
 echo "Wrote ~/.claude/CLAUDE.md — global rules loaded for this cloud session."
 
-# ─────────────────────────────────────────────────────────────────────────────
-# ENFORCEMENT: install the Sangamind plugins so the hooks RUN in the cloud VM,
-# not just the written rules. This is what blocks a bad commit (no-ai-coauthor),
-# client names in Oric, etc. — the layer a plain CLAUDE.md can't provide.
-# NOTE: unverified in cloud; if plugin install isn't supported in the environment
-# these commands fail harmlessly and you still have the written rules above.
-if command -v claude >/dev/null 2>&1; then
-  # Add the Sangamind marketplace from GitHub (private repo — the VM needs repo access).
-  claude plugin marketplace add ShreyanshPatidar/sangamind 2>/dev/null || \
-    echo "note: couldn't add sangamind marketplace (repo access or cloud limitation)."
-  # Enable the two plugins: skills + the switchmod enforcement hooks.
-  claude plugin enable sangamind@sangamind 2>/dev/null || echo "note: sangamind skills not enabled."
-  claude plugin enable switchmod@sangamind 2>/dev/null || echo "note: switchmod not enabled."
-  # The official hookify plugin (runs the block rules: no-ai-coauthor etc.).
-  claude plugin marketplace add anthropics/claude-plugins 2>/dev/null || true
-  claude plugin enable hookify@claude-plugins-official 2>/dev/null || \
-    echo "note: hookify not enabled — the commit/edit BLOCK rules won't enforce here."
-else
-  echo "note: 'claude' CLI not on PATH in this VM — plugins not installed; written rules still apply."
-fi
+# NOTE: plugins/hooks do NOT work in cloud ("Plugins aren't available in this
+# environment" — confirmed 21 Oct 2026). So hookify's enforced blocks (e.g.
+# no-ai-coauthor) cannot run here. The real attribution safeguard in cloud is the
+# GIT_AUTHOR_NAME / GIT_AUTHOR_EMAIL environment variables set in this same
+# environment config (git then physically can't author as "Claude"). Set them to:
+#   GIT_AUTHOR_NAME=Shreyansh Patidar
+#   GIT_AUTHOR_EMAIL=shreyanshpatidar777@gmail.com
+#   GIT_COMMITTER_NAME=Shreyansh Patidar
+#   GIT_COMMITTER_EMAIL=shreyanshpatidar777@gmail.com
 
-echo "Setup complete. Verify in-session with /context (Memory files) and /plugin (installed plugins)."
+# Belt-and-suspenders: also set git identity here in case the env vars aren't applied.
+git config --global user.name "Shreyansh Patidar"
+git config --global user.email "shreyanshpatidar777@gmail.com"
+
+echo "Setup complete. Verify with /context (should list ~/.claude/CLAUDE.md under Memory files)."

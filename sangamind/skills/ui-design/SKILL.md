@@ -49,6 +49,10 @@ the result, ask one question.
 Follow the plan through tokens. Build to a quality floor: works at phone width, visible keyboard focus,
 respects reduced motion, works in light and dark themes, has loading, empty and error states.
 
+**Let the layout do the explaining.** No secondary labels, descriptions or helper lines that repeat what
+the heading, grouping or the control already says. Add a line of text only when the layout genuinely
+can't carry the meaning (a consequence, a unit, a constraint the user would otherwise get wrong).
+
 **Premium is evidence of thought, not polish.** AI makes everything *look* decent — the "commodity
 ceiling" — so a pretty screen is the floor, not the edge. What reads as premium is the parts AI skips,
 so build them on purpose, not as afterthoughts:

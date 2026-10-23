@@ -4,3 +4,12 @@ node_modules/
 __pycache__/
 *.pyc
 .DS_Store
+
+# Private program material (Akshar Yadav's USE-GO content — Shreyansh is a student, not for publishing)
+sangamind/skills/mcb-framework/
+sangamind/skills/go-framework/
+
+# Backups and secrets from the video tools
+*.bak-*
+google-tts-key.txt
+.tts-cache/
