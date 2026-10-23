@@ -63,7 +63,11 @@ click the title promised, open a question the viewer cannot close, and prove the
   answered, not switched.
 - **Say the title's promise in words by ~0:20** ("one company that's accused of getting paid three
   times"). Holding the title's hook back for minutes is how a viewer feels lost.
-- **Ask the thumbnail's question out loud** if it has one ("So who did this?").
+- **Open with 2-3 hook questions** (Syptian: always). The first is the title's question, asked in
+  the first seconds ("Every time a concert ticket gets resold... who gets paid?"); tease its answer in
+  one line, then hit the picture moment and ask the second ("So who decided that price?"). Each
+  question is an open loop the video pays off later, in order. Never more than three.
+- **Ask the thumbnail's question out loud** if it has one.
 - **Give it air:** a beat of silence and picture before the first word, and real pauses between the
   hook lines. No dense fact (dates, counts) crammed into the first 15 seconds.
 
