@@ -1,5 +1,6 @@
 import React, {useContext} from "react";
 import {
+  Audio,
   Easing,
   Img,
   interpolate,
@@ -194,26 +195,57 @@ const InkDrawing: React.FC<{it: Item}> = ({it}) => {
   );
 };
 
+/** Typewriter: the text appears letter by letter (the full text keeps its space, so nothing reflows). */
+const Typed: React.FC<{text: string; it: Item}> = ({text, it}) => {
+  const p = usePaper();
+  const {t} = useItemTime(it);
+  const cps = p.typeCps ?? 18;
+  const n = Math.max(0, Math.floor(t * cps));
+  const done = n >= text.length;
+  const caretOn = !done || Math.floor(t * 2) % 2 === 0;
+  return (
+    <>
+      {text.slice(0, n)}
+      <span style={{opacity: caretOn && t < text.length / cps + 1.2 ? 1 : 0}}>|</span>
+      <span style={{opacity: 0}}>{text.slice(n)}</span>
+    </>
+  );
+};
+
+/** The keyboard sound under a typed item, for as long as it types. */
+const TypeSound: React.FC<{it: Item}> = ({it}) => {
+  const p = usePaper();
+  const {fps} = useVideoConfig();
+  if (it.enter !== "type" || !p.typeSfx || it.sound === false) return null;
+  const secs = (it.text ?? "").length / (p.typeCps ?? 18);
+  return (
+    <Sequence from={Math.round((it.time ?? 0) * fps)} durationInFrames={Math.max(1, Math.round(secs * fps))} layout="none">
+      <Audio src={staticFile(`sfx/${p.typeSfx}`)} volume={p.typeVolume ?? 0.45} />
+    </Sequence>
+  );
+};
+
 const TextItem: React.FC<{it: Item}> = ({it}) => {
   const p = usePaper();
   const {fonts} = useBrand();
   const color = colorOf(p, it.color);
+  const body: React.ReactNode = it.enter === "type" ? <Typed text={it.text ?? ""} it={it} /> : it.text;
   const style = it.style ?? "headline";
   const size = it.size ?? (style === "headline" ? 92 : style === "big" ? 170 : style === "mono" ? 26 : style === "note" ? 34 : 30);
   const base: React.CSSProperties = {color, whiteSpace: "pre-line", textAlign: it.align ?? "left", maxWidth: it.w, lineHeight: 1.05};
   let el: React.ReactNode;
   if (style === "headline" || style === "big") {
-    el = <div style={{...base, fontFamily: fonts.title_family, fontWeight: 800, fontSize: size}}>{it.text}</div>;
+    el = <div style={{...base, fontFamily: fonts.title_family, fontWeight: 800, fontSize: size}}>{body}</div>;
   } else if (style === "mono" || style === "kicker") {
     el = (
       <div style={{...base, font: `600 ${size}px ${p.mono_family}`, letterSpacing: style === "kicker" ? "0.3em" : "0.12em", textTransform: "uppercase", lineHeight: 1.45}}>
-        {it.text}
+        {body}
       </div>
     );
   } else if (style === "note") {
     el = (
       <div style={{position: "relative", background: "#FFFDF7", padding: "26px 30px", boxShadow: p.shadow, maxWidth: it.w ?? 620}}>
-        <div style={{fontFamily: fonts.title_family, fontStyle: "italic", fontWeight: 600, fontSize: size, color: p.ink, lineHeight: 1.2}}>{it.text}</div>
+        <div style={{fontFamily: fonts.title_family, fontStyle: "italic", fontWeight: 600, fontSize: size, color: p.ink, lineHeight: 1.2}}>{body}</div>
         {it.by ? <div style={{marginTop: 14, font: `600 ${Math.round(size * 0.55)}px ${p.mono_family}`, letterSpacing: "0.08em", color: p.soft}}>{it.by}</div> : null}
         <Tape w={it.w ?? 620} />
       </div>
@@ -221,14 +253,17 @@ const TextItem: React.FC<{it: Item}> = ({it}) => {
   } else {
     el = (
       <div style={{...base, display: "inline-block", border: `5px solid ${color}`, padding: "6px 18px", font: `900 ${size}px ${fonts.body_family}`, letterSpacing: "0.06em", textTransform: "uppercase"}}>
-        {it.text}
+        {body}
       </div>
     );
   }
   return (
-    <Entrance it={{...it, enter: it.enter ?? (style === "stamp" ? "stamp" : "fade")}} w={it.w ?? 400} h={size}>
-      {el}
-    </Entrance>
+    <>
+      <Entrance it={{...it, enter: it.enter ?? (style === "stamp" ? "stamp" : "fade")}} w={it.w ?? 400} h={size}>
+        {el}
+      </Entrance>
+      <TypeSound it={it} />
+    </>
   );
 };
 

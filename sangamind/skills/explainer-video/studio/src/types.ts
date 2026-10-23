@@ -37,6 +37,10 @@ export type Paper = {
   rulerLabels?: string[];
   /** readout status words: at the surface, moving, holding */
   status: [string, string, string];
+  /** typewriter text (enter "type"): a keyboard sound in public/sfx, its volume, characters per second */
+  typeSfx?: string;
+  typeVolume?: number;
+  typeCps?: number;
 };
 
 /** One thing on a paper page. x/y/w are in 1920x1080 page pixels; time/until are filled in by export.py from "at"/"out" cues. */
@@ -62,7 +66,9 @@ export type Item = {
   arrow?: boolean;
   dashed?: boolean;
   width?: number;
-  enter?: "drop" | "fade" | "stamp" | "pop" | "write" | "sink" | "fall";
+  enter?: "drop" | "fade" | "stamp" | "pop" | "write" | "type" | "sink" | "fall";
+  /** false = no keyboard sound for this typed item */
+  sound?: boolean;
   seconds?: number;
   settle?: number;
   sway?: number;

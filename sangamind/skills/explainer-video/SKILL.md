@@ -63,21 +63,28 @@ ffmpeg). After editing code here: `python setup.py --workspace <path> --sync`.
    `python tools/openverse.py "<plain words>"` — it matches words literally, so listen to a few,
    then `--get <n> --out _studio/public/<n>/sfx --name <sound>`. It logs the licence + credit to
    that folder's `credits.json` so the description carries it. Abstract hits stay synthesised.
-4. **Export** (voice + word timings + timeline):
-   `_tools/.venv/Scripts/python _tools/export.py <script> --assets <assets> --brand <brand.json> --out _studio/public/<n> --render-dir <channel>/renders/<n>`
-   (writes captions.srt for YouTube and credits.txt for the description into the render folder)
-5. **Storyboard before rendering.** `_tools/.venv/Scripts/python _tools/storyboard.py <n> --studio _studio --out <channel>/renders/<n>`
-   renders one still 70% into every scene and draws `storyboard.jpg`: numbered frames with time,
-   length, source file and the words spoken over each (red border = scene over 12 s, check it moves).
-   Look at it yourself first, then send it to the user for approval: wrong picture for the words,
-   text over a face, a static stretch. Fix scenes.json, re-export (cached voice is instant) and re-run
-   the storyboard - never the full render - until it reads right. For one moment in detail:
-   `npx remotion still Explainer out/s.png --frame=<f>` or `npx remotion studio`.
-6. **Render:** `npx remotion render Explainer <channel>/renders/<n>/video.mp4 --props='{"video":"<n>"}'`
-7. **Master the sound:** `_tools/.venv/Scripts/python _tools/master.py <video.mp4>` (voice + effects + drone
-   together land louder than the voice alone; this brings the mix to -14 LUFS, picture untouched).
-8. **Check:** `_tools/.venv/Scripts/python _tools/checks.py <video.mp4>` (format, black and frozen
-   frames, -14 LUFS loudness, frame sheet). Look at the frame sheet. Report every result.
+4. **Listen first.** `_tools/.venv/Scripts/python _tools/export.py <script> --assets <assets> --brand <brand.json> --out _studio/public/<n> --render-dir <channel>/renders/<n> --listen`
+   makes only the voice and writes `narration.mp3` into the render folder (about a minute). Send it to
+   the user and get a yes on the words, the pacing and the pauses before any picture is built.
+   Script changes later go the same way: a short audio of the changed parts, never a wall of text.
+5. **Export** (voice + word timings + timeline): the same command without `--listen` (writes captions.srt
+   for YouTube and credits.txt for the description into the render folder; cached voice is instant).
+6. **Layout check:** `_tools/.venv/Scripts/python _tools/layout_check.py _studio/public/<n>/timeline.json`
+   flags items that partly cover each other, text in the bottom strip / ruler / HUD, and stretches where
+   nothing changes for 8+ s. Fix every flag (move it, re-cue it, add a beat, or mark `"overlap": true`
+   when it is on purpose) and re-run until clean.
+7. **Storyboard:** `_tools/.venv/Scripts/python _tools/storyboard.py <n> --studio _studio --out <channel>/renders/<n>`
+   renders one still 70% into every scene and draws `storyboard.jpg` (time, length, words spoken;
+   red border = scene over 12 s). Look at it yourself; fix scenes.json and re-export until it reads right.
+8. **Draft render:** `_tools/.venv/Scripts/python _tools/render.py <n> --studio _studio --out <channel>/renders/<n>/draft.mp4 --draft`
+   (half size, 2-3x faster; `--frames 900-1500` for one stretch). The user watches the draft for content,
+   pacing and sound. Every round of changes is a draft, never a full render.
+9. **Fact-check before the final:** a separate agent that did not write the script checks every claim
+   against sources (numbers, dates, quotes, legal status, allegation wording) and reports a table; fix
+   what it finds.
+10. **Final:** `_tools/.venv/Scripts/python _tools/render.py <n> --studio _studio --out <channel>/renders/<n>/video.mp4`
+   renders full size once, masters the sound to -14 LUFS (`master.py`) and runs `checks.py` (format, black
+   and frozen frames, loudness, frame sheet). Look at the frame sheet. Report every result.
 
 ## The paper look (optional, per channel)
 
@@ -121,6 +128,9 @@ brand block (colours, fonts, depths, ruler labels, dive length); nothing is chan
   up and arrows, a date chip), not read out on title cards.
 - **Captions:** see the paper look - uploaded on long videos, burned in on Shorts.
 - Vary the entrances (wipe, zoom, slide, fade); never the same transition three times in a row.
+- **Typewriter text with keyboard sound** (`"enter": "type"` on a text item; brand `paper.typeSfx`,
+  `typeCps`): for the lines that read like evidence - a quote from a document, a dossier list, a court
+  finding. Big typed quotes can take the whole screen. A few per video, not every label.
 - **Sound only where it means something** (a gunshot, a bomb, a stamp), never a whoosh on every
   scene: brand.json `sfx.enter` / `sfx.steps` stay empty unless a channel wants defaults. Repeats
   cycle through pitch variants. The drone plays only under scenes marked `"tense": true`.

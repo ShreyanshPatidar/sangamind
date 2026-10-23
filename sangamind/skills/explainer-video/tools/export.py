@@ -170,6 +170,8 @@ def main():
     ap.add_argument("--brand", required=True)
     ap.add_argument("--out", required=True)
     ap.add_argument("--render-dir", help="also write captions.srt and credits.txt here")
+    ap.add_argument("--listen", action="store_true",
+                    help="narration only: write narration.mp3 into --render-dir to approve by ear, then stop")
     ap.add_argument("--scenes-only", action="store_true", help="reuse the narration; re-time scenes.json and brand only")
     a = ap.parse_args()
 
@@ -189,6 +191,13 @@ def main():
         polish(wav, cfg)
         total = round(len(audio) / rate, 3)
         print(f"narration: {total}s, {len(sentences)} sentences")
+        if a.render_dir:  # an mp3 of the voice alone, to listen to before any picture is made
+            Path(a.render_dir).mkdir(parents=True, exist_ok=True)
+            mp3 = Path(a.render_dir) / "narration.mp3"
+            subprocess.run(["ffmpeg", "-loglevel", "error", "-y", "-i", str(wav), "-b:a", "160k", str(mp3)], check=True)
+            print(f"listen: {mp3}")
+        if a.listen:
+            return
         words = word_times(wav, sentences, cfg["whisper_model"])
     plan = json.loads((assets / "scenes.json").read_text(encoding="utf-8"))
     scenes = resolve(plan["scenes"], words, total, cfg["scene_lead_seconds"])
