@@ -15,7 +15,8 @@ Script in, finished MP4 out. Everything runs locally; nothing is uploaded.
   `<workspace>/_studio` (node_modules, `public/<video>/` data, sfx, fonts).
   On Shreyansh's laptop the workspace is `D:\Coding\Apps\AI\Channels`.
 - **Channel data:** `<channel>/scripts/<n>-*.md`, `<channel>/assets/<n>/` (images, credits.json,
-  scenes.json, map configs), `<channel>/brand/brand.json`, renders in `<channel>/renders/<n>/`.
+  scenes.json, map configs), `<channel>/brand/brand.json`, renders in `<render>` = `<channel>/renders/<NNN>/` (three digits, e.g. `004`,
+  the same number as the on-screen FILE number).
 - **Writing and planning live in Notion** (Syptian since 23 Oct 2026: YouTube > Syptian - Brand, Topics,
   Scripts; see `<channel>/NOTION.md`). Copy a script from its Notion page into `<channel>/scripts/`
   only when its video is rendered; never edit the local copy instead of the page.
@@ -64,7 +65,7 @@ ffmpeg). After editing code here: `python setup.py --workspace <path> --sync`.
    `python tools/openverse.py "<plain words>"` — it matches words literally, so listen to a few,
    then `--get <n> --out _studio/public/<n>/sfx --name <sound>`. It logs the licence + credit to
    that folder's `credits.json` so the description carries it. Abstract hits stay synthesised.
-4. **Listen first.** `_tools/.venv/Scripts/python _tools/export.py <script> --assets <assets> --brand <brand.json> --out _studio/public/<n> --render-dir <channel>/renders/<n> --listen`
+4. **Listen first.** `_tools/.venv/Scripts/python _tools/export.py <script> --assets <assets> --brand <brand.json> --out _studio/public/<n> --render-dir <render> --listen`
    makes only the voice and writes `narration.mp3` into the render folder (about a minute). Send it to
    the user and get a yes on the words, the pacing and the pauses before any picture is built.
    Script changes later go the same way: a short audio of the changed parts, never a wall of text.
@@ -74,18 +75,21 @@ ffmpeg). After editing code here: `python setup.py --workspace <path> --sync`.
    flags items that partly cover each other, text in the bottom strip / ruler / HUD, and stretches where
    nothing changes for 8+ s. Fix every flag (move it, re-cue it, add a beat, or mark `"overlap": true`
    when it is on purpose) and re-run until clean.
-7. **Storyboard:** `_tools/.venv/Scripts/python _tools/storyboard.py <n> --studio _studio --out <channel>/renders/<n>`
+7. **Storyboard:** `_tools/.venv/Scripts/python _tools/storyboard.py <n> --studio _studio --out <render>`
    renders one still 70% into every scene and draws `storyboard.jpg` (time, length, words spoken;
    red border = scene over 12 s). Look at it yourself; fix scenes.json and re-export until it reads right.
-8. **Draft render:** `_tools/.venv/Scripts/python _tools/render.py <n> --studio _studio --out <channel>/renders/<n>/draft.mp4 --draft`
+8. **Draft render:** `_tools/.venv/Scripts/python _tools/render.py <n> --studio _studio --out <render>/draft.mp4 --draft`
    (half size, 2-3x faster; `--frames 900-1500` for one stretch). The user watches the draft for content,
    pacing and sound. Every round of changes is a draft, never a full render.
 9. **Fact-check before the final:** a separate agent that did not write the script checks every claim
    against sources (numbers, dates, quotes, legal status, allegation wording) and reports a table; fix
    what it finds.
-10. **Final:** `_tools/.venv/Scripts/python _tools/render.py <n> --studio _studio --out <channel>/renders/<n>/video.mp4`
+10. **Final:** `_tools/.venv/Scripts/python _tools/render.py <n> --studio _studio --out <render>/video.mp4`
    renders full size once, masters the sound to -14 LUFS (`master.py`) and runs `checks.py` (format, black
    and frozen frames, loudness, frame sheet). Look at the frame sheet. Report every result.
+11. **Upload folder:** once the final passes, `<render>` keeps only the five upload files, always named
+   `video.mp4`, `captions.srt`, `thumbnail.png`, `thumbnail-test.png` (Test & Compare) and `upload-pack.md`;
+   drafts, sheets, storyboard, logs and unused thumbnails go to the Recycle Bin.
 
 ## The paper look (optional, per channel)
 

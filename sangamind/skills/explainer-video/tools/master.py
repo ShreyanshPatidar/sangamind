@@ -1,7 +1,7 @@
 """Master a rendered video's sound to the loudness target in video.json (two-pass loudnorm).
 The picture is copied untouched; only the audio is re-encoded.
 
-    python master.py ../Syptian/renders/14/video.mp4
+    python master.py ../Syptian/renders/014/video.mp4
 """
 import json
 import re

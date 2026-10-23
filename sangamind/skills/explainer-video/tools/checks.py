@@ -1,6 +1,6 @@
 """Final-pass checks on a rendered video (from the motion-design harness's twelve checks).
 
-    python checks.py ../Syptian/renders/14/video.mp4
+    python checks.py ../Syptian/renders/014/video.mp4
 
 Reports format, length, black frames, frozen frames and loudness against video.json's targets, and
 writes a one-frame-per-second sheet next to the video to look at. Exit code 1 if anything fails.
