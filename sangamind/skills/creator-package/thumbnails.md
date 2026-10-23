@@ -11,9 +11,12 @@ before designing any thumbnail; check every draft with `thumbcheck.py` before sh
    moment is what makes it a story. **A static object is the most common reason a thumbnail is dull.**
 2. **The object is huge.** It fills 50-65% of the frame height, centred or slightly off-centre,
    under a band of words. Nothing else competes with it.
-3. **2-3 words, all caps, the heaviest sans-serif weight available** (Black/900), tight letter
-   spacing, across the top. One word in the accent colour. Elegant serifs and thin weights turn to
-   mush at feed size; keep the brand serif for inside the video.
+3. **Few words, the heaviest sans-serif weight available** (Black/900), tight letter spacing. The
+   default is 2-3 words in caps with one in the accent colour, but it is a default, not a law: a
+   single reaction word ("WAIT."), a bare number, a question, or no words at all can hit harder.
+   What stays fixed is the template (background, drawing style, one focal point, one accent), not
+   the word count. Elegant serifs and thin weights turn to mush at feed size; keep the brand serif
+   for inside the video.
 4. **The words add to the title, never repeat it.** The title says what happens; the thumbnail
    gives the twist, the order or the consequence ("IT WASN'T YOU", "DON'T MOVE", "DO NOT ANSWER").
    Direct address ("YOU", an imperative) beats description.
@@ -39,7 +42,7 @@ before designing any thumbnail; check every draft with `thumbcheck.py` before sh
 
 - **Object + moment:** what is happening to the object right now? (hand gripping, being torn, being
   pulled from three sides, about to fall, lighting up)
-- **Words:** 2-3, the twist/order, which one is in the accent colour.
+- **Words:** none, one reaction word, or 2-3 (the twist/order); which one is in the accent colour.
 - **Accent detail:** the one thing on the object in the accent colour.
 - **Background:** the channel's flat colour; confirm contrast with the object and both YouTube modes.
 

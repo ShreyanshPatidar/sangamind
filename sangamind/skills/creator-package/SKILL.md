@@ -36,7 +36,7 @@ python3 title.py titles.txt            # one per line, ranked
   reported because they fail differently: a desktop cut loses the tail, a mobile cut can lose the
   subject.
 - **The thumbnail must not repeat the title.** Different words, same promise.
-- **Three words maximum on the thumbnail.** At feed size a fourth word is a grey smear.
+- **Three words maximum on the thumbnail** (fewer, or none, is often better). At feed size a fourth word is a grey smear.
 - **A number, a name or a date** beats every adjective available to you.
 - **Two all-caps words is the ceiling** before a title reads as spam - except one closing caps phrase
   of up to four words when it is the channel's series formula ("…DO NOT UNPLUG IT").
@@ -52,7 +52,7 @@ before titling anything:
 - **One title formula:** a concrete, picturable first half + a short caps half that is the hook
   (e.g. `[What everyone believes or sees]… [THE HIDDEN PART]`).
 - **One thumbnail system:** the same background, layout and accent colour every time, one object
-  caught in a moment, 2-3 heavy words with one word in the accent colour (details in `thumbnails.md`).
+  caught in a moment, a few heavy words (or none) with one in the accent colour (details in `thumbnails.md`).
 - **Light lore (optional):** an episode/file number, a mascot's role if there is one, a subscribe line
   in the channel's voice.
 - **Fixed format, original content:** the premise repeats, the script, angle and visuals never do -
