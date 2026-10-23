@@ -79,6 +79,26 @@ ffmpeg). After editing code here: `python setup.py --workspace <path> --sync`.
 8. **Check:** `_tools/.venv/Scripts/python _tools/checks.py <video.mp4>` (format, black and frozen
    frames, -14 LUFS loudness, frame sheet). Look at the frame sheet. Report every result.
 
+## The paper look (optional, per channel)
+
+A channel whose brand.json has a `"paper"` block gets a printed-page look instead of dark archive cards:
+scene `"paper"` (a page with `items`) and scene `"dive"` (the move between sections), plus an always-on
+HUD (the video's `meta.file` stamp, a section readout and a ruler). Everything visual comes from the
+brand block (colours, fonts, depths, ruler labels, dive length); nothing is channel-specific in code.
+
+- **Items** (`kind`): `photo` (a real photo or clip, printed and taped, `caption`), `svg` (an ink drawing
+  from the assets folder), `text` (`style` headline/big/mono/kicker/note/stamp; `color` ink/accent/soft/
+  highlight), `line` (draws itself; `arrow`, `dashed`; use for strike-throughs and brackets), `coin`,
+  `glow`, `guide` (the mascot PNG, optional `lantern`). Positions are 1920x1080 page pixels.
+- **Timing:** each item appears on its own spoken cue (`"at"`) and can leave on another (`"out"`);
+  `enter` = drop/fade/stamp/pop/write/sink/fall. Keep one accent thing per moment.
+- **Scenes:** `section` (0 = the surface; pages at the surface take `waterline: <y>`), `dive` takes
+  `section`, `kicker`, `title`, optional `rise: true` to go back up, and an `sfx` (a file the channel
+  puts in `_studio/public/sfx`). `scenes.json` `"meta"`: `file` (e.g. "FILE 004") and `sections`
+  (the readout names, `|`-separated) for this video.
+- **Drawings:** keep text out of SVG files (they render without the brand fonts); put labels on as
+  `text` items. Pages longer than ~25 s need a new page or a steady stream of items.
+
 ## Visual rules (Shreyansh's feedback on the first video, 17 Oct 2026)
 
 - **Pictures carry the video, text sits on them.** Words go over a moving picture (`headline` +

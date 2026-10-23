@@ -14,6 +14,7 @@ import {
 import {BrandContext, useBrand} from "./brand";
 import {GeoScene} from "./scenes/GeoScene";
 import {MapScene} from "./scenes/MapScene";
+import {Dive, PaperGrain, PaperHUD, PaperPage} from "./scenes/Paper";
 import {Photo} from "./scenes/Photo";
 import {VideoContext} from "./scenes/Picture";
 import {Counter, EndCard, Kinetic, Stamp, Title} from "./scenes/Text";
@@ -51,6 +52,7 @@ export const Explainer: React.FC<ExplainerProps> = ({video, timeline, maps}) => 
   const {brand} = timeline;
   ensureFont(brand.fonts.title_family, brand.fonts.title_file);
   ensureFont(brand.fonts.body_family, brand.fonts.body_file);
+  if (brand.paper) ensureFont(brand.paper.mono_family, brand.paper.mono_file);
   const overlap = Math.round(brand.motion.enterSeconds * fps);
   const total = Math.ceil(timeline.duration * fps);
 
@@ -63,15 +65,22 @@ export const Explainer: React.FC<ExplainerProps> = ({video, timeline, maps}) => 
           const dur = Math.max(1, Math.round(scene.end * fps) - from + overlap);
           return (
             <Sequence key={i} from={from} durationInFrames={dur} premountFor={fps} name={`${i} ${scene.type}`}>
-              <SceneView scene={scene} index={i} maps={maps ?? {}} />
+              <SceneView scene={scene} index={i} maps={maps ?? {}} prev={timeline.scenes[i - 1]} />
             </Sequence>
           );
         })}
-        <Overlays />
+        {brand.paper ? (
+          <>
+            <PaperHUD timeline={timeline} />
+            <PaperGrain />
+          </>
+        ) : (
+          <Overlays />
+        )}
         <Captions words={timeline.words} scenes={timeline.scenes} />
         <Audio src={staticFile(`${video}/${timeline.audio}`)} volume={brand.motion.narrationVolume} />
         <Audio
-          src={staticFile("sfx/drone.wav")}
+          src={staticFile(`sfx/${brand.sfx?.droneFile ?? "drone.wav"}`)}
           durationInFrames={total}
           volume={(f) => brand.motion.droneVolume * droneLevel(f / fps, timeline, brand.sfx?.drone ?? "tense", brand.motion.droneFade)}
         />
@@ -103,10 +112,11 @@ export const Explainer: React.FC<ExplainerProps> = ({video, timeline, maps}) => 
   );
 };
 
-const SceneView: React.FC<{scene: Scene; index: number; maps: Record<string, MapData | GeoData>}> = ({
+const SceneView: React.FC<{scene: Scene; index: number; maps: Record<string, MapData | GeoData>; prev?: Scene}> = ({
   scene,
   index,
   maps,
+  prev,
 }) => {
   switch (scene.type) {
     case "kinetic":
@@ -125,6 +135,10 @@ const SceneView: React.FC<{scene: Scene; index: number; maps: Record<string, Map
       return scene.map && maps[scene.map] ? <MapScene scene={scene} map={maps[scene.map] as MapData} /> : null;
     case "geo":
       return scene.map && maps[scene.map] ? <GeoScene scene={scene} map={maps[scene.map] as GeoData} /> : null;
+    case "paper":
+      return <PaperPage scene={scene} />;
+    case "dive":
+      return <Dive scene={scene} prev={prev} />;
     default:
       return null;
   }
@@ -184,7 +198,7 @@ type Chunk = {words: Word[]; start: number; end: number};
 const Captions: React.FC<{words: Word[]; scenes: Scene[]}> = ({words, scenes}) => {
   const frame = useCurrentFrame();
   const {fps} = useVideoConfig();
-  const {colors, fonts, motion} = useBrand();
+  const {colors, fonts, motion, paper} = useBrand();
   const t = frame / fps;
   const chunks = useMemo(() => {
     const out: Chunk[] = [];
@@ -202,7 +216,7 @@ const Captions: React.FC<{words: Word[]; scenes: Scene[]}> = ({words, scenes}) =
   }, [words, motion.captionMaxWords]);
   const scene = scenes.find((s) => t >= s.start && t < s.end);
   if (!motion.captions) return null;
-  if (scene && (NO_CAPTIONS.includes(scene.type) || scene.headline || scene.bg)) return null;
+  if (scene && (NO_CAPTIONS.includes(scene.type) || scene.headline || scene.bg || scene.type === "dive")) return null;
   const chunk = chunks.find((c) => t >= c.start && t < c.end);
   if (!chunk) return null;
   return (
@@ -212,9 +226,11 @@ const Captions: React.FC<{words: Word[]; scenes: Scene[]}> = ({words, scenes}) =
           padding: "6px 18px",
           fontFamily: fonts.body_family,
           fontWeight: 700,
-          textShadow: "0 2px 12px rgba(0,0,0,0.9), 0 0 3px rgba(0,0,0,0.9)",
+          textShadow: paper ? undefined : "0 2px 12px rgba(0,0,0,0.9), 0 0 3px rgba(0,0,0,0.9)",
+          background: paper ? `${paper.color}e6` : undefined,
+          borderRadius: paper ? 8 : undefined,
           fontSize: motion.captionSize,
-          color: colors.text,
+          color: paper ? paper.ink : colors.text,
           maxWidth: "80%",
           textAlign: "center",
           lineHeight: 1.25,
@@ -226,7 +242,7 @@ const Captions: React.FC<{words: Word[]; scenes: Scene[]}> = ({words, scenes}) =
             <span
               key={i}
               style={{
-                color: active ? colors.accent : colors.text,
+                color: active ? (paper ? paper.highlight ?? paper.accent : colors.accent) : paper ? paper.ink : colors.text,
               }}
             >
               {w.text}

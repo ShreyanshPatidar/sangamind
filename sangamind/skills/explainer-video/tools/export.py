@@ -21,7 +21,6 @@ import subprocess
 from pathlib import Path
 
 import numpy as np
-from faster_whisper import WhisperModel
 from PIL import Image
 
 from voice import gap, load_cfg, load_tts, narration, polish, speak, write_wav
@@ -68,13 +67,20 @@ def synthesize(paras, cfg, tts, voice, speed, lang):
 
 
 def word_times(wav, sentences, model_name):
-    """Exact word times: Whisper's timestamps, mapped onto the script's own words sentence by sentence."""
-    model = WhisperModel(model_name, device="cpu", compute_type="int8")
-    # decode with ffmpeg ourselves (16 kHz mono float), so PyAV version changes can't break this
-    pcm = subprocess.run(["ffmpeg", "-loglevel", "error", "-i", str(wav), "-f", "f32le", "-ac", "1", "-ar", "16000", "-"],
-                         capture_output=True, check=True).stdout
-    segs, _ = model.transcribe(np.frombuffer(pcm, dtype=np.float32), language="en", word_timestamps=True)
-    heard = [w for s in segs for w in s.words]
+    """Exact word times: Whisper's timestamps, mapped onto the script's own words sentence by sentence.
+    Without Whisper (not installed, or its model can't be downloaded) every sentence is spread by
+    characters between its exact start and end: words land within ~0.2 s, fine for scene cues."""
+    heard = []
+    try:
+        from faster_whisper import WhisperModel
+        model = WhisperModel(model_name, device="cpu", compute_type="int8")
+        # decode with ffmpeg ourselves (16 kHz mono float), so PyAV version changes can't break this
+        pcm = subprocess.run(["ffmpeg", "-loglevel", "error", "-i", str(wav), "-f", "f32le", "-ac", "1", "-ar", "16000", "-"],
+                             capture_output=True, check=True).stdout
+        segs, _ = model.transcribe(np.frombuffer(pcm, dtype=np.float32), language="en", word_timestamps=True)
+        heard = [w for s in segs for w in s.words]
+    except Exception as e:  # noqa: BLE001 - any failure falls back to estimated times
+        print(f"word times: Whisper unavailable ({type(e).__name__}); estimating from sentence times")
     words = []
     for si, s in enumerate(sentences):
         script = s["text"].split()
@@ -138,6 +144,16 @@ def resolve(scenes, words, total, lead):
             steps.append({**st, "time": round(at - start, 3)})
         if steps:
             scene["steps"] = steps
+        items = []
+        for it in s.get("items", []):  # paper look: items appear on their own spoken cue ("at") and can leave on "out"
+            it = dict(it)
+            if "at" in it:
+                it["time"] = round(words[find_cue(words, it["at"], widx)]["start"] - start, 3)
+            if "out" in it:
+                it["until"] = round(words[find_cue(words, it["out"], widx)]["start"] - start, 3)
+            items.append(it)
+        if items:
+            scene["items"] = items
         out.append(scene)
     return out
 
@@ -169,9 +185,16 @@ def main():
         total = round(len(audio) / rate, 3)
         print(f"narration: {total}s, {len(sentences)} sentences")
         words = word_times(wav, sentences, cfg["whisper_model"])
-    scenes = resolve(json.loads((assets / "scenes.json").read_text(encoding="utf-8"))["scenes"],
-                     words, total, cfg["scene_lead_seconds"])
+    plan = json.loads((assets / "scenes.json").read_text(encoding="utf-8"))
+    scenes = resolve(plan["scenes"], words, total, cfg["scene_lead_seconds"])
     for s in scenes:
+        for it in s.get("items", []):  # photos, clips, drawings, the guide: copied flat into img/
+            if it.get("src"):
+                src = (assets / it["src"]).resolve()
+                it["src"] = src.name
+                shutil.copy(src, out / "img" / src.name)
+                if it.get("kind") == "photo":
+                    it["imgSize"] = media_size(src)
         for key in ("img", "bg"):
             if key in s:
                 shutil.copy(assets / s[key], out / "img" / s[key])
@@ -184,7 +207,7 @@ def main():
                               f"fetch a longer clip (footage.py --seconds) or split the scene")
     brand = json.loads(Path(a.brand).read_text(encoding="utf-8"))
     assign_sfx(scenes, brand.get("sfx", {}))
-    timeline = {"duration": total, "audio": "narration.wav", "brand": brand,
+    timeline = {"duration": total, "audio": "narration.wav", "brand": brand, "meta": plan.get("meta", {}),
                 "sentences": sentences, "words": words, "scenes": scenes}
     (out / "timeline.json").write_text(json.dumps(timeline, indent=1, ensure_ascii=False), encoding="utf-8")
     print(f"timeline: {len(words)} words, {len(scenes)} scenes -> {out / 'timeline.json'}")
@@ -200,6 +223,8 @@ def assign_sfx(scenes, rules):
     used = {}
 
     def file(name):
+        if name not in cfg["sounds"]:  # a channel's own sound file in _studio/public/sfx (e.g. "dive" -> dive.wav)
+            return name if name.endswith(".wav") else f"{name}.wav"
         n = cfg["sounds"][name].get("variants", cfg["variants"])
         used[name] = used.get(name, 0) + 1
         return f"{name}.wav" if n == 1 else f"{name}-{(used[name] - 1) % n + 1}.wav"
@@ -256,6 +281,7 @@ def write_upload_files(render_dir, words, max_words, assets, scenes, out):
     (render_dir / "captions.srt").write_text("\n".join(srt), encoding="utf-8")
     lines = []
     used = {s[k] for s in scenes for k in ("img", "bg") if s.get(k)}
+    used |= {it["src"] for s in scenes for it in s.get("items", []) if it.get("src")}
     for name, heading in (("credits.json", "Images:"), ("footage.json", "Footage:")):
         f = assets / name
         if f.exists():
