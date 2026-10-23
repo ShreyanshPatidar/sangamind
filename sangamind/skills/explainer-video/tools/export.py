@@ -175,8 +175,13 @@ def main():
         for key in ("img", "bg"):
             if key in s:
                 shutil.copy(assets / s[key], out / "img" / s[key])
-                with Image.open(assets / s[key]) as im:
-                    s["imgSize"] = list(im.size)
+                s["imgSize"] = media_size(assets / s[key])
+                if Path(s[key]).suffix.lower() in CLIP:
+                    secs = clip_seconds(assets / s[key])
+                    if secs < s["end"] - s["start"] + 0.5:
+                        print(f"warning: {s[key]} is {secs:.1f}s but its scene lasts "
+                              f"{s['end'] - s['start']:.1f}s - the picture freezes at the end; "
+                              f"fetch a longer clip (footage.py --seconds) or split the scene")
     brand = json.loads(Path(a.brand).read_text(encoding="utf-8"))
     assign_sfx(scenes, brand.get("sfx", {}))
     timeline = {"duration": total, "audio": "narration.wav", "brand": brand,
@@ -215,6 +220,26 @@ def srt_time(t):
     return f"{int(h):02d}:{int(m):02d}:{int(s):02d},{int(round((s % 1) * 1000)) % 1000:03d}"
 
 
+CLIP = (".mp4", ".webm", ".mov")
+
+
+def media_size(path):
+    """[width, height] of an image, or of a footage clip (tools/footage.py) via ffprobe."""
+    if path.suffix.lower() in CLIP:
+        r = subprocess.run(["ffprobe", "-v", "error", "-select_streams", "v:0", "-show_entries",
+                            "stream=width,height", "-of", "csv=p=0:s=x", str(path)],
+                           capture_output=True, text=True, check=True)
+        return [int(x) for x in r.stdout.strip().split("x")[:2]]
+    with Image.open(path) as im:
+        return list(im.size)
+
+
+def clip_seconds(path):
+    r = subprocess.run(["ffprobe", "-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0",
+                        str(path)], capture_output=True, text=True, check=True)
+    return float(r.stdout.strip())
+
+
 def write_upload_files(render_dir, words, max_words, assets, scenes, out):
     """captions.srt (upload to YouTube with the video) and credits.txt (paste into the description)."""
     render_dir.mkdir(parents=True, exist_ok=True)
@@ -230,10 +255,14 @@ def write_upload_files(render_dir, words, max_words, assets, scenes, out):
     srt = [f"{i}\n{srt_time(a)} --> {srt_time(b)}\n{text}\n" for i, (a, b, text) in enumerate(blocks, 1)]
     (render_dir / "captions.srt").write_text("\n".join(srt), encoding="utf-8")
     lines = []
-    credits = assets / "credits.json"
-    if credits.exists():
-        lines.append("Images (Wikimedia Commons):")
-        lines += [f"- {c['author']}, {c['license']}: {c['source']}" for c in json.loads(credits.read_text(encoding="utf-8"))]
+    used = {s[k] for s in scenes for k in ("img", "bg") if s.get(k)}
+    for name, heading in (("credits.json", "Images:"), ("footage.json", "Footage:")):
+        f = assets / name
+        if f.exists():
+            rows = [c for c in json.loads(f.read_text(encoding="utf-8")) if c["file"] in used]
+            if rows:
+                lines.append(heading)
+                lines += [f"- {c['author']}, {c['license']}: {c['source']}" for c in rows]
     for name in dict.fromkeys(s["map"] for s in scenes if s.get("map")):  # each map's credit line, once
         m = json.loads((out / name).read_text(encoding="utf-8"))
         lines.append(m.get("credit") or m["attribution"])

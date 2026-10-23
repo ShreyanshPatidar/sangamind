@@ -40,6 +40,14 @@ ffmpeg). After editing code here: `python setup.py --workspace <path> --sync`.
    (`https://api.openstreetmap.org/api/0.6/map?bbox=W,S,E,N`), write a `map-*.config.json`
    (center, width_m, routes by street name or points, markers, labels - see `tools/osm_map.py`),
    then `python osm_map.py area.osm config.json ../_studio/public/<n>/map-x.json`.
+   **Real footage:** `python footage.py --assets ../<Channel>/assets/<n> "concert crowd" "stadium at night"`
+   searches Pexels (free key in `_tools/pexels-key.txt`), Wikimedia Commons and the Internet Archive,
+   skips anything NC/ND or unlicensed, cuts 15 s clips (1080p, silent) into the assets folder, logs
+   source and licence in `footage.json` and draws `footage-sheet.jpg`. Look at the sheet, then use a
+   clip anywhere an image goes (`"img": "clip-concert-crowd-2.mp4"`, also as `bg`). Moving footage
+   under the narration is what makes it feel like a documentary rather than a slideshow: aim for one
+   clip every few scenes, stills for the specific people, documents and quotes. Archive films are long;
+   pass `--start <seconds>` for the part you want.
 3. **Scenes.** `assets/<n>/scenes.json`: a flat list in order, each starting on its spoken `at`
    cue. Types: `photo` (img, label, `move` in/out/left/right or `focus` [x, y, zoom] to push in on a
    point, `ring` [x, y, r] + `note` to circle someone, `kicker` + `headline` text on the picture,

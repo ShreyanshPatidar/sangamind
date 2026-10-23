@@ -1,10 +1,20 @@
 import React, {createContext, useContext} from "react";
-import {Easing, Img, interpolate, staticFile, useCurrentFrame, useVideoConfig} from "remotion";
+import {Easing, Img, interpolate, OffthreadVideo, staticFile, useCurrentFrame, useVideoConfig} from "remotion";
 import {useBrand} from "../brand";
 import type {Scene} from "../types";
 
 /** Which video's public folder the images come from. */
 export const VideoContext = createContext("");
+
+/** A real footage clip (from tools/footage.py) instead of a still: same camera, ring and headline. */
+export const isClip = (src: string) => /\.(mp4|webm|mov)$/i.test(src);
+
+const Media: React.FC<{url: string; clip: boolean; style: React.CSSProperties}> = ({url, clip, style}) =>
+  clip ? (
+    <OffthreadVideo src={url} muted style={{...style, objectFit: "cover"}} />
+  ) : (
+    <Img src={url} style={style} />
+  );
 
 const W = 1920;
 const H = 1080;
@@ -22,6 +32,7 @@ export const Picture: React.FC<{scene: Scene; src: string; dim?: number}> = ({sc
   const secs = scene.end - scene.start + motion.enterSeconds * 2;
   const t = interpolate(frame, [0, secs * fps], [0, 1], {extrapolateRight: "clamp"});
   const url = staticFile(`${video}/img/${src}`);
+  const clip = isClip(src);
 
   // where the picture sits in the frame
   const [iw, ih] = scene.imgSize ?? [W, H];
@@ -71,8 +82,9 @@ export const Picture: React.FC<{scene: Scene; src: string; dim?: number}> = ({sc
   return (
     <div style={{position: "absolute", inset: 0, overflow: "hidden", background: colors.backgroundDeep}}>
       {!cover ? (
-        <Img
-          src={url}
+        <Media
+          url={url}
+          clip={clip}
           style={{
             position: "absolute",
             inset: -60,
@@ -84,15 +96,16 @@ export const Picture: React.FC<{scene: Scene; src: string; dim?: number}> = ({sc
         />
       ) : null}
       <div style={{position: "absolute", left: 0, top: 0, width: W, height: H, transformOrigin: "0 0", transform}}>
-        <Img
-          src={url}
+        <Media
+          url={url}
+          clip={clip}
           style={{
             position: "absolute",
             left: bx,
             top: by,
             width: bw,
             height: bh,
-            filter: `sepia(${motion.photoSepia}) contrast(1.08)`,
+            filter: clip ? "contrast(1.05) saturate(0.9)" : `sepia(${motion.photoSepia}) contrast(1.08)`,
             boxShadow: cover ? undefined : "0 30px 80px rgba(0,0,0,0.55)",
           }}
         />

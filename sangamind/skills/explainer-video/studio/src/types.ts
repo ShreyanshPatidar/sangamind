@@ -38,6 +38,7 @@ export type Scene = {
   to?: number;
   suffix?: string;
   label?: string;
+  /** image, or a footage clip (.mp4/.webm/.mov from tools/footage.py) */
   img?: string;
   /** image behind a text scene */
   bg?: string;
