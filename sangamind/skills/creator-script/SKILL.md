@@ -118,6 +118,17 @@ pause land.
   happens now?"). Answer the ones that matter with sourced lines. Length follows the content: never
   pad, never cut real explanation to hit a number.
 
+## Written for the ear (AI voice)
+
+- **Short sentences:** under ~28 words (`script_check.py` fails longer ones). Long sentences are
+  where an AI voice goes flat and a non-native listener loses the thread. Split them; the split
+  is often a natural pause.
+- **Pace:** about 150-160 words a minute including pauses. Dense stretches (court cases, numbers)
+  need more pauses, not fewer.
+- **Highs and lows across the whole video:** `[loud]` and `[slow]` on 2-3 key lines per section,
+  not only in the hook, so six minutes don't sound like one long line.
+- **Open with 1 s of silence** (`[pause 1.0]` first), then the hook questions.
+
 ## Written for a global audience
 
 Assume the viewer has never heard of the country's institutions. The first time an organisation,
