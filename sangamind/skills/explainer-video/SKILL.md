@@ -66,8 +66,13 @@ ffmpeg). After editing code here: `python setup.py --workspace <path> --sync`.
 4. **Export** (voice + word timings + timeline):
    `_tools/.venv/Scripts/python _tools/export.py <script> --assets <assets> --brand <brand.json> --out _studio/public/<n> --render-dir <channel>/renders/<n>`
    (writes captions.srt for YouTube and credits.txt for the description into the render folder)
-5. **Look before rendering.** `npx remotion still Explainer out/s.png --frame=<f>` at key moments
-   (or `npx remotion studio` for a live preview), view the frames yourself, fix, repeat.
+5. **Storyboard before rendering.** `_tools/.venv/Scripts/python _tools/storyboard.py <n> --studio _studio --out <channel>/renders/<n>`
+   renders one still 70% into every scene and draws `storyboard.jpg`: numbered frames with time,
+   length, source file and the words spoken over each (red border = scene over 12 s, check it moves).
+   Look at it yourself first, then send it to the user for approval: wrong picture for the words,
+   text over a face, a static stretch. Fix scenes.json, re-export (cached voice is instant) and re-run
+   the storyboard - never the full render - until it reads right. For one moment in detail:
+   `npx remotion still Explainer out/s.png --frame=<f>` or `npx remotion studio`.
 6. **Render:** `npx remotion render Explainer <channel>/renders/<n>/video.mp4 --props='{"video":"<n>"}'`
 7. **Master the sound:** `_tools/.venv/Scripts/python _tools/master.py <video.mp4>` (voice + effects + drone
    together land louder than the voice alone; this brings the mix to -14 LUFS, picture untouched).
