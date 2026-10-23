@@ -60,13 +60,6 @@ click the title promised, open a question the viewer cannot close, and prove the
 
 1. **Hook.** Write FIVE against [the 25 formulas](hooks.json), run them through `hookscore.py`,
    keep the top two, and show the user both with their scores. Never hand over one hook.
-   **Cut the hook to the bone.** For each line ask: if I delete it, does the hook get weaker? If
-   not, delete it. No stage directions narrated ("you join the queue", "you open the app") - the
-   picture shows the setting; the voice only says what hits. A reveal needs a short spoken run-up
-   ("And suddenly...", "Then...") and real silence before and after the number, not an explanation
-   of how time passed. Example: "£135. And suddenly... £355." beats "£135. You join the queue.
-   Hours later... £355." Read the hook aloud at speed before showing it.
-   **Show the hook as text first and get a yes before making audio or visuals for it.**
 2. **The turn** (0:15-0:45). Say what the video is going to do, in one sentence, and start doing it.
    Promise the depth or the payoff in words the viewer feels ("the answer sits deeper than most
    people ever look", "seven rules; most people break the third"). A count can work once, in the
@@ -78,6 +71,25 @@ click the title promised, open a question the viewer cannot close, and prove the
 4. **The payoff.** Deliver the thing the hook promised, explicitly, and say that you are delivering
    it: "that is the prompt, it is in the description".
 5. **The close.** One ask. Not three.
+
+## Every line has a job
+
+Before anything is voiced, check each line does one of three jobs: **builds tension**, **delivers**
+(a fact, a number, the reveal), or **carries the rhythm** into the next line. Short joining words
+are jobs too: "And suddenly...", "But", "So", "Three times." - keep them, they are what makes a
+pause land.
+
+- **Silence is not tension.** A pause only works after a line that makes the viewer lean in. A gap
+  with nothing in front of it is dead air.
+- **Don't narrate the picture or the viewer** ("you join the queue", "you open the app"): it slows
+  the beat and the screen already shows it.
+- **Narrator asides** ("here's what matters", "back to X") stay only if they build anticipation
+  right before a payoff; if they just delay the point, cut them.
+- **Before a reveal: a run-up line, then silence, then the hit.** Never explain how time passed.
+  Vary the run-up words between videos. "£135. And suddenly... £355." beats "£135. You join the
+  queue. Hours later... £355." (and beats "£135. [silence] £355.").
+- **Text before audio:** the hook and any rewritten line go to the user as plain text and get a yes
+  before any voice or visuals are made.
 
 ## A connected story (not a list of chapters)
 
