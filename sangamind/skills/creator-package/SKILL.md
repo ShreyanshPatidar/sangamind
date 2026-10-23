@@ -51,12 +51,19 @@ before titling anything:
 - **One premise** the viewer can say back ("this channel dives down the iceberg of a thing you use").
 - **One title formula:** a concrete, picturable first half + a short caps half that is the hook
   (e.g. `[What everyone believes or sees]… [THE HIDDEN PART]`).
-- **One thumbnail system:** the same background, layout and accent colour every time, one object,
-  2-3 words with one word in the accent colour, the mascot (if any) in one corner.
+- **One thumbnail system:** the same background, layout and accent colour every time, one object
+  caught in a moment, 2-3 heavy words with one word in the accent colour (details in `thumbnails.md`).
 - **Light lore (optional):** an episode/file number, a mascot's role if there is one, a subscribe line
   in the channel's voice.
 - **Fixed format, original content:** the premise repeats, the script, angle and visuals never do -
   YouTube demonetises "template-based, repetitive" channels (policy-2026).
+
+## Thumbnails
+
+Before designing any thumbnail, read `thumbnails.md` (what the winning template does, what failed,
+the brief to write first) and run every draft through `python3 thumbcheck.py a.png b.png -o sheet.png`,
+which shows each one at feed size on YouTube's dark and light modes. Show the user that sheet. The two
+most common misses: a static object instead of an object caught in a moment, and too many elements.
 
 ## Write ten, keep two
 
