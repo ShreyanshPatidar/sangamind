@@ -139,6 +139,24 @@ brand block (colours, fonts, depths, ruler labels, dive length); nothing is chan
 - **Sound only where it means something** (a gunshot, a bomb, a stamp), never a whoosh on every
   scene: brand.json `sfx.enter` / `sfx.steps` stay empty unless a channel wants defaults. Repeats
   cycle through pitch variants. The drone plays only under scenes marked `"tense": true`.
+- **A mascot must read on a phone.** Big enough that the expression is legible at feed size (a small
+  corner sticker turns every pose into the same blob), a different pose each time (never the same
+  twice in a row), and a small reaction on each entrance (pop, tilt, bob) tied to the line.
+- **Props and effects mean something.** An effect on every appearance (a glow, a prop, a sound)
+  stops meaning anything; tie it to the moments it is about. The channel's brand says which.
+- **Show who the story is about, properly.** When the narration names a company, institution or
+  public figure - above all one that is accused of something - the viewer sees exactly who: the
+  full name on screen, the company's logo the first time it is named (editorial identification is
+  allowed, as long as it never looks like a sponsorship or a mockery), and a real photo of the
+  person or of the company's sign, building or court. Three limits:
+  - **Real photos only, licensed** (public domain / CC BY / BY-SA, credited). Never an AI image of a
+    real person; a press photo without a licence is not ours to use.
+  - **Accused, not guilty.** While a claim is unproven, the name or face carries "ALLEGED" / "accused
+    by <who>" on the same shot, and their denial gets screen time too. No faces cut into crime
+    imagery, nothing that edits them to look guilty.
+  - **Public actors only.** Companies, officials, executives named in public filings, public
+    figures. Someone a source left unnamed (an anonymous executive, a private broker) stays unnamed
+    and unpictured.
 
 ## Settings (nothing hardcoded)
 

@@ -92,6 +92,12 @@ click the title promised, open a question the viewer cannot close, and prove the
 4. **The payoff.** Deliver the thing the hook promised, explicitly, and say that you are delivering
    it: "that is the prompt, it is in the description".
 5. **The close.** One ask. Not three.
+   - **Land, don't recap.** The close is one consequence the viewer feels, then the sign-off. A list
+     of status updates there is a news bulletin, not an ending; those belong in the last beat or the
+     description.
+   - **Decide the next video's title before writing the close.** The tease must sell that exact
+     title with its own hook, and the end card must show the same title. A vague tease written
+     before the next video is planned is why an ending trails off.
 
 ## Every line has a job
 

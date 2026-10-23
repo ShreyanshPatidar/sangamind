@@ -38,6 +38,9 @@ python3 title.py titles.txt            # one per line, ranked
 - **The thumbnail must not repeat the title.** Different words, same promise.
 - **Three words maximum on the thumbnail** (fewer, or none, is often better). At feed size a fourth word is a grey smear.
 - **A number, a name or a date** beats every adjective available to you.
+- **Put the name people search in the title.** A new channel is found through search, not
+  curiosity: "SOMEONE did X" hides the word everyone types. When the claim is an allegation, the
+  title says so in one word ("X Is Accused Of ..."), never states it as fact.
 - **Two all-caps words is the ceiling** before a title reads as spam - except one closing caps phrase
   of up to four words when it is the channel's series formula ("…DO NOT UNPLUG IT").
 
