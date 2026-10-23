@@ -101,9 +101,10 @@ pause land.
 
 Assume the viewer has never heard of the country's institutions. The first time an organisation,
 office or place is named, say **what it does** in plain words, then the name: "America's consumer
-watchdog, the FTC", "Britain's competition watchdog", "London's Wembley Stadium", "British lawmakers"
+protection agency, the FTC", "Britain's competition regulator", "London's Wembley Stadium", "British lawmakers"
 (not "Parliament"). After that the short name is fine. Never an unexplained acronym, in the voice or on
-screen ("FTC (US CONSUMER WATCHDOG)"). Money in the currency of the story; say whose it is when it changes.
+screen ("FTC (US CONSUMER AGENCY)"). Plain, neutral words: "regulator", "agency",
+"court", not loaded ones like "watchdog" or "crackdown". Money in the currency of the story; say whose it is when it changes.
 
 ## A connected story (not a list of chapters)
 
