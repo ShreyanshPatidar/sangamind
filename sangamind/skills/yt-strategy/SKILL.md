@@ -44,9 +44,30 @@ question needs.
 2. **Income figures are claims, not facts.** Never repeat a creator's "$41k/month" as evidence.
 3. **Study, never copy.** Remaking someone's video, script, thumbnail or footage is both theft and,
    since 1 Oct 2026, a reach penalty on Shorts.
-4. **A human decision in every video.** Angle, opinion, edit choices. A channel whose videos could
-   swap titles unnoticed is the "inauthentic content" YouTube does not pay.
+4. **A human decision in every video.** Angle, opinion, edit choices. A fixed series premise and
+   title formula are fine (they are packaging); a channel whose videos could swap *scripts* unnoticed
+   is the "inauthentic content" YouTube does not pay.
 5. **Verify before publishing.** AI drafts, a human checks every fact against a source.
+
+# Topics — the test before anything is made
+
+Most weak videos were dead at the topic. A topic is made only if it passes all three:
+
+1. **It touches the viewer's life** - something they own, pay for, use, or see in the news.
+2. **The hidden part is genuinely unknown** to an ordinary viewer, not just to someone who skipped
+   school (the famous "secret" is not a secret).
+3. **It is not already owned on YouTube.** Search it (filter: videos), note the biggest view count in
+   the top results and its age. A recent definitive video in the millions owns the story.
+
+- **Proven-topic slot:** about 1 video in 4 may skip rule 3 when our version has a hidden part the big
+  video misses (or newer facts), clearly better packaging, and copies nothing.
+- **Review every two weeks:** re-run the coverage check on kept and dropped topics; big videos
+  appear, and dropped topics come back with news. Write the result into the topic list.
+- **Topic stock:** keep at least six passing topics queued beyond the last scheduled date.
+
+Worked example (a history/money explainer channel, Oct 2026): "the wrong turn that started WW1"
+failed rules 2 and 3 - the wrong turn is the famous fact, and HISTORY already has a video with nearly
+the same title. "Why concert tickets cost so much now" (biggest existing video 0.5M) passed.
 
 # Planning — a week or month of uploads
 
@@ -64,7 +85,12 @@ voice.md step as the making skills; invent no numbers.)
   finds them.
 
 Three uploads on a seven-day week, not seven. The empty days are what make the filled ones survive a
-bad week.
+bad week. **Raise the cadence only from a bank:** go from 3 to 4 a week once 3-4 finished videos sit
+ahead of their dates - extra uploads paid for with rushed fact-checks cost more than they earn.
+
+**Track videos, not a file.** One row per video (status, upload date, episode number, links) in a
+database or sheet the user already uses (Notion, Airtable, Google Sheets), viewed as a board by
+status - a single PIPELINE.md tracks one video at a time and breaks at 3 a week.
 
 Hand back a table: day, format, working title, the one sentence it promises, and what already exists
 for it. Then the honest line — how many hours this costs, and what to drop first if the week goes

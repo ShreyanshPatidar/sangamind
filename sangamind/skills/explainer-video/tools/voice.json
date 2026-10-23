@@ -2,15 +2,24 @@
   "model": "models/kokoro-v1.0.onnx",
   "voices": "models/voices-v1.0.bin",
   "voice": "bf_emma*0.6+af_bella*0.4",
-  "speed": 0.9,
+  "speed": 0.85,
   "lang": "en-gb",
   "pause_seconds": 0.35,
   "pronounce": {
-    "Lojka": "Loy-ka"
+    "Lojka": "Loy-ka",
+    "Princip": "Printsip",
+    "Čabrinović": "Chabrinovich",
+    "Mehmedbašić": "Mehmed-bashich",
+    "Čubrilović": "Chubrilovich",
+    "Grabež": "Grabezh",
+    "Ćumurija": "Chumuriya"
   },
   "polish": "highpass=f=70,equalizer=f=180:t=q:w=1:g=3,equalizer=f=3500:t=q:w=1:g=2,acompressor=threshold=-18dB:ratio=3:attack=5:release=80:makeup=2,loudnorm=I=-14:TP=-1.5:LRA=7,aresample=48000",
-  "sentence_pause": 0.3,
-  "beat_pause": 0.7,
+  "sentence_pause": 0.55,
+  "beat_pause": 1.2,
   "whisper_model": "small",
-  "scene_lead_seconds": 0.12
+  "scene_lead_seconds": 0.12,
+  "room_tone_db": -60,
+  "ellipsis_pause": 0.5,
+  "slow_factor": 0.88
 }

@@ -32,8 +32,16 @@ def check(title, thumb=None):
     if n > MOBILE:
         head = t[:MOBILE].rsplit(" ", 1)[0]
         issues.append(("mobile", f'a mobile feed shows about "{head}..." - check the subject survives'))
-    caps = [w for w in t.split() if len(w) > 2 and w.isupper()]
-    if len(caps) > 2: issues.append(("shouting", f"{len(caps)} all-caps words - two is the ceiling before it reads as spam"))
+    toks = t.split()
+    caps_idx = [i for i, w in enumerate(toks) if len(w) > 2 and w.isupper()]
+    caps = [toks[i] for i in caps_idx]
+    # one unbroken caps phrase of up to 4 words is a series formula's signature half
+    # ("...DO NOT UNPLUG IT", "...HERE'S WHO DECIDES"), not shouting
+    run = bool(caps_idx) and caps_idx == list(range(caps_idx[0], caps_idx[-1] + 1)) and \
+        all(w.isupper() or not any(c.isalpha() for c in w) for w in toks[caps_idx[0]:])
+    if run and len(caps) <= 4 and len(caps) > 2:
+        good.append(f"one closing caps phrase ({len(caps)} words) - reads as a series formula, not shouting")
+    elif len(caps) > 2: issues.append(("shouting", f"{len(caps)} all-caps words - two is the ceiling unless they form one closing phrase of up to four"))
     elif caps: good.append(f"{len(caps)} all-caps word for emphasis")
     v = [w for w in words(t) if w in VAGUE]
     if v: issues.append(("vague", f"{', '.join(sorted(set(v)))} - swap for a number, a name or a date"))

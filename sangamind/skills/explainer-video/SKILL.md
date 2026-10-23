@@ -16,6 +16,13 @@ Script in, finished MP4 out. Everything runs locally; nothing is uploaded.
   On Shreyansh's laptop the workspace is `D:\Coding\Apps\AI\Channels`.
 - **Channel data:** `<channel>/scripts/<n>-*.md`, `<channel>/assets/<n>/` (images, credits.json,
   scenes.json, map configs), `<channel>/brand/brand.json`, renders in `<channel>/renders/<n>/`.
+- **Writing and planning live in Notion** (Syptian since 23 Oct 2026: YouTube > Syptian - Brand, Topics,
+  Scripts; see `<channel>/NOTION.md`). Copy a script from its Notion page into `<channel>/scripts/`
+  only when its video is rendered; never edit the local copy instead of the page.
+- **Mascot:** full-size transparent poses in `<channel>/brand/mascot/` (Syptian: Berg,
+  `syptian-mascot-berg-<pose>.png`; `-blank` has no face, for blink/talk animation). Brand rules
+  decide where it may appear. Every new final asset (pose, logo, art) is also added to the Notion
+  "Brand assets" page - the laptop copy alone is not a backup.
 
 Setup on a new machine: `python setup.py --workspace <path>` (needs Python 3.10-3.13, Node 18+,
 ffmpeg). After editing code here: `python setup.py --workspace <path> --sync`.
@@ -24,7 +31,9 @@ ffmpeg). After editing code here: `python setup.py --workspace <path> --sync`.
 
 1. **Script.** Narration paragraphs under `## Script` (one per beat; `**[..]**` headings and
    `` `[ON SCREEN..]` `` lines are skipped). `[pause 0.8]` inside a line = that many seconds of
-   silence: use them after hook beats and before reveals.
+   silence: use them after hook beats and before reveals. A sentence starting `[slow]` (or `[slow 0.8]`) is read slower - use it on the
+   two or three lines that must land (the shots, the reveal, the signature line). `...` inside a
+   sentence is a short spoken pause. Name respellings live in `voice.json` "pronounce".
 2. **Assets.** Public-domain/CC images in `assets/<n>/` with `credits.json` (fetch from Wikimedia
    Commons with the licence; look at every image before using it - check it shows what the line
    says). Maps: download the area with the OSM API
@@ -80,6 +89,12 @@ ffmpeg). After editing code here: `python setup.py --workspace <path> --sync`.
 - `brand.json` (per channel): colours, fonts, motion sizes and timings, sfx/drone/narration volumes.
 - `tools/voice.json`: voice blend (e.g. `bf_emma*0.6+af_bella*0.4`), speed, pauses, polish chain,
   pronunciation respellings for names Kokoro gets wrong (check names by running Whisper on the output).
+  **Google voices (optional upgrade):** set `"voice": "google:en-GB-Chirp3-HD-Aoede"` (any Cloud
+  Text-to-Speech voice name) to narrate with Google instead of Kokoro. Free tier 1M characters/month
+  for Chirp 3 HD (a 5-minute video is about 4,500). Needs a Google Cloud project with the
+  Text-to-Speech API enabled and an API key restricted to it, saved in `_tools/google-tts-key.txt`
+  (or env `GOOGLE_TTS_KEY`); never commit it. Clips are cached in `_tools/.tts-cache/`, so re-exports
+  only pay for changed sentences. Kokoro speeds (~0.85) are slow for Google; start at 0.95-1.0.
 - `tools/video.json`: check targets. `tools/sfx.json`: the synthesised sound recipes.
   `tools/openverse.py`: search/fetch real CC-licensed sounds when synthesis won't do.
 

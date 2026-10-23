@@ -27,6 +27,15 @@ For each: last 20 uploads -> outliers, average, upload rhythm, what they quietly
 abandoned series probably didn't pay). One creator doing something is taste; five doing it is
 strategy. Example: all five caption from second one -> sound-off viewers matter.
 
+## Study the system, not only the video
+
+When a whole channel outperforms (every upload far above its subscriber count), the secret is usually
+the **series system**, not any one video: one premise, one title formula, one thumbnail system,
+light lore, everyday subjects. Example, studied 23 Oct 2026: Bradikinin (faceless, pictograms, calm
+narrator) - "If Your Phone Ever Charges To 101%… DO NOT UNPLUG IT" 1.6M, eight videos in 11 days all
+126K-2.6M at 41.8K subscribers; the hook counts the parts ("seven rules; most people break the
+third"). Copy the *system idea*, never its premise or its look (creator-package, "The series system").
+
 ## Outliers
 
 A video far above its channel's normal (20k average, one at 2M = 100x). `/creator-viral` ranks these.
@@ -61,7 +70,9 @@ podcast-fast editing -> history; celebrity-news rhythm -> internet personalities
 4. Google Trends, 12 months: rising, flat, dying.
 5. Comments on the top three: what did people ask that the video didn't deliver?
 
-Old, thin or badly made results with healthy views = a lane.
+Old, thin or badly made results with healthy views = a lane. A recent, definitive video in the
+millions = the story is owned; pass unless the topic qualifies as a proven-topic slot (yt-strategy,
+"Topics").
 
 ## Where to look
 

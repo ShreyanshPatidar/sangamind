@@ -6,7 +6,8 @@
 Writes into --out: narration.wav, timeline.json (words with times, scenes with times, brand), and
 copies every image the scenes use into img/.
 
-Script markup: a "[pause 0.8]" inside the narration adds that many seconds of silence there.
+Script markup: a "[pause 0.8]" inside the narration adds that many seconds of silence there;
+a sentence starting with "[slow]" (or "[slow 0.8]") is read slower; "..." mid-sentence is a short pause.
 
 scenes.json (in --assets) is a flat list of scenes in order. Each scene starts when the narrator says
 its "at" cue (a few words, matched in order); the first scene starts at 0, and a scene without a cue
@@ -23,7 +24,7 @@ import numpy as np
 from faster_whisper import WhisperModel
 from PIL import Image
 
-from voice import load_cfg, load_tts, narration, polish, speak, write_wav
+from voice import gap, load_cfg, load_tts, narration, polish, speak, write_wav
 
 PAUSE = re.compile(r"\[pause\s+([\d.]+)\]", re.I)
 
@@ -32,26 +33,35 @@ def norm(word):
     return re.sub(r"[^a-z0-9]", "", word.lower())
 
 
+SLOW = re.compile(r"^\[slow(?:\s+([\d.]+))?\]\s*", re.I)
+
+
 def synthesize(paras, cfg, tts, voice, speed, lang):
-    """Returns audio, rate, and sentences [{text, start, end, beat}]."""
-    audio, sentences, t, rate = [], [], 0.0, None
+    """Returns audio, rate, and sentences [{text, start, end, beat}].
+
+    A sentence that starts with "[slow]" (or "[slow 0.8]") is read slower - voice.json "slow_factor",
+    or the number given - for the lines that should land: the shots, the reveal, the signature line."""
+    audio, sentences, t, rate = [], [], 0.0, 24000
     for bi, para in enumerate(paras):
         pieces = PAUSE.split(para)  # text, seconds, text, seconds, ...
         for i, piece in enumerate(pieces):
             if i % 2:  # a pause marker
-                silence = np.zeros(int((rate or 24000) * float(piece)), dtype=np.float32)
+                silence = gap(float(piece), rate, cfg)
                 audio.append(silence)
-                t += len(silence) / (rate or 24000)
+                t += len(silence) / rate
                 continue
-            for sentence in re.split(r"(?<=[.!?])\s+", piece.strip()):
+            for sentence in re.split(r"(?<=[.!?])(?<!\.\.\.)\s+", piece.strip()):  # "..." stays inside its sentence
                 if not sentence:
                     continue
-                samples, rate = speak(tts, sentence, cfg, voice, speed, lang)
-                gap = np.zeros(int(rate * cfg["sentence_pause"]), dtype=np.float32)
-                audio += [samples, gap]
+                m = SLOW.match(sentence)
+                k = float(m.group(1) or cfg.get("slow_factor", 0.88)) if m else 1.0
+                sentence = SLOW.sub("", sentence)
+                samples, rate = speak(tts, sentence, cfg, voice, speed * k, lang)
+                pause = gap(cfg["sentence_pause"], rate, cfg)
+                audio += [samples, pause]
                 sentences.append({"text": sentence, "start": t, "end": t + len(samples) / rate, "beat": bi})
-                t += (len(samples) + len(gap)) / rate
-        beat_gap = np.zeros(int(rate * cfg["beat_pause"]), dtype=np.float32)
+                t += (len(samples) + len(pause)) / rate
+        beat_gap = gap(cfg["beat_pause"], rate, cfg)
         audio.append(beat_gap)
         t += len(beat_gap) / rate
     return np.concatenate(audio), rate, sentences

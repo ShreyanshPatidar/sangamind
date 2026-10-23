@@ -19,6 +19,9 @@ python3 title.py titles.txt            # one per line, ranked
 
 ## Before you write
 
+0. **Read the channel's series system first**, wherever the channel keeps its brand doc (a Notion
+   page, a brand.md, a Google Doc - ask if you can't find one). A channel with a fixed title formula
+   and thumbnail system gets titles IN that formula, never a fresh style per video.
 1. Read `~/.claude/youtube/voice.md` if it exists. That is the user's voice profile: how they talk
    on camera, the words they never use, who they are talking to, what they will not claim. If it
    does not exist, ask for **three of their own videos**, read or transcribe them, infer the voice,
@@ -35,7 +38,25 @@ python3 title.py titles.txt            # one per line, ranked
 - **The thumbnail must not repeat the title.** Different words, same promise.
 - **Three words maximum on the thumbnail.** At feed size a fourth word is a grey smear.
 - **A number, a name or a date** beats every adjective available to you.
-- **Two all-caps words is the ceiling** before a title reads as spam.
+- **Two all-caps words is the ceiling** before a title reads as spam - except one closing caps phrase
+  of up to four words when it is the channel's series formula ("…DO NOT UNPLUG IT").
+
+## The series system (a channel, not a pile of videos)
+
+The strongest faceless channels run every video on **one premise viewers recognise from the feed**
+(studied 23 Oct 2026: Bradikinin, "If Your [ordinary thing] Ever [impossible thing]… [ORDER]",
+126K-2.6M views a video at 41K subscribers). If the channel has no series system yet, propose one
+before titling anything:
+
+- **One premise** the viewer can say back ("this channel dives down the iceberg of a thing you use").
+- **One title formula:** a concrete, picturable first half + a short caps half that is the hook
+  (e.g. `[What everyone believes or sees]… [THE HIDDEN PART]`).
+- **One thumbnail system:** the same background, layout and accent colour every time, one object,
+  2-3 words with one word in the accent colour, the mascot (if any) in one corner.
+- **Light lore (optional):** an episode/file number, a mascot's role if there is one, a subscribe line
+  in the channel's voice.
+- **Fixed format, original content:** the premise repeats, the script, angle and visuals never do -
+  YouTube demonetises "template-based, repetitive" channels (policy-2026).
 
 ## Write ten, keep two
 

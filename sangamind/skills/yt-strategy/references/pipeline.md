@@ -33,6 +33,12 @@ stops the system approving its own average work.
 current stage: BRIEFED / DRAFTED / EDITED / APPROVED / PUBLISHED
 ```
 
+**More than one video in flight? Replace the shared file** with a tracker: one row per video
+(status, upload date, episode number, link to its script) in whatever the user already uses - Notion,
+Airtable, Google Sheets - plus one document per script. A single PIPELINE.md holds one video at a
+time and breaks at about three uploads a week. The four roles and their prompts still apply; each
+reads and writes the video's row and script document instead.
+
 VOICE.md: written once from five of your best pieces; every agent reads it every run. In Sangamind
 the voice file is `~/.claude/youtube/voice.md` (creator-script and yt-strategy read it).
 
@@ -68,7 +74,7 @@ Structured fields are followed far more reliably than paragraphs, and reuse keep
   "vocabulary": "plain English, explain any jargon in one sentence",
   "narrator_personality": "or the persona sheet",
   "character_registry": [{"name": "", "role": "", "locked_facts": "from the research brief only"}],
-  "story_structure": "cold open, background, rising stakes, turning point, fallout, reflection",
+  "story_structure": "the channel's signature format if it has one (e.g. levels, surface to bottom), else cold open, background, rising stakes, turning point, fallout, reflection",
   "cliffhangers": "",
   "curiosity_loops": "open a new question every 60-90 s (every 20-30 s for 1-5 min) and close it later",
   "emotional_beats": [],

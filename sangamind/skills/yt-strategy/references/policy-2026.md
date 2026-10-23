@@ -8,6 +8,11 @@ As reported by Tryahd's guide, current to 8 Oct 2026. Check the Help Center befo
   repetitive or manipulative content cannot earn. Reviewed per channel, not per video. YouTube's
   own examples: narrated stories with only superficial differences, slideshows with the same
   narration. It does NOT require a face, and does NOT ban AI or AI voices.
+- **Jul 2026 clarification** (TechCrunch, 20 Jul 2026) - three things make a channel ineligible:
+  (1) generic, repetitive or **template-based** content easy to make with AI/templates, including
+  tutorials that only repeat what is widely available; (2) off-putting or distressing content built
+  to manipulate (with or without AI); (3) AI personas of real people discussing health, finance or
+  legal topics. "Too much" of these removes YPP; no threshold published. AI itself is not banned.
 - **Jan 2026** - CEO letter makes "managing AI slop" a priority. Kapwing counted 16 of the top 100
   AI-slop channels gone (11 deleted, 5 emptied): ~35M subscribers, ~4.7B views. ~1 in 5 videos
   recommended to a new account was slop.
@@ -54,7 +59,8 @@ plan income that does not wait for YPP.
 
 1. An angle only this channel would have.
 2. Visible human judgment: script choices, edits, a consistent voice or persona, stated opinions.
-3. Varied formats - no single skeleton.
+3. One recognisable premise, varied execution - the series format may repeat (title formula,
+   thumbnail system), the skeleton of the script and the visuals may not.
 4. Disclose realistic AI; never impersonate a real person.
 5. Own something off-platform: email list, product, affiliate stack.
 6. Weight long-form and search; Shorts are the advertising department.

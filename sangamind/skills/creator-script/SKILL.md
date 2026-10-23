@@ -39,7 +39,13 @@ and weights live in `profiles.json`, the 25 formulas (21 creator + 4 story) in `
    prompt and the JSON script template are in
    [the playbook's pipeline](../yt-strategy/references/pipeline.md). Fill in the template before
    drafting a series, so every episode keeps the same audience, tone and rules.
-4. A character host? Write in the persona sheet's voice, never claim credentials, and keep money
+4. **Topic passed the test?** (yt-strategy, "Topics") If a big definitive video already tells the same
+   hidden story, stop and say so before writing a word.
+5. **Channel format.** If the channel has a signature format (in its brand doc), follow it - e.g.
+   "levels" from what everyone believes down to what almost nobody knows, "seven rules", "three
+   failures". The format shapes the spine; **the content of each part comes only from the research
+   brief** - if research finds three real parts, the video has three. No signature format? Skip this.
+6. A character host? Write in the persona sheet's voice, never claim credentials, and keep money
    content educational ([ai-host](../yt-strategy/references/ai-host.md)).
 
 ## Short-form (1-5 minutes)
@@ -55,6 +61,9 @@ click the title promised, open a question the viewer cannot close, and prove the
 1. **Hook.** Write FIVE against [the 25 formulas](hooks.json), run them through `hookscore.py`,
    keep the top two, and show the user both with their scores. Never hand over one hook.
 2. **The turn** (0:15-0:45). Say what the video is going to do, in one sentence, and start doing it.
+   Make it a **counted promise** and point at one part: "there are five levels to this; most people
+   never get past level two", "seven rules; most people break the third". It opens two loops at once
+   (what is it, why that one), and each counted part becomes a payoff and a chapter.
    No channel intro, no "before we get started", no subscribe pitch. Those are the single most
    common cause of the 0:30 cliff.
 3. **The body.** One idea per beat. Mark each beat with what is ON SCREEN, not just what is said -
@@ -86,7 +95,8 @@ every heading. Before drafting, write the **story spine** into the script file:
 - the two best hooks with their scored panels
 - the story spine (throughline + the question each beat ends on)
 - the script, beat by beat, with `[ON SCREEN: ...]` on every beat
-- the runtime estimate at 150 words per minute
+- the runtime estimate at 150 words per minute - **length follows the story**: never pad to reach a
+  length or cut a beat to fit one
 - one line naming which formula the winning hook used and why it fits this idea
 
 ## The gate
