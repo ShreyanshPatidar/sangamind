@@ -133,12 +133,17 @@ brand block (colours, fonts, depths, ruler labels, dive length); nothing is chan
   for Chirp 3 HD (a 5-minute video is about 4,500). Needs a Google Cloud project with the
   Text-to-Speech API enabled and an API key restricted to it, saved in `_tools/google-tts-key.txt`
   (or env `GOOGLE_TTS_KEY`); never commit it. Clips are cached in `_tools/.tts-cache/`, so re-exports
-  only pay for changed sentences. Kokoro speeds (~0.85) are slow for Google; start at 0.95-1.0.
+  only pay for changed sentences. Kokoro speeds (~0.85) are slow for Google; start at 0.95-1.0, with `sentence_pause` ~0.4 and
+  `beat_pause` ~0.9 (Chirp voices already breathe at the end of a sentence). A `[pause N]` replaces the
+  gap after the sentence before it; it never adds to it.
 - `tools/video.json`: check targets. `tools/sfx.json`: the synthesised sound recipes.
   `tools/openverse.py`: search/fetch real CC-licensed sounds when synthesis won't do.
 
 ## Rules
 
+- **Delivering big files:** a full render (200+ MB) is too big to copy to the laptop from a cloud
+  session (30 MB limit per file). Send it in chat to download, or render on the laptop with Claude Code.
+  Without Whisper (blocked in the cloud) subtitle word timing is estimated; exact on the laptop.
 - Never publish. Deliver files; Shreyansh uploads.
 - Image and map credits go in the description (`credits.json`, "Map data (c) OpenStreetMap contributors").
 - Remotion is free for individuals and companies up to 3 people; above that it needs a company licence.

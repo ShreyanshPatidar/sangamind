@@ -88,8 +88,14 @@ pause land.
 - **Before a reveal: a run-up line, then silence, then the hit.** Never explain how time passed.
   Vary the run-up words between videos. "£135. And suddenly... £355." beats "£135. You join the
   queue. Hours later... £355." (and beats "£135. [silence] £355.").
-- **Text before audio:** the hook and any rewritten line go to the user as plain text and get a yes
-  before any voice or visuals are made.
+- **Approve by ear, before the render:** new or rewritten lines go to the user as a short audio
+  preview in the channel voice (each part announced by number, one-line summary of each in chat),
+  not as a wall of text. Get a yes, or pick the strongest yourself if the user hands you the call,
+  before any visuals or render.
+- **Explain how and why, not just what.** Before the script is final, list the questions a viewer
+  would still have at the end ("how does the tool work?", "why can't they just leave?", "what
+  happens now?"). Answer the ones that matter with sourced lines. Length follows the content: never
+  pad, never cut real explanation to hit a number.
 
 ## A connected story (not a list of chapters)
 
