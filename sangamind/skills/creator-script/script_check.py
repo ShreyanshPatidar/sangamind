@@ -9,6 +9,7 @@ Reads the narration under "## Script" (headings, `[ON SCREEN..]` and `[NOTE..]` 
   WORDS      no loaded words (watchdog, crackdown...), no spoken level labels, no stock filler
   STAGE      no stage directions narrated ("you join the queue")
   DENSE      no pile of numbers and dates in the first ~40 words
+  LONG       no sentence over 28 words (hard to follow by ear, and the voice goes flat)
 Prints PASS / FAIL per check with the offending text. Exit code 1 if anything fails.
 These are the mechanical rules; the judgement rules (every line has a job, explain how and why) still
 need a read.
@@ -114,6 +115,11 @@ def main():
     first = " ".join(words(paras[0])[:40]).lower()
     n = len(re.findall(NUM_WORDS, first))
     results.append(("DENSE", n <= 8, f"{n} number words in the first ~40 words" + ("" if n <= 8 else " (too many facts up front)")))
+
+    # LONG: sentences too long to follow by ear (TTS also flattens on long lines)
+    longs = [x.strip() for x in re.split(r"(?<=[.!?])\s+", spoken) if len(words(x)) > 28]
+    results.append(("LONG", not longs, "all sentences under 29 words" if not longs else
+                    f"{len(longs)} sentence(s) over 28 words, split them: " + " | ".join(l[:70] + "..." for l in longs)))
 
     fails = 0
     for name, ok, detail in results:
