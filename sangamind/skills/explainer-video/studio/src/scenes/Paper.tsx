@@ -232,7 +232,7 @@ const TextItem: React.FC<{it: Item}> = ({it}) => {
   const body: React.ReactNode = it.enter === "type" ? <Typed text={it.text ?? ""} it={it} /> : it.text;
   const style = it.style ?? "headline";
   const size = it.size ?? (style === "headline" ? 92 : style === "big" ? 170 : style === "mono" ? 26 : style === "note" ? 34 : 30);
-  const base: React.CSSProperties = {color, whiteSpace: "pre-line", textAlign: it.align ?? "left", maxWidth: it.w, lineHeight: 1.05};
+  const base: React.CSSProperties = {color, whiteSpace: "pre-line", textAlign: it.align ?? "left", maxWidth: it.w, width: it.align && it.align !== "left" && it.w ? it.w : undefined, lineHeight: 1.05};
   let el: React.ReactNode;
   if (style === "headline" || style === "big") {
     el = <div style={{...base, fontFamily: fonts.title_family, fontWeight: 800, fontSize: size}}>{body}</div>;
