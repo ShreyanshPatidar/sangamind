@@ -58,6 +58,15 @@ and weights live in `profiles.json`, the 25 formulas (21 creator + 4 story) in `
 **The first 15 seconds is the whole job.** It does three things or the video leaks: confirm the
 click the title promised, open a question the viewer cannot close, and prove the payoff exists.
 
+**Check the opening against the title and thumbnail, side by side, before it is voiced:**
+- The **first frame is the thumbnail** (same object, same words, same moment), so the click feels
+  answered, not switched.
+- **Say the title's promise in words by ~0:20** ("one company that's accused of getting paid three
+  times"). Holding the title's hook back for minutes is how a viewer feels lost.
+- **Ask the thumbnail's question out loud** if it has one ("So who did this?").
+- **Give it air:** a beat of silence and picture before the first word, and real pauses between the
+  hook lines. No dense fact (dates, counts) crammed into the first 15 seconds.
+
 1. **Hook.** Write FIVE against [the 25 formulas](hooks.json), run them through `hookscore.py`,
    keep the top two, and show the user both with their scores. Never hand over one hook.
 2. **The turn** (0:15-0:45). Say what the video is going to do, in one sentence, and start doing it.
