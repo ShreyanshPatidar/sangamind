@@ -43,8 +43,12 @@ def synthesize(paras, cfg, tts, voice, speed, lang):
     audio, sentences, t, rate = [], [], 0.0, 24000
     for bi, para in enumerate(paras):
         pieces = PAUSE.split(para)  # text, seconds, text, seconds, ...
+        after_sentence = False
         for i, piece in enumerate(pieces):
-            if i % 2:  # a pause marker
+            if i % 2:  # a pause marker REPLACES the normal gap after the sentence before it, never adds to it
+                if after_sentence:
+                    t -= len(audio.pop()) / rate
+                    after_sentence = False
                 silence = gap(float(piece), rate, cfg)
                 audio.append(silence)
                 t += len(silence) / rate
@@ -60,6 +64,7 @@ def synthesize(paras, cfg, tts, voice, speed, lang):
                 audio += [samples, pause]
                 sentences.append({"text": sentence, "start": t, "end": t + len(samples) / rate, "beat": bi})
                 t += (len(samples) + len(pause)) / rate
+                after_sentence = True
         beat_gap = gap(cfg["beat_pause"], rate, cfg)
         audio.append(beat_gap)
         t += len(beat_gap) / rate
