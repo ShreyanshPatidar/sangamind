@@ -96,8 +96,11 @@ brand block (colours, fonts, depths, ruler labels, dive length); nothing is chan
   `section`, `kicker`, `title`, optional `rise: true` to go back up, and an `sfx` (a file the channel
   puts in `_studio/public/sfx`). `scenes.json` `"meta"`: `file` (e.g. "FILE 004") and `sections`
   (the readout names, `|`-separated) for this video.
-- **Subtitles always on** (brand `motion.captions: 1`): small, bottom centre, on a paper-coloured
-  strip, the spoken word in the highlight colour; keep source lines and labels out of the bottom band.
+- **Subtitles: uploaded, not burned in, on long videos** (brand `motion.captions: 0`). A paper video is
+  already full of designed text; a running caption strip makes a second stream to read, can't be
+  switched off and reads as a Shorts look. Upload `captions.srt` to YouTube instead (viewers toggle it,
+  it auto-translates, search indexes it). **Shorts: burn them in** (`captions: 1`): small, bottom
+  centre, on a paper-coloured strip, the spoken word in the highlight colour.
 - **Full-screen punchlines:** give the 2-3 lines the script marks for the screen their own short
   paper scene with one centred `big` text item (`"align": "center"`, `"enter": "pop"`) cued to the line.
 - **Dive titles are not labels:** a dive's `title` is the line that answers the previous section
@@ -116,8 +119,7 @@ brand block (colours, fonts, depths, ruler labels, dive length); nothing is chan
   zoom on cue (`steps`). No shot holds longer than ~5 s.
 - **Dates, places and lists are animated on a map or picture** (a `geo` map with countries lighting
   up and arrows, a date chip), not read out on title cards.
-- **Captions are small and optional** (`motion.captions`, `captionSize`), hidden while on-screen text
-  is showing; YouTube gets captions.srt anyway.
+- **Captions:** see the paper look - uploaded on long videos, burned in on Shorts.
 - Vary the entrances (wipe, zoom, slide, fade); never the same transition three times in a row.
 - **Sound only where it means something** (a gunshot, a bomb, a stamp), never a whoosh on every
   scene: brand.json `sfx.enter` / `sfx.steps` stay empty unless a channel wants defaults. Repeats
