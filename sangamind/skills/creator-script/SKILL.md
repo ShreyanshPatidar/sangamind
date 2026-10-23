@@ -97,6 +97,14 @@ pause land.
   happens now?"). Answer the ones that matter with sourced lines. Length follows the content: never
   pad, never cut real explanation to hit a number.
 
+## Written for a global audience
+
+Assume the viewer has never heard of the country's institutions. The first time an organisation,
+office or place is named, say **what it does** in plain words, then the name: "America's consumer
+watchdog, the FTC", "Britain's competition watchdog", "London's Wembley Stadium", "British lawmakers"
+(not "Parliament"). After that the short name is fine. Never an unexplained acronym, in the voice or on
+screen ("FTC (US CONSUMER WATCHDOG)"). Money in the currency of the story; say whose it is when it changes.
+
 ## A connected story (not a list of chapters)
 
 A script that reads like chapters (who, then what, then a myth, then the aftermath) loses people at
