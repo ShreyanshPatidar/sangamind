@@ -33,6 +33,7 @@ def norm(word):
 
 
 SLOW = re.compile(r"^\[slow(?:\s+([\d.]+))?\]\s*", re.I)
+LOUD = re.compile(r"^\[loud(?:\s+([\d.]+))?\]\s*", re.I)  # "[loud]" = louder (x1.5, or the number given)
 
 
 def synthesize(paras, cfg, tts, voice, speed, lang):
@@ -56,10 +57,20 @@ def synthesize(paras, cfg, tts, voice, speed, lang):
             for sentence in re.split(r"(?<=[.!?])(?<!\.\.\.)\s+", piece.strip()):  # "..." stays inside its sentence
                 if not sentence:
                     continue
+                lm = LOUD.match(sentence)
+                gain = float(lm.group(1) or cfg.get("loud_gain", 1.5)) if lm else 1.0
+                sentence = LOUD.sub("", sentence)
                 m = SLOW.match(sentence)
                 k = float(m.group(1) or cfg.get("slow_factor", 0.88)) if m else 1.0
                 sentence = SLOW.sub("", sentence)
+                lm2 = LOUD.match(sentence)  # either order: "[slow] [loud]" works too
+                if lm2:
+                    gain = float(lm2.group(1) or cfg.get("loud_gain", 1.5))
+                    sentence = LOUD.sub("", sentence)
                 samples, rate = speak(tts, sentence, cfg, voice, speed * k, lang)
+                if gain != 1.0:
+                    peak = float(np.abs(samples).max()) or 1.0
+                    samples = samples * min(gain, 0.98 / peak)
                 pause = gap(cfg["sentence_pause"], rate, cfg)
                 audio += [samples, pause]
                 sentences.append({"text": sentence, "start": t, "end": t + len(samples) / rate, "beat": bi})

@@ -12,7 +12,13 @@ description: >-
 
 One idea into a script somebody finishes.
 
-Two tools live in this folder and both actually run. Use them. Do not eyeball the hook.
+Three tools live in this folder and all of them actually run. Use them. Do not eyeball the hook.
+
+**Before anything is voiced, run the rules check and paste its output in chat:**
+`python3 script_check.py <script.md> --title "<the title>"` checks the opening questions, the title's
+promise in the first seconds, acronyms explained on first mention, loaded words and spoken level
+labels, narrated stage directions, and facts crammed up front. Every FAIL is fixed before the voice is
+made. It covers the mechanical rules only; read the script against the judgement rules too.
 
 ```bash
 python3 hookscore.py hooks.txt                    # rank your hook options

@@ -33,7 +33,8 @@ ffmpeg). After editing code here: `python setup.py --workspace <path> --sync`.
    `` `[ON SCREEN..]` `` lines are skipped). `[pause 0.8]` inside a line = that many seconds of
    silence: use them after hook beats and before reveals. A sentence starting `[slow]` (or `[slow 0.8]`) is read slower - use it on the
    two or three lines that must land (the shots, the reveal, the signature line). `...` inside a
-   sentence is a short spoken pause. Name respellings live in `voice.json` "pronounce".
+   sentence is a short spoken pause. `[loud]` at the start of a sentence (with or after `[slow]`)
+   makes it louder (x1.5, or `[loud 1.3]`): for the hook questions and the one line that must hit. Name respellings live in `voice.json` "pronounce".
 2. **Assets.** Public-domain/CC images in `assets/<n>/` with `credits.json` (fetch from Wikimedia
    Commons with the licence; look at every image before using it - check it shows what the line
    says). Maps: download the area with the OSM API
