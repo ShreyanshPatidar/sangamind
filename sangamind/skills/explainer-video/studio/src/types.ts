@@ -19,6 +19,8 @@ export type Paper = {
   glow: string;
   tape: string;
   highlight?: string;
+  /** verdict stamps (NO EVIDENCE, ALLEGED, DENIED): the default colour of the "stamp" text style */
+  danger?: string;
   shadow: string;
   grain: number;
   waterLines: number;

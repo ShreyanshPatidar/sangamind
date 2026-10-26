@@ -34,7 +34,7 @@ export const usePaper = (): Paper => {
 };
 
 const colorOf = (p: Paper, c?: string) =>
-  !c ? p.ink : c === "ink" ? p.ink : c === "accent" ? p.accent : c === "soft" ? p.soft : c === "highlight" ? p.highlight ?? p.accent : c;
+  !c ? p.ink : c === "ink" ? p.ink : c === "accent" ? p.accent : c === "soft" ? p.soft : c === "highlight" ? p.highlight ?? p.accent : c === "danger" ? p.danger ?? p.ink : c;
 
 /** Faint wavy water lines across the page (below the waterline only when `from` is set). */
 export const PaperGround: React.FC<{from?: number; shift?: number}> = ({from = 0, shift = 0}) => {
@@ -228,7 +228,7 @@ const TypeSound: React.FC<{it: Item}> = ({it}) => {
 const TextItem: React.FC<{it: Item}> = ({it}) => {
   const p = usePaper();
   const {fonts} = useBrand();
-  const color = colorOf(p, it.color);
+  const color = colorOf(p, it.color ?? (it.style === "stamp" ? "danger" : undefined));
   const body: React.ReactNode = it.enter === "type" ? <Typed text={it.text ?? ""} it={it} /> : it.text;
   const style = it.style ?? "headline";
   const size = it.size ?? (style === "headline" ? 92 : style === "big" ? 170 : style === "mono" ? 26 : style === "note" ? 34 : 30);
