@@ -1,11 +1,11 @@
-"""Narrate a Syptian-style script with Kokoro (local, free) or Google Cloud TTS (Chirp 3 HD / Studio).
+"""Narrate a channel script with Kokoro (local, free) or Google Cloud TTS (Chirp 3 HD / Studio).
 
 Reads the narration from a script .md (the lines under "## Script", skipping beat headings and
 [ON SCREEN] notes) and writes a WAV. Settings come from voice.json next to this file; flags override.
 Names Kokoro gets wrong go in its "pronounce" list as a respelling ("Lojka": "Loy-ka").
 Delivery: "..." inside a sentence is a short pause; pauses carry quiet room tone ("room_tone_db").
 
-    python voice.py ../Syptian/scripts/14-wrong-turn-ww1.md -o out.wav
+    python voice.py ../<channel>/scripts/14-wrong-turn-ww1.md -o out.wav
     python voice.py script.md --voice bf_emma --speed 0.95 --beats 3
     python voice.py script.md --voice google:en-GB-Chirp3-HD-Aoede --beats 3 -o g.wav
 

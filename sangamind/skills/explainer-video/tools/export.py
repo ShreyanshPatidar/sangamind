@@ -1,7 +1,7 @@
 """Prepare a video for the Remotion studio: narration, word timings and the scene timeline.
 
-    python export.py ../Syptian/scripts/14-wrong-turn-ww1.md --assets ../Syptian/assets/14 \
-        --brand ../Syptian/brand/brand.json --out ../_studio/public/14
+    python export.py ../<channel>/scripts/14-wrong-turn-ww1.md --assets ../<channel>/assets/14 \
+        --brand ../<channel>/brand/brand.json --out ../_studio/public/14
 
 Writes into --out: narration.wav, timeline.json (words with times, scenes with times, brand), and
 copies every image the scenes use into img/.

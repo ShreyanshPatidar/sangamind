@@ -16,12 +16,13 @@ Script in, finished MP4 out. Everything runs locally; nothing is uploaded.
   On Shreyansh's laptop the workspace is `D:\Coding\Apps\AI\Channels`.
 - **Channel data:** `<channel>/scripts/<n>-*.md`, `<channel>/assets/<n>/` (images, credits.json,
   scenes.json, map configs), `<channel>/brand/brand.json`, renders in `<render>` = `<channel>/renders/<NNN>/` (three digits, e.g. `004`,
-  the same number as the on-screen FILE number).
-- **Writing and planning live in Notion** (Syptian since 23 Oct 2026: YouTube > Syptian - Brand, Topics,
-  Scripts; see `<channel>/NOTION.md`). Copy a script from its Notion page into `<channel>/scripts/`
-  only when its video is rendered; never edit the local copy instead of the page.
-- **Mascot:** full-size transparent poses in `<channel>/brand/mascot/` (Syptian: Berg,
-  `syptian-mascot-berg-<pose>.png`; `-blank` has no face, for blink/talk animation). Brand rules
+  the same number as the on-screen file number, if the look shows one).
+- **Writing and planning live in Notion** when the channel has a `<channel>/NOTION.md` (its page links).
+  Edit rules, topics and scripts there only. The video maker reads `<channel>/scripts/` copies pulled by
+  `tools/notion_pull.py <channel> [scripts/<file>.md]` (map in `<channel>/notion.json`) right before
+  voicing. Never fix a line in the copy: fix the Notion page and pull again, or the two drift.
+- **Mascot:** full-size transparent poses in `<channel>/brand/mascot/`, named
+  `<channel>-mascot-<name>-<pose>.png` (`-blank` has no face, for blink/talk animation). Brand rules
   decide where it may appear. Every new final asset (pose, logo, art) is also added to the Notion
   "Brand assets" page - the laptop copy alone is not a backup.
 

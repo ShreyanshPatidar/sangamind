@@ -69,7 +69,7 @@ click the title promised, open a question the viewer cannot close, and prove the
   answered, not switched.
 - **Say the title's promise in words by ~0:20** ("one company that's accused of getting paid three
   times"). Holding the title's hook back for minutes is how a viewer feels lost.
-- **Open with 2-3 direct questions to the viewer, back to back** (Syptian: always). Ask them
+- **Open with 2-3 direct questions to the viewer, back to back** (a channel brand doc can make this a must). Ask them
   straight at the viewer in the first seconds, one per line with a pause after each, the title's
   question first: "Every time a concert ticket gets resold... who do you think gets paid? Who decides
   the price? And how did this ticket go from 135 to 355?" Then one line that kills the easy answer
@@ -95,9 +95,9 @@ click the title promised, open a question the viewer cannot close, and prove the
    - **Land, don't recap.** The close is one consequence the viewer feels, then the sign-off. A list
      of status updates there is a news bulletin, not an ending; those belong in the last beat or the
      description.
-   - **Decide the next video's title before writing the close.** The tease must sell that exact
-     title with its own hook, and the end card must show the same title. A vague tease written
-     before the next video is planned is why an ending trails off.
+   - **A tease is the channel's choice** (its brand doc says). If it teases, decide the next video's title
+     before writing the close: the tease sells that exact title with its own hook and the end card shows
+     it. A vague tease written before the next video is planned is why an ending trails off.
 
 ## Every line has a job
 

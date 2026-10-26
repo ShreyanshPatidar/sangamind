@@ -1,7 +1,7 @@
 """Find real moving footage for a video: search free archives, download short clips, show a contact sheet.
 
-    python footage.py --assets ../Syptian/assets/04 "concert crowd" "stadium lights at night"
-    python footage.py --assets ../Syptian/assets/04 "1950s factory" --sources archive --start 120
+    python footage.py --assets ../<channel>/assets/04 "concert crowd" "stadium lights at night"
+    python footage.py --assets ../<channel>/assets/04 "1950s factory" --sources archive --start 120
 
 Sources (all free, licence checked per clip; anything NC / ND / unclear is skipped):
   pexels     modern stock video, free for commercial use. Needs a free key: pexels-key.txt next to this

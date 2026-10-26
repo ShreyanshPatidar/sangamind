@@ -1,6 +1,6 @@
 """Storyboard check: one still per scene with its time and the words spoken over it, before the full render.
 
-    python storyboard.py 04 --studio ../_studio --out ../Syptian/renders/004
+    python storyboard.py 04 --studio ../_studio --out ../<channel>/renders/004
 
 Run after export.py. Renders a still 70% into every scene (a few seconds each, no audio, no video file)
 and draws storyboard.jpg: a grid of numbered frames, each with its time and the narration under it.
