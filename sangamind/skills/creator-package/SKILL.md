@@ -38,9 +38,13 @@ python3 title.py titles.txt            # one per line, ranked
 - **The thumbnail must not repeat the title.** Different words, same promise.
 - **Three words maximum on the thumbnail** (fewer, or none, is often better). At feed size a fourth word is a grey smear.
 - **A number, a name or a date** beats every adjective available to you.
-- **Put the name people search in the title.** A new channel is found through search, not
-  curiosity: "SOMEONE did X" hides the word everyone types. When the claim is an allegation, the
-  title says so in one word ("X Is Accused Of ..."), never states it as fact.
+- **The creator picks the title.** Write the title that fits this video best; no fixed formula
+  unless the creator asks for one. Offer options, say what each one trades off (search phrase vs
+  curiosity), and never push a rewrite of a title they have chosen. A pattern that often works, as
+  one example among others: what people believe or see, then the hidden part in caps ("Why X Costs
+  So Much… SOMEONE GETS PAID 3 TIMES").
+- **An allegation is never stated as fact in a title.** If a title names who did something unproven,
+  it says "accused" (or leaves the name out).
 - **Two all-caps words is the ceiling** before a title reads as spam - except one closing caps phrase
   of up to four words when it is the channel's series formula ("…DO NOT UNPLUG IT").
 
