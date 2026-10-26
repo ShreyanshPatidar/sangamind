@@ -23,5 +23,10 @@
     "loudness_lufs": -14,
     "loudness_tolerance": 1,
     "true_peak_max": -1
+  },
+  "patch": {
+    "crf": 18,
+    "preset": "medium",
+    "tolerance": 0.06
   }
 }

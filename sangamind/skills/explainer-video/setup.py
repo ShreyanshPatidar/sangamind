@@ -20,10 +20,16 @@ HERE = Path(__file__).parent
 CFG = json.loads((HERE / "setup.json").read_text(encoding="utf-8"))
 
 
+# The workspace's own choices (the chosen voice, check targets): copied once on setup, never overwritten.
+SETTINGS = {"voice.json", "video.json"}
+
+
 def copy_tree(src: Path, dst: Path):
     for f in src.rglob("*"):
-        if f.is_file():
+        if f.is_file() and ".bak-" not in f.name:
             target = dst / f.relative_to(src)
+            if f.name in SETTINGS and target.exists():
+                continue
             target.parent.mkdir(parents=True, exist_ok=True)
             shutil.copy2(f, target)
 

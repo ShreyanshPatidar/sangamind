@@ -54,6 +54,8 @@ def main():
     py = sys.executable
     subprocess.run([py, str(HERE / "master.py"), str(out)], check=True)
     subprocess.run([py, str(HERE / "checks.py"), str(out)], check=True)
+    # the timeline this video was made from, so patch.py can later fix one stretch without a full render
+    shutil.copy(studio / "public" / a.video / "timeline.json", out.with_suffix(".timeline.json"))
     print(f"final -> {out}")
 
 

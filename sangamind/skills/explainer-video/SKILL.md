@@ -87,8 +87,16 @@ ffmpeg). After editing code here: `python setup.py --workspace <path> --sync`.
 10. **Final:** `_tools/.venv/Scripts/python _tools/render.py <n> --studio _studio --out <render>/video.mp4`
    renders full size once, masters the sound to -14 LUFS (`master.py`) and runs `checks.py` (format, black
    and frozen frames, loudness, frame sheet). Look at the frame sheet. Report every result.
-11. **Upload folder:** once the final passes, `<render>` keeps only the five upload files, always named
-   `video.mp4`, `captions.srt`, `thumbnail.png`, `thumbnail-test.png` (Test & Compare) and `upload-pack.md`;
+11. **Fixing a finished video (picture, sound or both):** change scenes.json and/or the script, re-run
+   export.py (`--scenes-only` if the narration didn't change), then
+   `_tools/.venv/Scripts/python _tools/patch.py <n> --studio _studio --video <render>/video.mp4 --from 4:30 --to 5:00`
+   with the stretch of the finished video the change sits in. It renders only that stretch with its sound,
+   joins it between the untouched parts, re-masters and runs the checks (minutes, not a full render). It
+   refuses when the change reaches outside the stretch (it compares the sentences of the old and new
+   timelines), and keeps the old file until the checks pass. Needs `video.timeline.json` (render.py writes it).
+12. **Upload folder:** once the final passes, `<render>` keeps only the five upload files, always named
+   `video.mp4`, `captions.srt`, `thumbnail.png`, `thumbnail-test.png` (Test & Compare) and `upload-pack.md`,
+   plus `video.timeline.json` (what patch.py needs to fix the video later);
    drafts, sheets, storyboard, logs and unused thumbnails go to the Recycle Bin.
 
 ## The paper look (optional, per channel)
